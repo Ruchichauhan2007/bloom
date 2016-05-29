@@ -1,0 +1,52 @@
+<div class="intileSignUp">
+  <div class="row">
+    <div class="EligibilityHeader">
+      <div class="col-md-6 col-sm-6 col-xs-6"> <img src="/gladstone/portal/bloom/app/assets/image/headingIcon.png" /> </div>
+      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+        <p>4/6</p>
+      </div>
+    </div>
+  </div>
+  <h1 class="heading">Incentives</h1>
+  <p class="subHeading">{{Incentives.incentiveDescription}}</p>
+  <ul class="V_Point">
+    <li  ng-repeat="Incentive in IncentivesData"><span>{{Incentive}}</span></li>
+  </ul>
+  <div class="healthCoching">
+    <h2>HEALTH COACHING</h2>
+    <p class="hend-icon">Changing your lifestyle isn&rsquo;t easy.
+      Self-management doesn&rsquo;t mean
+      you have to do it alone.<br />
+      <br />
+      Your health coach learns about your
+      specific experience to help you with what&rsquo;s
+      important to you. Set and achieve
+      personal health goals with their support.</p>
+  </div>
+  <div class="icon-image" align="center"> <img src="/gladstone/portal/bloom/app/assets/image/icon-HC2.png" /> </div>
+  <form  class="SignUpProcess" method="post" ng-submit="addIncentive()">
+    <div class="form-group check-condition">
+      <div class="col-md-12 paddingLeft0" >
+        <div class="checkbox needDCT">
+          <div class="checkbox preferred">
+          <p><input type="checkbox" ng-model="healthCoaching" id="healthCoaching" ng-checked="healthCoaching" ng-value="healthCoaching" /> <label for="healthCoaching" class="color-theme">I don&rsquo;t want free health coaching.</label></p>
+        </div>
+          <strong class="checkError" ng-show="healthCoaching">You&rsquo;ll still receive your supplies and
+          access to everything else we offer.
+          Let us know if you change your mind!</strong> </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group check-condition loader-container">
+        <ion-spinner icon="dots" class="spinner-dark" id="loadingIcon" style="display:none;"></ion-spinner>
+      <div  class="col-md-6 col-sm-6 col-xs-6 padding0"> <a ng-href="#/prescription">
+        <p class="back-button"><strong>BACK</strong></p>
+        </a> </div>
+      <div align="right" class="col-md-6 col-sm-6 col-xs-6 padding0 mt0">
+        <button class="btn btn-default btn-DarkSky" type="submit">NEXT <span><img src="/gladstone/portal/bloom/app/assets/image/left-arrow.png"></span></button>
+      </div>
+    </div>
+        <p class=" paddingLeft0 text-center_text">Having trouble? <a href="#/havingTrouble" class="link">Get help enrolling.</a> </p>
+
+  </form>
+</div>

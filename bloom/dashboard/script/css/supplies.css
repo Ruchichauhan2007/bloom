@@ -1,0 +1,111 @@
+#topbar-patient {
+    width: 100%;
+    background-color: #d8d8d8;
+    height: 30px;
+}
+div.inline-container {
+    height: 30px;
+    display: block;
+    width: 100%;
+}
+div.inline-container > div {
+    display: block;
+    font-size: 20px;
+}
+div.inline-container > div.left {
+    overflow: hidden;
+    width: auto;
+}
+div.inline-container > div.right {
+    float: right;
+}
+div.inline-container > div.instruction {
+    width: 150px;
+}
+div#name {
+    padding-left: 20px;
+}
+div#dob {
+    width: 200px;
+    padding-right: 20px;
+    text-align: right;
+}
+.message_box_bg {
+    background-color: #f1f1f1;
+    border-bottom: 4px solid #a6a9b8;
+    border-radius: 5px;
+    float: left;
+    margin-left: 8px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 98% !important;
+}
+.message_box_order {
+    background-color: #f1f1f1;
+    border-bottom: 4px solid #a6a9b8;
+    border-radius: 5px;
+    float: left;
+    margin-left: 8px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 49% !important;
+}
+p {
+    font-size: 20px;
+}
+div.card-image {
+    width: 10%;
+}
+div.card-title {
+    width: 50%;
+}
+div.card-order-image {
+    width: 20%;
+}
+div.card-order {
+    width: 80%;
+}
+div.card-details {
+    width: 40%;
+}
+div.card-column {
+    float: left;
+    position: relative;
+}
+#button-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#button-content > input {
+    margin: 10px;
+}
+#button-content > input[type=submit]#order, input[type=submit]#placeOrder {
+    width: 150px;
+}
+select.quantity {
+    background: linear-gradient(to bottom, #f5f5f5 0%, #ececec 24%, #c8c8c8 81%, #c2c2c2 95%, #c3c3c3 100%);
+    vertical-align: middle;
+    width: 100px;
+    font-size: 20px;
+}
+.modal-header {
+    /* Firefox v3.6+ */
+    
+    background-image: -moz-linear-gradient(139% 89% 90deg, rgb(185, 185, 200) 0%, rgb(247, 247, 247) 99%);
+    /* safari v4.0+ and by Chrome v3.0+ */
+    
+    background-image: -webkit-gradient(linear, 139% 89%, 139% 3%, color-stop(0, rgb(185, 185, 200)), color-stop(0.99, rgb(247, 247, 247)));
+    /* Chrome v10.0+ and by safari nightly build*/
+    
+    background-image: -webkit-linear-gradient(rgb(185, 185, 200) 0%, rgb(247, 247, 247) 99%);
+    /* Opera v11.10+ */
+    
+    background-image: -o-linear-gradient(rgb(185, 185, 200) 0%, rgb(247, 247, 247) 99%);
+    /* IE v10+ */
+    
+    background-image: -ms-linear-gradient(rgb(185, 185, 200) 0%, rgb(247, 247, 247) 99%);
+    background-image: linear-gradient(rgb(185, 185, 200) 0%, rgb(247, 247, 247) 99%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff7f7f7,endColorstr=#ffb9b9c8,GradientType=0)";
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#fff7f7f7, endColorstr=#ffb9b9c8, GradientType=0);
+}

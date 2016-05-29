@@ -1,0 +1,271 @@
+
+li
+{
+list-style:none;
+}
+#main-img
+{
+    background-color: #fff;
+    padding: 10px;
+    height: 108px;    
+    box-shadow: 0px 25px 19px -18px #545454;
+    -webkit-box-shadow: 0px 25px 19px -18px #545454;
+    -moz-box-shadow: 0px 25px 19px -18px #545454;
+    -o-box-shadow: 0px 25px 19px -18px #545454;
+	float:left;
+}
+
+#imageContainer
+{
+    position: relative;
+	margin-top: 15px;
+}
+#imageContainer h3
+{
+padding-bottom:20px;
+}
+
+#imageContainer h4
+{
+font-size: 18px;
+font-weight: normal;
+border-top: solid 2px #ccc;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-top:30px;
+}
+#imageContainer:before
+{
+  
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    bottom: -10px;
+    z-index: 2;
+}
+
+#imageContainer:after
+{
+  
+   
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    bottom: -10px;
+    z-index: 2;
+}
+
+#imageBox
+{
+padding: 10px;
+background-color: #fff;
+list-style: none;
+white-space: nowrap;
+overflow-x: scroll;
+height: 220px;
+overflow-y: hidden;
+}
+
+#imageBox li
+{
+    display: inline-block;
+    margin: 0 10px 0 0;
+	width:200px;
+	text-align: center;
+}
+
+#imageBox li span
+{
+clear:both;
+display: block;
+font-size: 18px;
+font-weight: normal;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#imageBox img
+{
+    
+    cursor: pointer;
+    border: 4px solid #FFFFFF;
+	margin-top:30px;
+}
+
+
+#imageContainer ::-webkit-scrollbar
+{
+   background-color: #fff;
+   border-radius: 10px;
+    height: 13px;
+	border: 1px gray solid;
+border-radius: 10px;
+-webkit-box-shadow: 0 0 6px gray inset;
+	
+}
+#imageContainer ::-webkit-scrollbar-thumb
+{
+background:url(../../images/scroll_gallery.png) no-repeat;
+}
+#imageContainer ::-webkit-scrollbar-thumb:window-inactive
+{
+    background: #aaa;
+}
+
+li
+{
+list-style:none;
+}
+#main-img
+{
+    background-color: #fff;
+    padding: 10px;
+    height: 108px;    
+    box-shadow: 0px 25px 19px -18px #545454;
+    -webkit-box-shadow: 0px 25px 19px -18px #545454;
+    -moz-box-shadow: 0px 25px 19px -18px #545454;
+    -o-box-shadow: 0px 25px 19px -18px #545454;
+	float:left;
+}
+#imageContainer h3
+{
+padding-bottom: 6px;
+font-size: 18px;
+}
+
+#imageContainer h4
+{
+font-size: 18px;
+font-weight: normal;
+border-top: solid 2px #AEACAC;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-top:30px;
+}
+#imageContainer:before
+{
+  
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    bottom: -10px;
+    z-index: 2;
+}
+
+#imageContainer:after
+{
+  
+   
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    bottom: -10px;
+    z-index: 2;
+}
+
+#imageBox
+{
+padding: 10px;
+background-color: #fff;
+list-style: none;
+white-space: nowrap;
+overflow-x: scroll;
+height: 190px;
+overflow-y: hidden;
+margin: 0 20px;
+border: solid 1px #908585;}
+
+#imageBox li
+{
+    display: inline-block;
+    margin: 0 10px 0 0;
+	width:200px;
+	text-align: center;
+}
+
+#imageBox li span
+{
+clear:both;
+display: block;
+}
+#imageBox img
+{
+    
+    cursor: pointer;
+    border: 4px solid #FFFFFF;
+	margin-top:0px;
+}
+
+#selectedDevices
+{
+padding: 10px;
+background-color: #fff;
+list-style: none;
+white-space: nowrap;
+overflow-x: scroll;
+height: 206px;
+overflow-y: hidden;
+margin: 0;
+}
+
+#selectedDevices li
+{
+    display: inline-block;
+    margin: 0 10px 0 0;
+	width:200px;
+	text-align: center;
+}
+
+#selectedDevices li span
+{
+clear:both;
+display: block;
+}
+#selectedDevices img
+{
+    
+    cursor: pointer;
+    border: 4px solid #FFFFFF;
+	margin-top:0px;
+}
+
+#imageContainer ::-webkit-scrollbar
+{
+   background-color: #fff;
+   border-radius: 10px;
+    height: 13px;
+	border: 1px gray solid;
+border-radius: 10px;
+-webkit-box-shadow: 0 0 6px gray inset;
+	
+}
+#imageContainer ::-webkit-scrollbar-thumb
+{
+background:url(../../images/scroll_gallery.png) no-repeat;
+}
+#imageContainer ::-webkit-scrollbar-thumb:window-inactive
+{
+    background: #aaa;
+}
+
+
+.dashboardpopup_glucometer h2 {
+background: linear-gradient(to bottom, #eff1fd 0%,#eaeef1 4%,#eaeceb 9%,#e5e4ec 15%,#e3e2e7 17%,#e1e0e6 22%,#d9d8e0 28%,#d7d5e0 33%,#c9c7d2 48%,#bcbbc9 63%,#bab9c7 67%,#bab8cd 85%,#bcb8c9 87%,#b7bbc7 93%,#bbb9c6 100%);
+font-weight: normal;
+padding: 10px;
+}
+
+.dashboardpopup_glucometer_nav {
+border: solid 2px #47779f;
+margin-top: 5px;
+border-radius: 5px 5px 0px 0px;
+float: left;
+height: 48px;
+width: 847px;
+background: #fefefe;
+background: -moz-linear-gradient(top, #fefefe 0%, #f8f8f8 43%, #f1f1f3 62%, #ededeb 74%, #e8eceb 76%, #e5e5e5 93%, #e4e4e6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(43%,#f8f8f8), color-stop(62%,#f1f1f3), color-stop(74%,#ededeb), color-stop(76%,#e8eceb), color-stop(93%,#e5e5e5), color-stop(100%,#e4e4e6));
+background: -webkit-linear-gradient(top, #fefefe 0%,#f8f8f8 43%,#f1f1f3 62%,#ededeb 74%,#e8eceb 76%,#e5e5e5 93%,#e4e4e6 100%);
+background: -o-linear-gradient(top, #fefefe 0%,#f8f8f8 43%,#f1f1f3 62%,#ededeb 74%,#e8eceb 76%,#e5e5e5 93%,#e4e4e6 100%);
+background: -ms-linear-gradient(top, #fefefe 0%,#f8f8f8 43%,#f1f1f3 62%,#ededeb 74%,#e8eceb 76%,#e5e5e5 93%,#e4e4e6 100%);
+background: linear-gradient(to bottom, #fefefe 0%,#f8f8f8 43%,#f1f1f3 62%,#ededeb 74%,#e8eceb 76%,#e5e5e5 93%,#e4e4e6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e4e4e6',GradientType=0 );
+}

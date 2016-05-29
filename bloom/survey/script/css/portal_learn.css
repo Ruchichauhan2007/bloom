@@ -1,0 +1,140 @@
+/* CSS Document */
+
+.portal_learn_rightpart
+{
+
+background-color: #d6d9de;
+
+}
+
+
+.learn_patient_content
+{
+height:50px;
+background-color:#dedfe0;
+border: 1px solid #949494;
+
+}
+.learn_patient_content h1 
+{
+color:#000;
+font-size:23px;
+float:left;
+padding-top:10px;
+}
+.learn_patient_content_align
+{
+float: right;
+margin-right: 22px;
+}
+.learn_patient_contentimg
+{
+float:left;
+
+}
+.learn_content_bg
+{
+background-color:#f1f1f1;
+border-bottom:solid 4px #a6a9b8;
+border-radius:5px;
+margin-bottom:5px;
+height:112px;
+margin-left: 15px;
+opacity: 0.7;
+}
+.learn_content_bg:hover
+{
+	opacity: 1;
+}
+.learn_box_img
+{
+margin:15px 0;
+}
+
+.learn_box_content
+{
+padding-top: 37px;
+padding-bottom: 5px;
+}
+
+.learn_box_content h2 a
+{
+color:#000;
+}
+.learn_box_content_button
+{
+
+margin-top: 5px;
+padding:0px;
+}
+.learn_box_content_button a
+{
+background-color: #f4377b;
+padding: 10px 30px;
+border-bottom: solid 4px #c83166;
+border-radius: 5px;
+float: left;
+color: #fff;
+text-decoration: none;
+font-size: 20px;
+margin-bottom: 10px;
+margin-left: 22px;
+margin-top:6px;
+}
+.date_span
+{
+font-size: 19px;
+float: left;
+}
+.click_text
+{
+margin-top:10px;
+}
+.learn_box_content h2
+{	
+	font-size:22px;
+}
+
+.learn_box_content h3
+{	
+	font-size:19px;
+}
+div.scrollbar
+{
+	height:590px
+}
+.modal-dialog {
+width: 458px;
+margin: 15% auto;
+}
+.modal-header
+{
+padding: 2px 0 0 10px;
+background: linear-gradient(to bottom, #f7f7f9 0%,#f6f6f8 6%,#e4e3e8 31%,#e2e1e7 37%,#d9dadf 49%,#ceceda 66%,#cbcbd5 69%,#c7c7d3 77%,#c2c1cf 83%,#b9b8c6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f9', endColorstr='#b9b8c6',GradientType=0 );
+height: 37px;
+}
+.modal-content
+{
+	height:220px;
+	background-color:#e8e8e8;
+}
+.close {
+
+opacity: inherit;
+}
+
+.modal-body
+{
+	font-size:20px;
+	padding-top:25px;
+}
+.modal-footer
+{
+	margin-top:30px;
+}
+.delete
+{
+height:50%;
+}
+

@@ -1,0 +1,191 @@
+/* CSS Document */
+html{height:100%;}
+body
+{
+font-family:Arial, Helvetica, sans-serif;
+padding:0px;
+margin:0px;
+height:100%;
+}
+
+
+/*start header*/
+.header
+{
+background-color:#34b4e3;
+height:57px;
+box-shadow: 0px 2px 2px #C5C1C1;
+}
+/*end header*/
+
+
+/*start header*/
+/*.container {
+    width: 75%;
+}*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+/*.provider_wrapper
+{
+margin:0 auto;
+}*/
+
+.provider_logo
+{
+float:left;
+}
+
+.provider_form
+{
+margin-top:50px;
+}
+
+.provider_form_leftsection
+{
+
+
+}
+
+.provider_form_leftsection h2
+{
+font-size:25px;
+font-weight:normal;
+}
+
+.provider_input 
+{
+width:100%;
+margin-top:22px;
+}
+.provider_input label
+{
+float:left;
+font-size:20px;
+padding:3px 10px 0 0;
+}
+
+.provider_input input
+{
+width:70%;
+float:left;
+padding: 6px 10px;
+margin-top:4px;
+border: solid 1px #ccc;
+}
+.provider_form_rightsection
+{
+padding: 0;
+}
+
+.provider_form_rightsection h2
+{
+font-size:25px;
+font-weight:normal;
+}
+
+
+.provider_input_right
+{
+width:100%;
+margin-top:22px;
+}
+
+
+/*.provider_input_right label
+{
+float:left;
+font-size:20px;
+padding:10px 10px 0 0;
+width:30%;
+}
+
+.first
+{
+width:20%;
+float:left;
+padding:10px;
+border: solid 1px #ccc;
+}
+
+.second
+{
+width:7%;
+float:left;
+padding:10px;
+margin:0 2%;
+border: solid 1px #ccc;
+} 
+
+.third
+{
+width:20%;
+float:left;
+border: solid 1px #ccc;
+padding:10px;
+}*/
+.provider_input_right label
+{
+font-size:20px;
+padding:3px 10px 0 0;
+}
+
+#last_name,#first_name{
+border: 1px solid #ccc;
+margin-top: 4px;
+padding: 6px 10px;
+
+}
+#middle_initial{
+padding: 6px 10px;
+margin:4px 2% 0;
+border: solid 1px #ccc;
+}
+
+
+.provider_mid
+{
+
+font-size:23px;
+
+
+}
+
+.provider_mid h3
+{
+font-weight:normal;
+}
+
+
+.date_birth
+{
+width:100%;
+margin-top:15px;
+}
+
+
+.date_birth label {
+    font-size: 20px;
+    padding: 3px 10px 0 0;
+}
+
+.date_birth input {
+    border: 1px solid #ccc;
+    margin-top: 4px;
+    padding: 6px 10px;
+}
+.provider_button
+{
+margin-top:80px;
+float:right;
+}
+
+.ui-datepicker-trigger {
+    margin-left: 10px;
+}
+.provider_input_right label.col-lg-4,.date_birth label.col-lg-4 {
+    padding: 5px 0;
+    width: 30%;
+}

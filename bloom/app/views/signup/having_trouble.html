@@ -1,0 +1,50 @@
+<div class="intileSignUp">
+  <div class="row">
+    <div class="EligibilityHeader">
+      <div class="col-md-6 col-sm-6 col-xs-6"> <img src="/gladstone/portal/bloom/app/assets/image/headingIcon.png"> </div>
+      <div align="right" class="col-md-6 col-sm-6 col-xs-6">
+        <p><a href="http://www.kannact.com" target="_blank" class="klink">Kannact.com</a></p>
+      </div>
+    </div>
+  </div>
+  <h1 class="heading">Having trouble?</h1>
+  <p class="subHeading">If you need help enrolling, please call us at 1-844-4KANNACT or submit your info below and we&rsquo;ll get back to you.</p>
+  <div class="boxCont">
+    <h4>SUPPORT REQUEST</h4>
+    <p class="subHeading">{{patientName}}</p>
+    <p class="subHeading">{{DOB}}</p>
+    <p class="subHeading" ng-if="employers">{{employers.employer}}</p>
+    <p class="subHeading" ng-if="employer">{{employer}}</p>
+  </div>
+  <form ng-submit="signupSupportRequest()" class="SignUpProcess " method="post" name="myForm" novalidate>
+    <!--action="#/shippingAddress"-->
+    <label class="item-input item-floating-label"> <span class="input-label has-input">Email address</span>
+      <input type="email" class="form-control " placeholder="Email address" ng-model="contactEmailAddress" name="contactEmailAddress"  ng-model-options="{ updateOn: 'blur' }"   required />
+<span  class="errorMsg" ng-show="myForm.contactEmailAddress.$dirty && myForm.contactEmailAddress.$invalid">
+<span ng-show="myForm.contactEmailAddress.$error.required ">Email address is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+ <span ng-show="myForm.contactEmailAddress.$error.email">Invalid email address.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+</span>
+
+    </label>
+    <label class="item-input item-floating-label"> <span class="input-label has-input">Phone number</span>
+      <input type="text" class="form-control" placeholder="Phone number" ng-minlength="10"  ng-model="constactPhoneNumber" name="constactPhoneNumber"  ng-model-options="{ updateOn: 'blur' }"   required/>
+<span  class="errorMsg" ng-show="myForm.constactPhoneNumber.$dirty && myForm.constactPhoneNumber.$invalid">
+<span ng-show="myForm.constactPhoneNumber.$error.required ">Phone number is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+<span ng-show="myForm.constactPhoneNumber.$error.minlength">Phone number must be minimum 10 characters.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" />
+</span>
+</span>
+    </label>
+    <div class="form-group check-condition loader-container">
+        <ion-spinner icon="dots" class="spinner-dark" id="loadingIcon" style="display:none;"></ion-spinner>
+
+      <div class="col-md-8 col-sm-8 col-xs-8 padding0">
+        <div class="">
+          <p class="link"> We strive to respond to all requests within 72 hours.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-4 padding0 text-right">
+        <button class="btn btn-default btn-DarkSky" type="submit"   ng-disabled="myForm.$invalid">SUBMIT</button>
+      </div>
+    </div>
+  </form>
+</div>

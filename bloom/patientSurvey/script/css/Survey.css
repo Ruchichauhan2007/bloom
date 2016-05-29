@@ -1,0 +1,331 @@
+body {
+	padding:0px;
+	margin:0px;
+	font-family:Helvetica;
+}
+h1, h2, h3, h4, h5, h6, p, span, img, ol, ul, li, a, div, table, td, tr {
+	padding:0px;
+	margin:0px;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.survey {
+    background: #d6d9de none repeat scroll 0 0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.survey h1 {
+    color: #666666;
+    font-size: 30px;
+    font-weight: bold;
+}
+.infoSurvey {
+    background: rgba(0, 0, 0, 0) url("../../images/survey_Icon.png") no-repeat scroll 0 0;
+    margin-top: 16px;
+    padding-left: 88px;
+    text-align: justify;
+}
+.infoSurvey p {
+    font-size: 20px;
+    padding-bottom: 15px;
+	color:#000;
+}
+.Table_Survey {
+    background: #eeeeee none repeat scroll 0 0;
+	font-family:Arial;
+    font-size: 20px;
+	color: #80808b;
+}
+.Table_Survey .table > thead > tr > th {
+    border-bottom: 0px solid #ddd;
+    vertical-align: bottom;
+}
+.Table_Survey .table > thead > tr > th, .Table_Survey .table > tbody > tr > th, .Table_Survey .table > tfoot > tr > th, .Table_Survey .table > thead > tr > td, .Table_Survey .table > tbody > tr > td, .Table_Survey .table > tfoot > tr > td {
+    border-top: 0px solid #ddd;
+}
+.Number {
+	font-weight:normal;
+}
+.SectionSurvey{
+	color:#000;
+}
+.SectionSurveyTitle{
+	color:#000;
+	font-size:27px;
+	font-weight:normal;
+}
+.inComplete span {
+    color: #2cb0f5;
+    text-decoration: none;
+}
+.completed span {
+    color: #2cb0f5;
+    text-decoration: none;
+}
+.inComplete{
+    color: #000;
+    text-decoration: none;
+	cursor: pointer;
+}
+.completed{
+    color: #000;
+    text-decoration: none;
+	cursor: pointer;
+}
+.inComplete:hover{
+    color: #000;
+}
+.completed:hover{
+    color: #000;
+}
+.Table_Survey tbody {
+    border-top: 1px solid #ccc;
+	
+}
+.SubmitSurvey {
+    background: #eeeeee none repeat scroll 0 0;
+    color: #80808b;
+    font-size: 25px;
+    padding: 25px 0 22px;
+	border-top: 2px solid #ccc;
+}
+button.btn.btn-lg.btn-default.btn-submitS {
+    background: transparent none repeat scroll 0 0;
+    color: #cccccc;
+    font-size: 25px;
+    padding: 14px 25px;
+}
+.SubmitSurvey p {
+    padding: 13px 0 13px 30px;
+}
+.StatusArrow{ 
+	text-align:right;
+}
+.infoSurvey p a {
+    color: #2cb0f5;
+    text-decoration: underline;
+}
+.Table_Survey td {
+    padding-right: 0 !important;
+}
+.assessments {
+    background: #d6d9de none repeat scroll 0 0;
+    padding: 15px;
+}
+.assessments h3 span {
+    padding-right: 8px;
+}
+.assessments h4 {
+    color: #80808b;
+    font-size: 20px;
+    text-align: right;
+}
+.assessments p {
+    background: rgba(0, 0, 0, 0) url("../../images/D_Scope.png") no-repeat scroll 0 4px;
+    color: #333333;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-left: 48px;
+}
+.questionSurvey {
+    background: #eeeeee none repeat scroll 0 0;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+	float: left;
+    padding: 15px;
+    width: 100%;
+}
+.questionSurvey a {
+	color:#000;
+	font-size:15px;
+}
+.questionSurvey h1 {
+    color: #000;
+    font-size: 18px;
+    line-height: 30px;
+	margin-bottom:15px;
+	font-weight:normal;
+}
+.questionSurvey p {
+    color: #80808b;
+    font-size: 16px;
+}
+.NameEnquiry label {
+    color: #83828d;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+.NameEnquiry input, .NameEnquiry select{
+    border-radius: 0;
+    height: 35px;
+}
+.question8 .active,.question8 a:hover {
+	background: #2db0f6 none repeat scroll 0 0;
+    color: #fff;
+}
+.question8 a {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    float: left;
+    margin-right: 2px;
+    margin-top: 14px;
+    padding-top: 4px;
+    text-align: center;
+    width: 19%;
+	word-wrap: break-word;
+	/*word-break:break-all;*/
+	padding-left:5px;	
+	padding-right:5px;
+	height:auto;
+	margin-bottom: 10px;
+}
+/*.question8 a.padTop10 {
+    padding-top: 20px;
+}*/
+.assessments1 p {
+    background: rgba(0, 0, 0, 0) url("../../images/Book_Icon.png") no-repeat scroll 0 7px / 42px 40px;
+    color: #333333;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-left: 48px;
+}
+.assessments1 {
+    background: #d6d9de none repeat scroll 0 0;
+    padding: 15px;
+}
+.assessments1 h4 {
+    text-align: right;
+}
+.date_only{
+    width: 50%;
+    float: left;
+    margin-right: 5px;
+    height: 35px;
+}
+.addressInfoArea .form-group {
+    float: left;
+    width: 100%;
+	margin-bottom: 10px;
+}
+.addressInfoArea input {
+    border-radius: 0;
+}
+.addressInfoArea label {
+    font-weight: normal;
+    padding-top: 8px;
+}
+.addressInfoArea {
+    padding-top: 8px;
+}
+.questionSurvey .form-group {
+    float: left;
+    width: 100%;
+}
+.questionSurvey label {
+    font-weight: normal;
+    padding-top: 9px;
+    padding-bottom: 0;
+}
+.table-responsive input[type="checkbox"] ,.table-responsive input[type="radio"] {
+    zoom: 1.7;
+}
+.table-responsive input[type="radio"]{
+	margin-top: -4px;	
+}
+.table-responsive input[type="checkbox"]{
+	margin-top: 0px;	
+}
+button.btn.btn-default.btn-submitS.btn-lg.btn-enable {
+    color: #80808b;
+}
+.questionSurveyHeading {
+    background: #eeeeee none repeat scroll 0 0;
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+.questionSurveyHeading h4 {
+    font-size: 27px;
+    text-align: center;
+    text-transform: capitalize;
+	font-weight:normal;
+}
+.Subsequent-date .form-control {
+    float: left;
+    width: 80%;
+}
+.date_only.Subsequent-date {
+    width: 75%;
+}
+.instruction-lines strong {
+    font-size: 29px;
+    font-style: italic;
+    font-weight: bold;
+}
+td .col-md-12.CommetBox {
+    padding: 0px 6px;
+    width: 103%;
+}.isDisabled {
+    opacity: .5;
+    pointer-events: none;
+	cursor: none;
+}
+.HideQuestion
+{
+display:none;
+}
+.confirmationDiv a {
+    float: none;
+    padding: 10px 10px 10px 10px;
+    border-radius: 6px;
+}
+td.otherTextBox {
+    background-color: #eeeeee !important;
+    border: none !important;
+}
+.span-left-align{
+ position:relative;
+ left:-235px;
+ top:9px;
+}
+.label-left-align{
+ margin-left:15px;
+}
+.features
+{
+font-size:16px !important;
+font-weight:normal !important;
+}
+.txt
+{
+font-size:16px !important;
+font-weight:normal !important;
+}
+.form-group label{
+font-size:16px !important;
+font-weight:normal !important;
+}
+.form-group table-striped th{
+font-size:16px !important;
+font-weight:normal !important;
+}
+a.confirmation
+{
+font-size:16px !important;
+font-weight:normal !important;
+}
+.extraComment
+{
+	font-size:16px !important;
+	font-weight:normal !important;
+}
+th.matrixRow,th.matrixRow
+{
+	font-size:16px !important;
+	font-weight:normal !important;
+}

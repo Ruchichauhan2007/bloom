@@ -1,0 +1,532 @@
+/* General css */
+body
+{
+background:#f5f5f5 url('../../images/body-bg.png') repeat-x top left fixed;
+padding:0px;
+font-family: 'Source Sans Pro', Arial;
+font-size: 16px;
+margin:0px;
+height:100%
+}
+
+
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0}
+strong,th{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+
+/*For Clear*/
+.clearfix {*zoom: 1;}
+.clearfix:before,.clearfix:after { display: block; content: ""; line-height: 0;}
+.clearfix:after {clear: both;}
+.clear{ clear:both;}
+
+.login-nav-container{/*overflow-y:scroll;*/}
+.menu-up-btn,.menu-down-btn{width: 100%; height: 16px; background: linear-gradient(to bottom, #f9f9f9 0%, #f7f7f7 32%, #f3f3f3 51%, #eeeeee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #ccc;cursor:pointer}
+.arrow-up{width: 0px; border-bottom: 5px solid black; border-left: 5px solid transparent; border-right: 5px solid transparent; margin: 0px auto; position: relative; top: 5px; }
+.arrow-down{width: 0px; border-top: 5px solid black; border-left: 5px solid transparent; border-right: 5px solid transparent; margin: 0px auto; position: relative; top: 5px;}
+/*Form Elements*/
+button,input,select,textarea {margin: 0;font-size: 100%;}
+button,input {line-height: normal; text-transform: none;}
+button,html input[type="button"],input[type="reset"],input[type="submit"] { cursor: pointer; -webkit-appearance: button;}
+button[disabled], input[disabled] { cursor: default;}
+input[type="checkbox"],input[type="radio"] {padding: 0; box-sizing: border-box;}
+input[type="search"] {-webkit-box-sizing: content-box; -moz-box-sizing: content-box;box-sizing: content-box;-webkit-appearance: textfield;}
+textarea {overflow: auto;vertical-align: top;}
+a:active, a:focus, input[type="image"], select:focus, input, input[type="button"]:focus, *:focus {
+    outline: 0 none; border:none;
+}
+input[type=submit] {
+background-color: transparent;
+color: #7fcebb;
+text-transform: uppercase;
+width:100px;
+margin-right: 0;
+height:40px;
+}
+input[type="reset"],input[type="submit"],.provider_button > input,#cancel,.auth_but > input,.Login_submit_buttom > input,.login_leftpart_form input {
+    font-size: 16px !important;
+    font-weight: 600;
+}
+/*Misc*/
+.floatleft{float:left;}
+.floatright{float:right;}
+.textleft{text-align:left;}
+.textright{text-align:right;}
+.textcenter{text-align:center;}
+.indisplay{display:inline-block; *display:inline; zoom:1; vertical-align:middle;}
+.tbold{font-weight:bold;}
+.disblock {display:block;}
+.disnone {display:none;}
+.overflowhidden {overflow: hidden;}
+.textjustify{text-align:justify;}
+.text10 {font-size:10px!important;}
+.text12{font-size:12px!important; line-height:17px;}
+.marginauto{ margin:0 auto;}
+.heightauto{height:auto!important;}
+
+a{
+	transition-property: color;
+	transition-duration: .5s;
+	transition-timing-function: linear;
+	}
+	
+
+/*login css*/
+header {
+height: 60px;
+/*background-color: #04aefc;
+border-bottom: solid 4px #0492d4;*/
+}
+
+.wapper {
+max-width: 1000px;
+margin: 0 auto;
+}
+.logo
+{
+padding-top:0px;
+float:left;
+margin-left: 10px;
+}
+input[type=button] {
+    background-color: #03aeff;
+    border-bottom: solid 5px #0395d1;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 19px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+}
+
+input[type=reset] {
+background-color: transparent;
+color: #7fcebb;
+text-transform: uppercase;
+width:100px;
+margin-right: 5px;
+height:40px;
+}
+
+footer
+{
+/*background-color:#00afff;*/
+width: 100%;
+height: 47px;
+z-index: 9999;
+position: relative;
+}
+
+.footerlink_left {
+float: left;
+}
+
+.footerlink_left a{
+color: #fff;
+text-decoration: none;
+padding-top: 15px;
+float: left;
+font-size:20px;
+}
+
+.footerlink_right {
+float: right;
+}
+
+.footerlink_right a {
+color: #fff;
+text-decoration: none;
+padding-top: 15px;
+float: left;
+font-size:20px;
+padding-bottom: 4px;
+}
+
+.common_head_right {
+float: right;
+margin-top: 12px;
+}
+
+.common_head_right li {
+float: left;
+margin-left: 20px;
+}
+
+footer, .push { clear:both;}
+.wrapper2 {
+  height: auto !important;
+    margin: 0 auto -47px;
+    min-height: 100%;}
+
+
+/*  common css - content library */
+
+.navbar-default {
+    background-color: #6ac4ac;
+    border-color: #6ac4ac;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+	padding: 15px 30px;
+	min-height: 60px;
+	line-height: 30px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background: transparent;
+	color: #fff;
+	border-bottom: 4px solid #fff;
+	
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: #fff;
+	transition-property: color;
+	transition-duration: .5s;
+	transition-timing-function: linear;
+}
+.nav-container{
+  width:300px;
+  box-shadow: 0 2px 2px 0px #ccc;
+  padding-bottom:20px;
+  float:left;
+  background: #f9f9f9; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9f9f9 0%, #f7f7f7 32%, #f3f3f3 51%, #eeeeee 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(32%,#f7f7f7), color-stop(51%,#f3f3f3), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+border-bottom:solid 1px #ccc;
+min-height: 573px;
+}
+.nav{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: rgba(255,255,255, 0.6);
+	text-transform: uppercase;
+	padding-top: 20px;
+    padding-bottom: 16px;
+}
+.nav li{
+  position:relative;
+overflow:hidden;
+}
+.nav-container li a {
+  text-decoration:none;
+  display:block;
+  
+  height:100%;
+  line-height:60px;
+  color:#000;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left:25%;
+  border-left:5px solid transparent;
+  letter-spacing:1px;
+  transition: all 0.3s linear;
+}
+.nav li.active a{
+	color: #000;
+	background: transparent; 
+	outline:0;
+}
+
+.nav span[class ^= "icon"]{
+  position:absolute;
+  left:20px;
+  font-size: 1.5em;
+  transition: all 0.3s linear;
+  color:#000 !important;
+}
+
+	
+
+.forgot_username
+{
+background-color: #ff8900 !important;
+border-bottom: solid 5px #c85c03!important;
+border-radius: 7px!important;
+height: 47px!important;
+color: #fff!important;
+font-size: 22px!important;
+border-left: none!important;
+border-top: none!important;
+border-right: none!important;
+cursor: pointer!important;
+padding:5px 15px!important;
+width:230px!important;
+}
+
+
+/* CSS Document */
+
+
+span.text{font: 12px Arial;}
+.required{color:red}
+
+.dashboardCardsDropDown  option
+{
+background-color:#f5f5f5;
+border-bottom:solid 1px #ccc;
+padding:10px;
+font-size:22px;
+}
+
+.learn_patient_content_align option
+{
+background-color:#f5f5f5;
+border-bottom:solid 1px #ccc;
+padding:10px;
+font-size:22px ;
+}
+
+/*change 25*/
+.form-horizontal .form-group label {
+display: inline-block;
+max-width: 100%;
+margin-bottom: 5px;
+font-weight: 500;
+font-size: 16px;
+color: #000;
+
+}
+/*end 25*/
+
+
+/*change 25*/
+.form-control {
+display: block;
+width: 100%;
+height: 34px;
+padding: 6px 6px;
+font-size: 14px;
+line-height: 1.42857143;
+background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 0px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+font-weight: normal;
+
+}
+/*end change 25*/
+
+
+.col-md-1 h3 img {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    float: right;
+    height: 48px;
+    margin-bottom: 15px;
+    width: 48px;
+}
+.pull-right1
+{
+float: right;
+margin-bottom: -30px;
+}
+
+
+.reviewd_div
+{
+margin-left:-15px;
+
+}
+
+
+.date_add_patient
+{
+	height:28px;
+}
+#add-patient-form .form-group {
+margin-bottom: 6px;
+}
+/* add patient drop down */
+
+ .custom-dropdown--large {
+    font-size: 1.5em;
+}
+
+.custom-dropdown--small {
+    font-size: .7em;
+}
+
+.custom-dropdown__select{
+    font-size: inherit; /* inherit size from .custom-dropdown */
+    padding: .5em; /* add some space*/
+    margin: 0; /* remove default margins */
+	
+}
+
+.custom-dropdown__select--white {
+   
+    background: linear-gradient(to bottom, #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%); 
+	box-shadow: 0px 0px 4px #000; 
+}
+
+@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) {
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .custom-dropdown__select {
+        padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+        border: 0;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+		
+    }
+
+    .custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+		background:url(../../images/arrow_bg.png) no-repeat right; 
+		
+    }
+
+    .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "";
+      
+        font-size: .625em;
+        
+        right: 1.2em;
+      
+		background:url(../../images/arrow_bg.png) no-repeat right;  
+		
+    }
+
+    .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 3em;
+        right: 0; top: 0; bottom: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .custom-dropdown__select[disabled] {
+        color: rgba(0,0,0,.3);
+    }
+
+    .custom-dropdown.custom-dropdown--disabled::after {
+        color: rgba(0,0,0,.1);
+    }
+
+    /* White dropdown style */
+    .custom-dropdown--white::before {
+        bottom: .0em;
+    }
+
+    .custom-dropdown--white::after {
+        color: rgba(0,0,0,.9);
+    }
+
+    /* FF only temp fix */
+
+    @-moz-document url-prefix() {
+        .custom-dropdown__select             { padding-right: .9em }
+        .custom-dropdown--large .custom-dropdown__select { padding-right: 1.3em }
+        .custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+#patient_img
+{
+width:99%;
+}
+
+
+
+
+.dashselect
+{
+	padding-left:30px !important;
+}
+
+
+h3.URGENTtitle{
+	padding:0 !important;
+}
+
+.sidebar-filter{
+	width: 300px;
+	float:left;
+	background: #fff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,.15);
+	box-shadow: 0 1px 2px 1px rgba(0,0,0,.15);
+}
+
+
+#menu-content.login_patient_list-1{
+	overflow: inherit !important;
+	height: inherit !important;
+}
+
+
+#btnExportPDF a img{
+	width: 24px !important;
+}
+
+.btn-neutral-default{
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.38);
+    font-weight: 600;
+    font-size: 14px;
+}
+button[disabled] {
+    cursor:none;
+	pointer-events: none;
+    background: rgba(153,153,153,0.20);
+    border-radius: 2px;
+    font-family: SourceSansPro-Semibold;
+    font-size: 16px;
+    color: #999999;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    padding: 8px;
+}
+button[type='reset']
+{
+	font-family: SourceSansPro-Semibold; 
+	font-size: 16px; 
+	color: rgba(153,153,153,0.60); 
+	background-color:#fff;
+	letter-spacing: 0.5px; 
+	line-height: 20px; 
+	padding: 8px;
+	border: 1px solid rgba(153,153,153,0.40); 
+	border-radius: 2px;
+}
+#errorMsgDivd
+{
+font-family: SourceSansPro-Regular;
+font-size: 14px;
+color: rgba(184, 0, 22, 0.54);
+line-height: 18px;
+}
+#errorMsgDivd img { width:16px;}

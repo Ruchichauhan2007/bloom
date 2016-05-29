@@ -1,0 +1,193 @@
+/* CSS Document */
+
+.portal_learn_rightpart
+{
+
+background-color: #fff;
+width: 100%;
+float: left;
+}
+
+.not-assigned{
+	float: left;
+	padding: 10px 0;
+	width: 100%;
+}
+.learn_patient_content
+{
+background-color:transparent;
+border-bottom: 1px solid #e0e0e0;
+padding: 20px 15px;
+}
+.learn_patient_content h1 
+{
+color:#858585;
+font-size:16px;
+}
+.learn_patient_content_align
+{
+	width: 100% !important;
+}
+.learn_patient_contentimg
+{
+
+}
+.learn_content_bg
+{
+padding: 20px 15px;
+/*background: #fff;*/
+width: 100%;
+float: left;
+border-bottom: 1px solid #e0e0e0;
+}
+.learn_content_bg:hover
+{
+	opacity: 1;
+}
+.learn_box_img
+{
+margin:0;
+}
+.learn_box_img img{
+	width: 100%;
+	border-radius: 100%;
+}
+.learn_box_content
+{
+padding-top: 5px;
+/*padding-bottom: 5px;*/
+}
+
+.learn_box_content h2 a
+{
+color:#7fcebb;
+float: right;
+text-transform: uppercase;
+}
+.learn_box_content_button
+{
+
+margin-top:0;
+padding-top: 5px;
+}
+
+.learn_box_content_button .date_span{
+	margin: 0 !important;
+}
+.learn_box_content_button a
+{
+background-color: transparent;
+color: #7fcebb;
+text-transform: uppercase;
+width:100px;
+margin-right: 0;
+height:40px;
+}
+.date_span
+{
+font-size: 16px;
+float: left;
+color: rgba(0,0,0,0.38);
+padding-top: 5px;
+}
+.click_text
+{
+margin-top:10px;
+}
+.learn_box_content h2
+{	
+	font-size:16px;
+	color:#858585;
+}
+.learn_content_bg.bordered{
+	border-bottom: 1px solid #e0e0e0;
+	padding: 15px !important;
+}
+.learn_content_bg.selectedCard{
+	background: #f5f5f5;
+}
+.learn_box_content h3
+{	
+	font-size:19px;
+}
+div.scrollbar
+{
+	height:590px
+}
+.modal-dialog {
+width: 458px;
+margin: 15% auto;
+}
+.modal-header
+{
+padding: 2px 0 0 10px;
+background: linear-gradient(to bottom, #f7f7f9 0%,#f6f6f8 6%,#e4e3e8 31%,#e2e1e7 37%,#d9dadf 49%,#ceceda 66%,#cbcbd5 69%,#c7c7d3 77%,#c2c1cf 83%,#b9b8c6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f9', endColorstr='#b9b8c6',GradientType=0 );
+height: 37px;
+}
+.modal-content
+{
+	height:220px;
+	background-color:#e8e8e8;
+}
+.close {
+
+opacity: inherit;
+}
+
+.modal-body
+{
+	font-size:20px;
+	padding-top:25px;
+}
+.modal-footer
+{
+	margin-top:30px;
+}
+.delete
+{
+/*height:50%;*/
+}
+
+.button-content {
+    text-align: right;
+    border-bottom: 1px solid #e3e3e3;
+    background: transparent;
+    color: #7fcebb;
+    width: 100%;
+    padding: 5px;
+    float: left;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 16px !important;
+}
+
+.filter-tabs .btn-neutral{
+	border: medium none;
+box-shadow: none;
+padding: 6px 15px;
+color: #7fcebb;
+background: transparent;
+text-transform: uppercase;
+font-weight: 600;
+outline: 0 none;
+}
+
+.padd-15 {
+    padding: 15px;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(0,0,0,0.12);
+}
+
+.filter-tabs .btn-default.active, .filter-tabs .btn-default:active{
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    border: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}

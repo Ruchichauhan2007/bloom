@@ -1,0 +1,394 @@
+@charset "utf-8";
+/* CSS Document */
+.card-container{
+	display: block;
+	margin-bottom: 15px;
+	background: #fff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,.15);
+	box-shadow: 0 1px 2px 1px rgba(0,0,0,.15);
+}
+.patientcare_bg {
+    
+    float: left;
+    width: 100%;
+	
+}
+
+
+.patientcare_bgt_content {
+ border: 0;
+height: 53px;
+text-align:right;
+border: solid 1px #8a8c98;
+}
+#selectedPatient
+{
+	float:none;
+}
+
+.patientcare_bgt_content_align {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.patientcare_bgt_content_align h1 {
+  color: #46464b;
+font-size: 24px;
+padding-top: 15px;
+margin: 0px;
+float: right;
+padding-right: 5px;
+}
+
+.patientcare_bgt_content_alignimg {
+    float: left;
+	padding-top:6px;
+	
+}
+
+.patientcare_bgt_content_alignimg img
+{
+	border-radius:100%;
+	width:48px;
+	border:solid 2px #fff;
+	height: 48px;
+	margin-left:5px;
+}
+
+.patientcare_tabs
+{
+/*background: url(../../images/top-nav.png) repeat;*/
+width: 100%;
+height: 49px;
+border: none;
+border-bottom: 1px solid rgba(0,0,0,0.12);
+overflow-y: hidden;
+}
+
+.patientcare_tabs li
+{
+float: left;
+
+}
+.patientcare_tabs li a
+{
+	font-size: 16px;
+	color: rgba(0,0,0,0.38);
+	letter-spacing: 0.5px;
+	float: left;
+	text-transform: uppercase;
+	padding: 12px 20px;
+	text-decoration: none;
+	font-weight: 600;
+	
+}
+
+.patientcare_tabs li a:hover
+{
+	color: rgba(0,0,0,0.54);
+}
+
+.patientcare_tabs li a.active{
+	border-bottom: 3px solid #6AC5AD !important;
+	color: rgba(0,0,0,0.54) !important;
+}
+
+.patient_care_form
+{
+	margin:0px 0px;
+	float:left;
+	width: 100%;
+}
+
+.patient_care_form_bg
+{height: 85px;
+background-color: #fff;
+width: 100%;
+border-radius: 5px;
+border-bottom: solid 4px #a6a9b8;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+
+.patient_care_form_bg h1
+{
+	margin:0px;
+	padding:20px;
+	color:#999;
+}
+
+.patient_form_area
+{
+margin: 0px 10px 0px 10px;
+}
+.patient_form_area_actionplan
+{
+margin: 10px 38px 10px 38px;
+background-color: #fff;
+min-height:150px;
+padding: 12px !important;
+border: solid 1px #A19A9A;
+}
+.patient_form_area_actionplan h5
+{
+font-size: 16px;
+color: #6C6767;
+}
+.patientcare_button
+{
+position: absolute;
+bottom: 0;
+right: 0;
+padding-right: 37px;
+}
+
+
+.patientcare_button input[type=submit]
+{
+background-color: rgb(26,219,130);
+width: 100px;
+height: 46px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+font-size: 22pt;
+margin-bottom: 10px;
+color: #fff;
+margin-left:10px;
+
+}
+
+.patientcare_tabs p
+{
+font-size: 15px;
+color: #fff;
+padding: 4px 10px;
+}
+
+.patient_form_area input[type=text]
+{
+background-color: #fff;
+width: 91%;
+margin-bottom: 10px;
+margin-top: 7px;
+font-size: 16px;
+padding-left: 10px;
+margin-left: 7.5mm;
+border: solid 1px #B0AAAA;
+}
+
+
+.
+.patient_form_area_actionplan textarea
+{
+border-left: solid 2px #999;
+border-top: solid 2px #999;
+background-color:#fff;
+width: 100%;
+padding: 10px;
+padding-left:0px;
+text-align: justify;
+margin-top: 7px;
+margin-bottom: 20px;
+font-size: 16px;
+color: #000;
+border:none;
+}
+
+.patientcare_messagebg h3
+{
+float: left;
+font-size: 16px;
+color: #4F4242;
+padding: 13px;
+}
+.patientcare_messagebg
+{
+ background-color: #fff;
+ border-bottom: 1px solid #e0e0e0;
+}
+.patientcare_messagebg p
+{
+clear: both;
+font-size: 16px;
+padding: 13px;
+font-weight: normal;
+color: #000;
+padding-top: 0px;
+}
+
+.patientcare_messagebg_text
+{
+margin-bottom:0px;
+}
+.patientcare_messagebg_text h4
+{
+	font-size: 16px;
+	color: #6C6767;
+}
+.patientcare_messagebg_text h5
+{
+	padding: 17px 10px 0 10px;
+	font-size: 16px;
+	color: #6C6767;
+	float:left;
+}
+
+.patientcare_messagebg_text textarea
+{
+border:none;
+width:100%;
+font-weight:bold;
+font-size: 16px;
+font-weight:normal;
+color: #000;
+padding: 10px;
+}
+.patientcare_tabs ul li {
+	background: transparent;
+}
+.col-xs-12 col-md-9
+{
+	overflow:hidden !important;
+}
+
+.patientCards {
+background-color: #f0f0f0;
+height: 112px;
+border-radius: 5px;
+margin: 5px 10px 5px 11px;
+padding-top: 10px;
+border-bottom: 4px solid #a6a9b8;
+}
+
+.patientCards h4 {
+font-size: 20px;
+color: #444;
+padding-top:22px;
+}
+
+.patientCards h3 {
+font-size: 16px;
+color: #888;
+padding-top:10px;
+}
+
+.pat_but 
+{
+	float:right;
+	
+	
+}
+.pat_but input[type=reset]{
+background-color: #f4377b !important;
+padding: 10px 23px !important;
+border-bottom: solid 4px #c83166 !important;
+border-radius: 5px!important;
+float: left!important;
+color: #fff!important;
+text-decoration: none!important;
+font-size: 18px!important;
+box-shadow: none;
+width: 92px;
+height: 42px;
+float:right!important;
+}
+.pat_but h3
+{
+	padding-top: 20px;
+font-size: 15px;
+clear: both;
+margin-left: 0;
+float: right;
+}
+
+
+/*new textarea*/
+
+.InnerPart {
+    background: none repeat scroll 0 0 #d6d9de;
+    padding: 7px 0;
+	height: 400px;
+	
+}
+.InnerPart input {
+    border-radius: 0;
+    height: 55px;
+    margin-bottom: 25px;
+}
+.InnerPart textarea {
+padding: 10px 0 0 0;
+vertical-align: top;
+width: 100%;
+max-height: 290px;
+overflow-y: scroll;
+border-radius: 0;
+
+font-weight: normal;
+color: #000;
+}
+
+.animated {
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	transition: height 0.2s;
+}
+.InnerPart h5
+{
+font-size: 16px;
+color: #6C6767;
+}
+.patientcare_messagebg1
+{
+	background-color:#fff;
+	padding:10px;
+	margin:0px;
+}
+
+.patientcare_messagebg1 textarea, .patientcare_messagebg_text textarea{
+	resize: none;
+	min-height: 140px;
+}
+.pat_care_edit
+{
+width: 80%;
+padding-left: 26px;
+padding-top: 2px;
+font-size: 14px;
+padding-bottom: 5px;;
+}
+.patcare11
+{
+float: left;
+width: 100%;
+}
+.learn_patient_contentimg img
+{
+float: right !important;
+margin-right: 25px !important;
+width: 42px;
+border-radius: 50%;
+border: solid 2px #fff;
+margin-left: 7px;
+height: 42px;
+margin-top: 4px;
+ 
+}
+
+.button-content{
+	text-align: right;
+	padding: 10px;
+}
+.btn-neutral{
+	background: transparent !important;
+    color: #7fcebb !important;
+    border-bottom: 0 !important;
+    text-transform: uppercase !important; 
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+input[type=submit].btn-neutral, input[type=reset].btn-neutral{	
+margin: 0 !important;
+font-size: 16px !important;
+}

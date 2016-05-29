@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+span
+{
+color:#FF0000; 
+}
+.patient_profile_left
+h3
+{
+padding-bottom:20px;
+margin-top: 20px;
+}
+
+.patient_profile_right
+h3
+{
+padding-bottom:20px;
+margin-top: 20px;
+}
+.col-md-6.patient_profile_left .form-group {
+padding-bottom: 30px;
+color:#000;
+}
+
+.patient_profile_left label {
+font-size: 16px;
+font-weight: 500;
+}
+
+.col-md-6.patient_profile_left .form-group [type="text"] {
+border-radius: 0px;
+height: 27px;
+box-shadow: inherit;
+}
+
+.patient_profile_right1
+{
+border:solid 1px #B2ADAD;
+color:#000;
+}
+
+.patient_profile_right1 p
+{
+border-bottom: solid 1px #B2ADAD;
+padding: 20px 10px;
+color: #000;
+}
+
+.col-md-6.col-sm-6.patient_profile_left label {
+padding-left: 0;
+}
+
+.patient_profile_but input[type="submit"]
+{
+float:right;
+margin-top:30px;
+}

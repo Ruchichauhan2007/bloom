@@ -1,0 +1,53 @@
+<div class="intileSignUp">
+  <div class="row">
+    <div class="EligibilityHeader">
+      <div class="col-md-6 col-sm-6 col-xs-6"> <img src="/gladstone/portal/bloom/app/assets/image/headingIcon.png" /> </div>
+      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+        <p>6/6</p>
+      </div>
+    </div>
+  </div>
+  <h1 class="heading">Confirmation</h1>
+  <div class="confirmation">
+    <p class="subHeading">Please review your information:</p>
+    <p>{{patientName}}<br />
+      {{DOB}}<br />
+      {{employers.employer}}</p>
+    <div class="shipping">
+      <h2>SHIPPING ADDRESS<span class="Right"><a href="#/shippingAddress">EDIT</a></span></h2>
+      <p>{{addressLine}}<br />
+        {{city}} {{stateId}}, {{postalCode}}</p>
+    </div>
+    <div class="shipping">
+      <h2>PRESCRIPTION<span class="Right"><a href="#/prescription">EDIT</a></span></h2>
+      <p ng-if="prescriptionDetailInfo">{{prescriptionDetailInfoDoc.prescriberName}}<br />
+        {{prescriptionDetailInfoDoc.city}}, {{doctorStateText}}</p>
+      <br  ng-if="prescriptionDetailInfo" />
+      <p ng-if="prescriptionDetailInfoPhar">{{prescriptionDetailInfoPhar.prescriberName}}<br />
+        {{prescriptionDetailInfoPhar.addressLine1}}, {{prescriptionDetailInfoPhar.city}}, {{PstateStateText}}</p>
+    </div>
+    <div class="shipping">
+      <h2>INCENTIVES<span class="Right"><a href="#/eligibility">EDIT</a></span></h2>
+      
+       <p  ng-repeat="Incentive in IncentivesData">{{Incentive}}</p>
+      
+    </div>
+    <div class="shipping">
+      <h2>CONTACT INFORMATION<span class="Right"><a href="#/instructions">EDIT</a></span></h2>
+      <p>{{emailAddress}}<span ng-if="preferredContactType == 'email'"> - Preferred</span><br />
+        {{phoneNumber}}<span ng-if="preferredContactType == 'phone'"> - Preferred</span><br />
+        {{specialInstructions}}</p>
+    </div>
+    <div class="height20"></div>
+    <div class="form-group check-condition  loader-container">
+    <ion-spinner icon="dots" class="spinner-dark" id="loadingIcon" style="display:none;"></ion-spinner>
+      <div class="col-md-6 col-sm-6 col-xs-6 padding0 mt0 mtd2" > <a ng-href="#/instructions">
+        <p class="back-button"><strong>BACK</strong></p>
+        </a> </div>
+      <div align="right" class="col-md-6 col-sm-6 col-xs-6 padding0 mt0"> <a ng-href="">
+        <button class="btn btn-default btn-DarkSky" type="submit" ng-click="addPatient()">CONFIRM</button>
+        </a> </div>
+    </div>
+  </div>
+  <div class="SignUpProcess"><p class=" paddingLeft0 text-center_text">Having trouble? <a href="#/havingTrouble" class="link">Get help enrolling.</a> </p></div>
+</div>

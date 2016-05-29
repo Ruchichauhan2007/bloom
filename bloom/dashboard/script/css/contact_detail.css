@@ -1,0 +1,95 @@
+body{ padding:0px; margin:0px;}
+h1, h2, h3, h4, h5, h6, table, td, tr, th, ul, li, ol, a, p, span, strong, div{ padding:0px; margin:0px;}
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+.FormLeft .form-group {
+    float: left;
+    margin: 0;
+    padding: 15px 0 0;
+    width: 100%;
+}
+.FormLeft .form-group .form-control {
+    border-radius: 0 !important;
+}
+.FormLeft .form-group label {
+    font-family: arial;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Contact*/
+.FormLeft1 .form-group {
+    float: left;
+    margin: 0;
+    padding: 5px 0 0;
+    width: 100%;
+}
+.FormLeft1 .form-group .form-control {
+    border-radius: 0 !important;
+}
+.FormLeft1 .form-group label {
+    font-family: arial;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 7px;
+}
+.FormRight1 .form-group {
+    float: left;
+    margin: 0;
+    padding: 5px 0 0;
+    width: 100%;
+}
+.FormRight1 .form-group .form-control {
+    border-radius: 0 !important;
+}
+.FormRight1 .form-group label {
+    font-family: arial;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 7px;
+}
+.rightFormContact p {
+    font-size: 16px;
+    padding: 2px 0 0 12px;
+}
+.rightFormContact h1 {
+    color: #535354;
+    font-family: arial;
+    font-size: 22px;
+    padding: 0 0 2px 11px;
+}
+.rightFormContact {
+    border: 1px solid #ccc;
+    float: left;
+    margin-top: 10px;
+    padding: 7px 4px 16px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+

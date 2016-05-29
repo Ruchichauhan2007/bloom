@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="/gladstone/portal/bloom/dashboard/script/css/dashboard.css">
+
+<!-- Delete  patient dialog -->
+<div class="modal" id="patientDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog pat_lis_model">
+		<div class="modal-content modal-cont">
+			<div class="modal-header modal-head">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><img src="/gladstone/portal/bloom/common/images/close_but.jpg" alt=""></span><span class="sr-only">Close</span></button>
+				<h4 class="modal-title" id="myModalLabel">Delete Patient</h4>
+			</div>
+			<div class="modal-body pat-body">
+				Are you sure you want to delete this patient?
+			</div>
+			<div class="modal-footer modal-foot">
+				<button type="button" class="btn btn-default btnpatlist" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary btnpatlist1" delete-id="0" id="patient-delete-button" ng-click="delPatient()" data-dismiss="modal">Delete</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="dashboard_patient_rightpart">
+	<div class="dashboard_patient_rightpart_bg">
+		<div class="learn_patient_content_align">
+                        <form method="post" ng-submit="searchAllFields()">
+
+			<div class="col-md-12" style="padding: 0">
+				<div class="input-group serch_patlist" style="float: left;">
+					<input type="hidden" value="" id="currentPage">
+					<input type="hidden" value="" id="Page">
+					<input type="text" class="form-control" value="" id="searchInput"  ng-model="searchTxt" placeholder="Search" name="q" style="padding: 6px 6px; border: inherit;" >
+					<div class="input-group-btn search_but">
+						<button class="btn btn-default" id="patientSearch" type="submit" >
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+                    
+				</div>
+			</div></form>
+			<!--div class="col-md-12" style="padding:0">
+				 <div class="input-group serch_patlist" style="float: left;">
+					<input type="hidden" value="<?php echo $selectPatient;?>" id="currentPage" />
+					<input type="hidden" value="<?php echo $page;?>" id="Page" />
+					<input type="text" class="form-control" value="<?php echo $_REQUEST['searchStr']?>" id="searchInput" placeholder="Search" name="q" style="padding:6px 6px; border: inherit;"/>
+					<div class="input-group-btn search_but">
+						<button class="btn btn-default" id="patientSearch" type="button"><i class="glyphicon glyphicon-search"></i></button>
+					</div>
+				</div>
+			</div-->
+		</div>
+		<span class=" custom-dropdown custom-dropdown--white"></span>
+	</div>
+	<div class="compare_models mCustomScrollbar _mCS_1">
+		<div class="mCustomScrollBox mCS-light-thin mCS-mouse-over" id="mCSB_1" style="position: relative; height: 100%; max-width: 100%; ">
+			<div class="dashboard_box_bg">
+				<div class="dashboard_box_bg_img">
+					<a href="#/add_pat" id = "add_pat" ng-click="addPatient();">
+						<img src="/gladstone/portal/bloom/dashboard/images/addpatient.png" alt=""></a>
+				</div>
+				<div class="dashboard_box_bg_text">
+					<a href="#/add_pat"  id = "add_pat" ng-click="addPatient();">
+						Click to add a Patient
+					</a>
+				</div>
+			</div>
+			<div id="content">
+				<div style="width:100%; text-align:center;">
+					<button type="button" ng-repeat="letter in alphabet" ng-click="selectCategory(letter)" style="width:24px;" ng-class="{ 'no-result': selectedCategory === letter && !filteredItems.length }">
+						{{letter}}
+					</button>
+				</div>
+			</div>
+			<div class="patientList_parent_bg" id="PatientList_part_bg_all">
+				<div class="PatientList_part_bg cardPanel" ng-repeat="x in patients | orderBy: 'lastName' | filter:search" ng-attr-id="{{x.entityId}}"  ng-click="setContextPatient(x.entityId);">
+						<div class="col-lg-2 col-sm-2 col-xs-2 patient_img_left">
+							<a href="#/edit_pat" ng-click="patIconClicked(x.entityId);"><img class="default_img" src="/gladstone/portal/bloom/common/images/DEFAULT.png" alt=""></a>
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5 patient_address">
+							<h2>{{ x.lastName }} {{ x.firstName }}</h2>
+							<h3>{{localDateFormatter(x.dateOfBirth)}}</h3>
+						</div>
+						<div class="col-lg-5 col-sm-5 col-xs-5 edit_sub_button">
+							<ul id="bttnGroup121">
+								<li><a href="#/edit_pat" ng-click="editPatient(x.entityId);">Edit</a></li>
+								<li><a href="#/del_pat" ng-click="confirmDelPatient(x.entityId)" class="last1" data-toggle="modal" data-target="#patientDeleteModal">Delete</a></li>
+							</ul>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,134 @@
+.sidebarBox {
+top:7%;
+	position:absolute;
+  right:0;
+  display:none;
+  /*margin-top:10px;*/
+  margin-right: 10px;
+  /* padding: 10px; */
+  width:400px;
+  height:1000px;
+  color:white;
+  background-color: rgb(238,238,238);
+  border: 2px solid; 
+}
+.scrollingBox {
+	width: 400px; 
+}
+
+.notesList {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.notesList li {
+    display:inline;
+    margin-right: 5px;
+}
+.notesList li.active {
+  text-decoration: underline;  
+}
+
+.addCmtBox {
+  background-color: white;
+  padding: 0 2px 0px 2px;
+}
+.addCmtBox textarea {
+  display: block;
+  width: 378px;
+  height: 100px;
+  border: 1px solid;
+  color: gray;
+}
+.addCmtBox button {
+  color: gray;
+  margin-top: 5px;
+}
+
+.pinnedNotes {
+  margin: 10px 5px 5px 10px;
+  color: gray;
+}
+
+.notesBox {
+  margin: 10px 5px 5px 10px;
+  color: gray;
+}
+.note {
+  margin-bottom: 10px;
+  border-bottom: 1px solid;
+}
+.history {
+  margin-bottom: 10px;
+  border-bottom: 1px solid;
+}
+.note h5 a {
+  float: right;
+  display: inline;
+  margin-right: 10px;
+}
+.history h5 a {
+  float: right;
+  display: inline;
+  margin-right: 10px;
+}
+input[class=pinInput] {
+  display:none;
+} 
+input[class=pinInput] + label
+{
+  background: url(/gladstone/portal/bloom/login/images/PinOff.png) no-repeat;
+  background-size: 100%;
+  height: 15px;
+  width: 15px;
+  display:inline-block;
+  float : right;
+  padding: 0 4px 0 0px;
+}
+input[class=pinInput]:checked + label
+{
+  background: url(/gladstone/portal/bloom/login/images/PinOn.png) no-repeat;
+  background-size: 100%;
+  height: 15px;
+  width: 15px;
+  display:inline-block;
+  float : right;
+  padding: 0 4px 0 0px;
+}
+
+input[class=pinInput1] {
+  display:none;
+}
+input[class=pinInput1] + label
+{
+  background: url(/gladstone/portal/bloom/login/images/PinOff1.png) no-repeat;
+  background-size: 100%;
+  height: 15px;
+  width: 15px;
+  display:inline-block;
+  float : right;
+  padding: 0 4px 0 0px;
+}
+input[class=pinInput1]:checked + label
+{
+  background: url(/gladstone/portal/bloom/login/images/PinOn1.png) no-repeat;
+  background-size: 100%;
+  height: 15px;
+  width: 15px;
+  display:inline-block;
+  float : right;
+  padding: 0 4px 0 0px;
+}
+#addCmtBtnIcon {
+	background: url('/gladstone/portal/bloom/login/images/addNoteEnabled.png') no-repeat;
+	background-size: 100%;
+	height: 30px;
+	width: 30px;
+	border: none;
+}
+#addCmtBtnIcon[disabled] {
+	background: url('/gladstone/portal/bloom/login/images/addNoteDisabled.png') no-repeat;
+	background-size: 100%;
+	height: 30px;
+	width: 30px;
+	border: none;
+}

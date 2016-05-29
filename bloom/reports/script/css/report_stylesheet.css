@@ -1,0 +1,148 @@
+.reporthead img {
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 42px;
+    height: 42px;
+}
+.reporthead span {
+    color: black;
+    font-size: 22px;
+}
+.reporthead {
+    padding: 20px 15px;
+	background: #fff;
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid #e0e0e0;
+}
+.reporthead img {
+    border: solid 2px #fff;
+}
+.createReport {
+    background: none repeat scroll 0 0 #fff;
+    padding: 0;
+}
+.linkCreate {
+    color: #7fcebb;
+    float: right;
+    text-transform: uppercase;
+}
+.linkCreate:hover {
+    text-decoration: none;
+    color: #777777;
+}
+.card_create_report{
+    padding: 20px 15px;
+	width: 100%;
+	float: left;
+}
+.card_report{
+	border-top: 1px solid #e0e0e0;
+	padding: 15px;
+	width: 100%;
+	float: left;
+}
+.card_create_report_1 {
+    float: left;
+    margin: 0;
+    padding: 20px 15px;
+}
+.card_create_report_link p {
+    color: #707174;
+    font-size: 18px;
+    margin: 0;
+}
+.createrName li {
+    color: #9a9ba5;
+    display: inline;
+    font-size: 16px;
+    list-style: outside none none;
+}
+.custom-dropdown__select--white {
+    box-shadow: 0 0 1px 1px #777;
+    font-size: 20px;
+    width: 325px;
+}
+.date_span{
+	color: rgba(0,0,0,0.38);
+}
+.fromDate {
+    margin: 12px 0 0;
+}
+.fromToDate {
+    font-size: 19px;
+    font-weight: normal;
+    margin: 7px 0 0;
+    padding: 0 5px 0 0;
+    text-align: right;
+}
+.fromToDate_input {
+    padding: 0;
+}
+.fromToDate_img {
+    padding: 0 7px;
+}
+.fromToDate_input input {
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 1px #777 inset;
+    font-size: 18px;
+    height: 38px;
+}
+.form-group.Engagement_Report_input {
+    margin: 10px 0;
+}
+.submit {
+    height: 37px !important;
+    margin: 0 !important;
+    background-color: #1adb82 !important;
+    border-color: #18ab67 !important;
+    padding: 3px 0 !important;
+    text-align: center;
+    width: 100%;
+}
+.modal-header-1 {
+    padding: 2px 0 0 10px;
+    background: linear-gradient(to bottom, #f7f7f9 0%, #f6f6f8 6%, #e4e3e8 31%, #e2e1e7 37%, #d9dadf 49%, #ceceda 66%, #cbcbd5 69%, #c7c7d3 77%, #c2c1cf 83%, #b9b8c6 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f9', endColorstr='#b9b8c6', GradientType=0);
+    height: 37px !important;
+}
+.close {
+    opacity: inherit;
+    width: 37px;
+    margin-top: -2px;
+}
+h4.modal-title-1 {
+    font-weight: normal;
+    padding-top: 4px;
+}
+.modal-dialog {
+    margin: 30px auto;
+    max-width: 400px;
+}
+.modal-body {
+    font-size: 18px;
+    text-align: center;
+}
+.modal-footer {
+    border: 0 none;
+    padding: 0 8px 8px;
+}
+.btnpatlist1 {
+    background-color: #1adb82 !important;
+    border-color: -moz-use-text-color -moz-use-text-color #18ab67 !important;
+    border-radius: 5px !important;
+    border-style: none none solid !important;
+    border-width: medium medium 5px !important;
+    color: #fff !important;
+    font-size: 16pt !important;
+    text-align: center !important;
+}
+.modal-content {
+    border-radius: 0;
+}
+input[type=text]#toDateInput, input[type=text]#fromDateInput {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 18px;
+    height: 44px;
+}

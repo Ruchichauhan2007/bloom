@@ -1,0 +1,172 @@
+
+
+/*#preview
+{
+    background-color: #F2F2F2;
+    padding: 10px;
+    height: 108px;    
+    box-shadow: 0px 25px 19px -18px #545454;
+    -webkit-box-shadow: 0px 25px 19px -18px #545454;
+    -moz-box-shadow: 0px 25px 19px -18px #545454;
+    -o-box-shadow: 0px 25px 19px -18px #545454;
+	float:left;
+}*/
+
+#imageContainer
+{
+    width: 450px;
+	float:left;
+    position: relative;
+}
+
+#imageContainer:before
+{
+  
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    bottom: -10px;
+    z-index: 2;
+}
+
+#imageContainer:after
+{
+  
+   
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    bottom: -10px;
+    z-index: 2;
+}
+
+#imageBox
+{
+    padding: 10px;
+    background-color: rgba(0,0,0,0.2);
+    list-style: none;
+    white-space: nowrap;    
+    overflow-x: scroll;
+	height: 300px;
+	overflow-y: hidden;
+	width: 598px;
+}
+
+#imageContainer h3 {
+line-height: 40px;
+font-weight: normal;
+font-size: 24px;
+}
+#imageContainer h5 {
+font-weight: normal;
+font-size: 18px;
+line-height: 30px;
+}
+/*changes*/
+
+.galleryimages{background-image:url(../../images/Sprite_sheet-img.jpg); background-repeat:no-repeat; background-position:0px 0px; height:138px; width:138px; cursor:pointer;}
+.airplane-1{background-position:0px 0px;}
+.apple-2{background-position:-147px 0px;}
+.banana-3{background-position:-295px 0px;}
+.barn-4{background-position:-444px 0px;}
+.bear-5{background-position:-589px 0px;}
+.beaver-6{background-position:-739px 0px;}
+.book-7{background-position:-887px 0px;}
+.butterfly-8{background-position:-1037px 0px;}
+.candle-9{background-position:-1182px 0px;}
+.car-10{background-position:-1333px 0px;}
+.cat-11{background-position:-1479px 0px;}
+.cookie-12{background-position:-1628px 0px;}
+.cow-13{background-position:-1775px 0px;}
+.dino-14{background-position:-1923px 0px;}
+.dog-15{background-position:-2072px 0px;}
+.drop-16{background-position:-2220px 0px;}
+.drum-17{background-position:-2369px 0px;}
+.duck-18{background-position:-2516px 0px;}
+.eagel-19{background-position:-2665px 0px;}
+.egg-20{background-position:-2812px 0px;}
+.FIRE-21{background-position:-2959px 0px;}
+.firehydrant-22{background-position:-3108px 0px;}
+.frog-23{background-position:-3256px 0px;}
+.gate-24{background-position:-3404px 0px;}
+.giza-25{background-position:-3552px 0px;}
+.hal-26{background-position:-3700px 0px;}
+.hamburger-27{background-position:-3848px 0px;}
+.heart-28{background-position:-3996px 0px;}
+.house-29{background-position:-4144px 0px;}
+.island-30{background-position:-4293px 0px;}
+.kite-31{background-position:-4440px 0px;}
+.leaf-32{background-position:-4588px  0px;}
+.lemon-33{background-position:-4736px 0px;}
+.lighthouse-34{background-position:-4884px 0px;}
+.lion-35{background-position:-5031px 0px;}
+.manwpipe-36{background-position:-5179px 0px;}
+.mms-37{background-position:-5329px 0px;}
+.moonwolf-38{background-position:-5473px 0px;}
+.motorcycle-39{background-position:-5623px 0px;}
+.mouse-40{background-position:-5771px 0px;}
+.orangejuice-41{background-position:-5921px 0px;}
+.paw-42{background-position:-6066px 0px;}
+.peace-43{background-position:-6217px 0px;}
+.pengiun-44{background-position:-6363px 0px;}
+.pepper-45{background-position:-6512px  0px;}
+.piano-46{background-position:-6660px  0px;}
+.pond-47{background-position:-6807px 0px;}
+.popcorn-48{background-position:-6956px 0px;}
+.pumpkinpie-49{background-position:-7104px 0px;}
+.rocket-50{background-position:-7253px 0px;}
+.sailboat-51{background-position:-7401px 0px;}
+.salad-52{background-position:-7549px 0px;}
+.saturn-53{background-position:-7697px 0px;}
+.skate-54{background-position:-7843px 0px;}
+.snowflake-55{background-position:-7992px 0px;}
+.statueliberty-56{background-position:-8140px 0px;}
+.sun-57{background-position:-8288px 0px;}
+.taj-58{background-position:-8436px 0px;}
+.toucan-59{background-position:-8583px 0px;}
+.tree-60{background-position:-8732px 0px;}
+.truck-61{background-position:-8880px 0px;}
+.tuba-62{background-position:-9028px 0px;}
+.umbrella-63{background-position:-9176px 0px;}
+.wheel-64{background-position:-9323px  0px;}
+.wizardhat-65{background-position:-9472px   0px;}
+
+
+#preview{
+	background-image: url("../../images/Sprite_sheet-img.jpg");
+	height: 138px;
+    width: 138px;
+	margin-top:30px;
+	margin-bottom:30px;
+	}
+/*changes end*/
+
+#imageBox li
+{
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+#imageBox img
+{
+    width: 120px;
+    cursor: pointer;
+    border: 4px solid #FFFFFF;
+}
+
+
+#imageContainer ::-webkit-scrollbar
+{
+   background-color: #fff;
+   border-radius: 10px;
+    height: 13px;
+	
+}
+#imageContainer ::-webkit-scrollbar-thumb
+{
+background:url(../../images/scroll_gallery.png) no-repeat;
+}
+#imageContainer ::-webkit-scrollbar-thumb:window-inactive
+{
+    background: #aaa;
+}
+

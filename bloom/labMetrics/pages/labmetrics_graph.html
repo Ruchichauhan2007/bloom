@@ -1,0 +1,41 @@
+<script src="/gladstone/portal/bloom/common/script/js/d3.v3.js" charset="utf-8"></script>
+<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/post-data.js"></script>
+<script type="text/javascript" src="/gladstone/portal/bloom/labMetrics/scripts/js/labmetrics_constants.js"></script>
+<script src="/gladstone/portal/bloom/labMetrics/scripts/js/chart.js"></script>
+<script src="/gladstone/portal/bloom/labMetrics/scripts/js/labmetrics_graph.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/gladstone/portal/bloom/labMetrics/scripts/css/labmetrics_graph.css">
+
+<div class="center-div" id="context-patient">
+    <select id="segment-select" onchange="javascript:changeGraph()">
+    </select>
+    <div id="selectedPatient">
+        <img  style="height:42px; width:42px; border-radius:50%; margin-right:10px;"  src="/gladstone/portal/bloom/portalLearn/images/learn_patient_img.jpg" alt="">
+        <span></span>
+    </div>
+</div>
+<div class="center-div">
+    <h1 id="empty-message"> No Metrics</h1>
+</div>
+
+<div class="main-content">
+    <p id="graph-content"></p>
+
+    <div class="center-div" id="table-content">
+        <p></p>
+    </div>
+</div>
+<script>
+$(document).ready(function()
+{ 		window.location.hash = '/labmetric_graph';
+		var userType=$("#userType").val();
+		
+		if(userType.toUpperCase() =="PATIENT")
+		{
+		    $('#selectedPatient').hide();
+		    $('#context-patient').css('height','0px');
+		}
+});
+
+
+</script>

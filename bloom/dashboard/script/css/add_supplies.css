@@ -1,0 +1,49 @@
+@grid-columns:              24;
+@grid-gutter-width:         30px;
+@grid-float-breakpoint:     768px;
+
+tr, th, td, thead {
+	border: 1px solid #999;
+}
+th {
+	font-weight: bold;
+	border: 1px solid #999;
+}
+.whitebg {
+	background-color: #eeeeee;
+}
+
+.my-style, .myLtable {
+	border: 1px solid #333;
+	background-color:#eee;
+}
+
+.suppRow:hover {
+	background-color: lightblue;
+} 
+
+.orderHistRow {
+	cursor: pointer;
+}
+
+.orderHistRow:hover {
+	background-color: lightblue;
+} 
+
+.orderHistRow_active {
+	text-decoration: underlined;
+	background-color: #8e7cc3;
+}
+
+.orderBtn{
+	float: right;
+	text-align: left;
+}
+
+td { 
+	border: none;
+}
+
+.my-style th {
+	border: 1px solid #999;
+}

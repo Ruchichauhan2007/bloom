@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+
+.reg_self_wapper
+{
+margin-top:20px;
+}
+
+.reg_self_wapper h1
+{
+font-size:28px;
+padding-bottom:10px;
+}
+
+
+.self_regs_h h3
+{
+padding: 10px 0;
+}
+
+.self_reg_step1
+{
+background-color:#4b83b3;
+text-align:center;
+height:34px;
+width:11% !important;
+}
+
+.self_reg_step1 a
+{
+color:#fff;
+line-height: 35px;
+text-decoration:none;
+}
+
+
+.self_reg_step2
+{
+background-color:#60aaea;
+text-align:center;
+height:34px;
+width:11% !important;
+}
+
+.self_reg_step2 a
+{
+color:#fff;
+line-height: 35px;
+text-decoration:none;
+}
+
+.self_pat_reg_form
+{
+margin-top:10px;
+
+}
+.self_form_bbg
+{
+border: solid 1px #ccc;
+padding: 11px;
+}
+.reg_step_left label 
+{
+font-size: 16px;
+font-weight: 500;
+}
+
+.col-md-6.reg_step_left .form-group {
+padding-bottom: 40px;
+}
+
+.col-md-6.reg_step_left .form-group [type="text"]
+{
+border-radius:0px;
+height:27px;
+box-shadow: inherit;
+}
+
+.col-md-6.reg_step_left .form-group [type="password"]
+{
+border-radius:0px;
+height:27px;
+box-shadow: inherit;
+}
+
+.col-md-6.reg_step_left .form-group [type="date"]
+{
+border-radius:0px;
+height:27px;
+box-shadow: inherit;
+}
+
+.col-md-6.reg_step_left .form-group select
+{
+width:100%;
+border-radius:0px;
+height:28px;
+box-shadow: inherit;
+border:solid 1px #ccc;
+}
+
+.col-md-2.self_reg_but {
+float: right;
+width:15% !important;
+
+}
+.self_reg_text
+{
+padding:0; margin-top:-23px;
+font-size:16px;
+
+}
+
+.reg_step_left span
+{
+color:#FF0000;
+}
+
+

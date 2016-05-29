@@ -1,0 +1,1004 @@
+
+/* dashboard*/
+body
+{
+background-color:#d6d9de;
+font-family:Arial, Helvetica, sans-serif;
+}
+.dashboard_top_nav {
+background: url(../../images/top-nav.png) repeat;
+width: 100%;
+height: 33px;
+}
+
+.dashboard_top_nav ul {
+width: 1000px;
+margin: 0 auto;
+}
+
+.dashboard_top_nav li {
+float: left;
+}
+
+.dashboard_top_nav li a.active {
+background: url(../../images/hover.png) repeat;
+}
+
+.dashboard_top_nav li a {
+float: left;
+background-color: #928f92;
+text-decoration: none;
+color: #fff;
+padding: 6px 10px;
+border-right: solid 2px #424251;
+font-size:16px;
+}
+
+.dashboard_top_nav li a:hover {
+background: url(../../images/hover.png) repeat;
+}
+
+
+.dashboard_leftsection {
+margin-top:30px;
+width: 500px;
+float: left;
+margin-bottom:30px;
+}
+
+
+.dashboard_firstname {
+width: 100%;
+margin-top:10px;
+float:left;
+}
+.dashboard_leftsection label
+{
+float:left;
+width:25%;
+font-size:17px;
+}
+
+.dashboard_firstname select
+{
+float:left;
+width:20%;
+padding:5px;
+height:35px;
+
+}
+.dashboard_firstname input
+{
+width:25%;
+float:left;
+margin-right:2%;
+padding:5px;
+}
+
+.dashboard_firstname input.first
+{
+width:7%;
+}
+
+.dashboard_date
+{
+width:100%;
+margin-top:10px;
+float:left;
+
+}
+
+.dashboard_date input
+{
+width:45%;
+float:left;
+margin-right:2%;
+padding:3px;
+}
+
+.lab
+{
+text-indent:-9999px;
+}
+
+.radio1
+{
+width:100%;
+margin-top:10px;
+float:left;
+}
+
+.email
+{
+width:100%;
+margin-top:10px;
+float:left;
+}
+
+.email input
+{
+width:47%;
+float:left;
+margin-right:2%;
+padding:5px;
+}
+
+
+.dashboard_user
+{
+width:100%;
+margin-top:10px;
+float:left;
+}
+
+.dashboard_user input
+{
+width:47%;
+float:left;
+margin-right:2%;
+padding:5px;
+background-color:inherit;
+border:none;
+}
+
+.dashboard_password input
+{
+width:47%;
+float:left;
+margin-right:2%;
+padding:5px;
+
+}
+
+.dashboard_rightsection
+{
+margin-top:30px;
+width: 400px;
+float: right;
+}
+
+.dashboard_patient_status
+{
+width:220px;
+float:left;
+}
+.dashboard_patient_status select
+{
+width:180px;
+}
+.dashboard_patient_status p
+{
+font-size:17px;
+padding:10px 0px;
+}
+
+ select
+{
+background: #f5f5f5; /* Old browsers */
+background: -moz-linear-gradient(top,  #f5f5f5 0%, #ececec 24%, #c8c8c8 81%, #c2c2c2 95%, #c3c3c3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(24%,#ececec), color-stop(81%,#c8c8c8), color-stop(95%,#c2c2c2), color-stop(100%,#c3c3c3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#c3c3c3',GradientType=0 ); /* IE6-9 */
+border-radius:5px;
+padding:6px;
+
+}
+.dashboard_patient_status input
+{
+width: 75%;
+float: left;
+margin-right: 2%;
+padding: 5px;
+margin: 4px 0;
+}
+
+
+.dashboard_patient_status_img {
+width: 170px;
+
+float: left;
+margin-top:20px;
+margin-left: 1%;
+margin-right: 0%;
+border: solid 2px;
+border-color: #b7b9bd;
+text-align:center;
+}
+
+.dashboard_patient_status_img img {
+width: 150px;
+height: 150px;
+background-size: cover;
+margin-top:10px;
+}
+
+.dashboard_patient_status_replace {
+width: 170px;
+height: 40px;
+float: left;
+background-color: #e0f0b2;
+
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+color: #8d986b;
+text-align: center;
+line-height: 34px;
+text-align:center;
+}
+
+.dashboard_Primary_Escalation
+{
+width:100%;
+margin-top:30px;
+}
+
+.dashboard_Primary_Escalation select
+{
+width:200px;
+float:right;
+}
+
+
+.bashboard_buttons
+{
+width:57%;
+margin:20px 0;
+float:right;
+}
+
+
+.dashboard_rightsection label span
+{
+color:#FF0000;
+}
+
+.dashboard_leftsection label span
+{
+color:#FF0000;
+}
+
+.dashboard_leftsection input[type=radio]
+{
+border-color:#000;
+}
+
+
+
+
+/*----Portal_AddDevices start css------*/
+
+.dashboard_inventory_leftpart
+{
+margin-top:10px;
+background-color:#fff;
+height:220px;
+float:left;
+width: 700px;
+}
+
+
+.dashboard_inventory_leftpart li
+{
+float: left;
+width: 130px;
+text-align: center;
+
+}
+
+.dashboard_inventory_leftpart li span
+{
+clear: both;
+display: block;
+padding-top:20px;
+}
+.dashboard_inventory_leftpart h2
+{
+font-size:20px;
+color:#CCCCCC;
+font-weight:normal;
+padding: 11px;
+}
+
+.dashboard_inventory_rightpart
+{
+width:240px;
+float:right;
+margin-top:170px;
+margin-left:50px;
+}
+
+
+/*--------Portal_AddDeviceSchedule css---------*/
+
+
+.dashboard_device_schedule
+{
+background-color:#f1f1f1;
+border-bottom:solid 4px #a6a8b7;
+border-radius:5px;
+height:200px;
+width:400px;
+float:left;
+margin:30px 50px;
+}
+
+.dashboard_device_schedule_product
+{
+float:left;
+width:200px;
+}
+
+.dashboard_device_schedule_product li
+{
+margin-bottom:30px;
+margin-top:10px;
+}
+
+.dashboard_device_schedule_product li a
+{
+text-decoration:none;
+color:#999999;
+font-size:23px;
+padding:10px;
+
+}
+
+.dashboard_device_schedule_product_acceptable
+{
+width:200px;
+float:left;
+}
+
+.dashboard_device_schedule_product_acceptable img
+{
+margin-top:20px;
+
+}
+
+.dashboard_device_schedule_product_acceptable h3
+{
+color:#999999;
+font-size:20px;
+font-weight:normal;
+}
+
+
+
+/* dashboardpop design css*/
+.dashboardpopup_glucometer
+{
+background-color:#eaeaea;
+width:850px;
+height:600px;
+margin:0 auto;
+}
+
+.dashboardpopup_glucometer h2
+{
+background: linear-gradient(to bottom, #eff1fd 0%,#eaeef1 4%,#eaeceb 9%,#e5e4ec 15%,#e3e2e7 17%,#e1e0e6 22%,#d9d8e0 28%,#d7d5e0 33%,#c9c7d2 48%,#bcbbc9 63%,#bab9c7 67%,#bab8cd 85%,#bcb8c9 87%,#b7bbc7 93%,#bbb9c6 100%);
+font-weight:normal;
+padding:10px;
+}
+
+.dashboardpopup_glucometer_nav
+{
+border: solid 2px #47779f;
+margin-top: 5px;
+border-radius: 5px 5px 0px 0px;
+float: left;
+height: 48px;
+width: 847px;
+background: #fefefe; /* Old browsers */
+background: -moz-linear-gradient(top,  #fefefe 0%, #f8f8f8 43%, #f1f1f3 62%, #ededeb 74%, #e8eceb 76%, #e5e5e5 93%, #e4e4e6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(43%,#f8f8f8), color-stop(62%,#f1f1f3), color-stop(74%,#ededeb), color-stop(76%,#e8eceb), color-stop(93%,#e5e5e5), color-stop(100%,#e4e4e6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fefefe 0%,#f8f8f8 43%,#f1f1f3 62%,#ededeb 74%,#e8eceb 76%,#e5e5e5 93%,#e4e4e6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fefefe 0%,#f8f8f8 43%,#f1f1f3 62%,#ededeb 74%,#e8eceb 76%,#e5e5e5 93%,#e4e4e6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fefefe 0%,#f8f8f8 43%,#f1f1f3 62%,#ededeb 74%,#e8eceb 76%,#e5e5e5 93%,#e4e4e6 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fefefe 0%,#f8f8f8 43%,#f1f1f3 62%,#ededeb 74%,#e8eceb 76%,#e5e5e5 93%,#e4e4e6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e4e4e6',GradientType=0 ); /* IE6-9 */
+
+}
+
+.dashboardpopup_glucometer_nav li
+{
+float:left;
+}
+
+.dashboardpopup_glucometer_left
+{
+float:left;
+width:350px;
+margin-left:60px;
+margin-top:50px;
+}
+.dashboardpopup_glucometer_left label
+{
+font-size:23px;
+
+}
+
+.dashboardpopup_glucometer_left select
+{
+width:250px;
+margin-top:20px;
+}
+.dashboard_box input[type=text]
+{
+background: linear-gradient(to bottom, #d0d0d0 0%,#fbfbfb 25%,#ffffff 29%,#ffffff 100%);
+width:87px;
+height:57px;
+border:solid 1px #ccc;
+text-align:center;
+font-size:25px;
+margin-top:10px;
+float:left;
+margin-right:20px;
+margin-bottom:10px;
+}
+.dashboard_box
+{
+width: 87px;
+float: left;
+text-align: center;
+margin-right: 39px;
+}
+
+
+.dashboardpopup_glucometer_left p
+{
+font-size:23px;
+margin-top:20px;
+}
+
+
+.dashboard_popup_buttonsbg
+{
+margin-top:300px;
+margin-left:50px;
+}
+
+
+/* Portal_AddPatAvatar css */
+
+.dashboard_profile_webcaml
+{
+width:1000px;
+float:left;
+}
+.dashboard_profile_webcam
+{
+width:577px;
+float:left;
+margin-top:30px;
+display:block;
+}
+
+.dashboard_profile_web_images
+{
+border:solid 4px #fff;
+width:569px;
+height:450px;
+float:left;
+}
+
+.dashboard_profile_web_images h2
+{
+background: linear-gradient(to bottom, #f5f5f5 0%,#f1f1f1 4%,#f0f0f2 8%,#eae9ef 16%,#dfdee4 30%,#dddde5 34%,#d2d2da 48%,#cacad6 62%,#c0c0cc 74%,#bcbbcb 80%,#b9b8c8 88%,#bab9c9 100%);
+height:45px;
+text-align:center;
+padding-top:10px;
+}
+
+.dashboard_prolile_rightpart
+{
+width:400px;
+float:right;
+margin-top:30px;
+}
+
+.dashboard_prolile_rightpart li
+{
+float:left;
+margin-left:70px;
+width:114px;
+height:115px;
+margin-bottom:50px;
+}
+
+.dashboard_prolile_rightpart li.last
+{
+margin-left:0px;
+margin-top:30px;
+}
+
+.dashboard_prolile_rightpart_button
+{
+width: 240px;
+float: right;
+
+margin-left: 50px;
+}
+
+
+/*-----add patient list*/
+
+
+.nav-container{
+  width:300px;
+  box-shadow: 0 2px 2px 0px #ccc;
+  padding-bottom:20px;
+  float:left;
+  background: #f9f9f9; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9f9f9 0%, #f7f7f7 32%, #f3f3f3 51%, #eeeeee 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(32%,#f7f7f7), color-stop(51%,#f3f3f3), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+border-bottom:solid 1px #ccc;
+min-height: 573px;
+}
+.nav{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+.nav li{
+  height:50px; 
+  position:relative;
+ background: #f9f9f9; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9f9f9 0%, #f7f7f7 32%, #f3f3f3 51%, #eeeeee 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(32%,#f7f7f7), color-stop(51%,#f3f3f3), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+border-bottom:solid 1px #ccc;
+
+}
+.nav-container li a {
+  text-decoration:none;
+  display:block;
+  height:100%;
+  line-height:50px;
+  color:#000;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left:25%;
+  border-left:5px solid transparent;
+  letter-spacing:1px;
+  transition: all 0.3s linear;
+}
+.nav li.active a{
+  color: #000;
+
+ background: #f9f9f9; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9f9f9 0%, #f7f7f7 32%, #f3f3f3 51%, #eeeeee 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(32%,#f7f7f7), color-stop(51%,#f3f3f3), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+
+  outline:0;
+}
+.nav li:not(.active):hover a{
+color: #666; background: #f9f9f9; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9f9f9 0%, #f7f7f7 32%, #f3f3f3 51%, #eeeeee 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(32%,#f7f7f7), color-stop(51%,#f3f3f3), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f9f9 0%,#f7f7f7 32%,#f3f3f3 51%,#eeeeee 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+
+}
+.nav span[class ^= "icon"]{
+  position:absolute;
+  left:20px;
+  font-size: 1.5em;
+  transition: all 0.3s linear;
+  color:#000 !important;
+}		
+
+.patpart
+{
+float:left;
+width:700px;
+background-color:#d6d9de;
+}			
+
+.select-bg
+{
+background-color:#dedfe0;
+border:solid 1px #ccc;
+float:left;
+width:668px;
+text-align:center;
+}
+
+.select-bg select
+{
+width:220px;
+padding:10px;
+}
+
+.PatientList-part {
+background-color: #f0f0f0;
+width: 650px;
+border-bottom: solid 5px #a6a9b8;
+border-radius: 5px;
+float: left;
+margin: 10px 20px;
+}
+.PatientList-part img {
+float: left;
+margin: 10px;
+}
+.PatientList-part p {
+float: left;
+margin: 0px;
+padding: 40px 10px;
+font-size: 24px;
+color: #666;
+}
+
+.patient-img {
+float: left;
+width: 100px;
+margin-right: 10px;
+}
+
+.patient-name {
+margin: 15px 20px;
+width: 230px;
+float: left;
+}
+.patient-name h2 {
+line-height: 35px;
+}
+
+.editbutton {
+width: 230px;
+float: left;
+margin: 15px 0px;
+}
+.editbutton li {
+float: left;
+margin-right: 10px;
+margin-top: 10px;
+}
+.editbutton li a {
+background-color: #04aefc;
+padding: 10px 30px;
+border-bottom: solid 4px #0492d4;
+border-radius: 5px;
+float: left;
+color: #fff;
+text-decoration: none;
+font-size: 18px;
+}
+
+.editbutton li a.last {
+background-color: #f4377b;
+padding: 10px 30px;
+border-bottom: solid 4px #c83166;
+border-radius: 5px;
+float: left;
+color: #fff;
+text-decoration: none;
+font-size: 18px;
+}
+
+.PatientList-profile {
+width: 667px;
+height: 424px;
+margin-left: 2px;
+overflow-y: scroll;
+float: left;
+overflow-x: hidden;
+}
+
+
+
+
+
+/*-----set date......*/
+
+
+.dashboardpopup_dateset_left
+{
+float: left;
+width: 200px;
+margin-left: 60px;
+margin-top: 50px;
+}
+
+.dashboardpopup_dateset_leftpart
+{
+float: left;
+width: 545px;
+margin-left: 30px;
+margin-top: 50px;
+}
+.dashboardpopup_dateset_leftpart .form-checkbox {display:none}
+.dashboardpopup_dateset_leftpart .form-checkbox + label:before { height: 19px; width: 19px; border: 1px  solid black; cursor:pointer;  content: "\2713";  margin-right:10px;}
+.dashboardpopup_dateset_leftpart input[type="checkbox"]:checked + label:before {background-color: #fff;content: "\00a0\00a0\00a0\00a0"; margin-right:10px;}
+.option
+{
+font-size:20px;
+}
+.dashboardpopup_dateset_leftpart label
+{
+padding-bottom:20px;
+width: 500px;
+float:left;
+}
+.dashboardpopup_dateset_day input[type=text]
+{
+background-color:#888888;
+width:62px;
+height:47px;
+border-top:solid 4px #b0b0b0;
+border-left:solid 4px #b0b0b0;
+border-right:solid 4px #b0b0b0;
+border-bottom:solid 4px #464646;
+text-align:center;
+color:#fff;
+font-size:24px;
+margin-right:2px;
+cursor:pointer;
+}
+
+.last
+{
+background-color:#36b5e5 !important;
+width:62px;
+height:47px;
+border-top:solid 4px #82cce7!important;
+border-left:solid 4px #82cce7!important;
+border-right:solid 4px #82cce7!important;
+border-bottom:solid 4px #225b6e!important;
+
+text-align:center;
+color:#fff;
+font-size:24px;
+margin-right:2px;
+cursor:pointer;
+}
+
+.dashboard_set_time_pm
+{
+margin-top: 70px;
+float: left;
+margin-left: 25px;
+}
+.set_time_text
+{
+font-size:30px;
+float:left;
+}
+
+.set_time_bg
+{
+background-color: #777;
+float: left;
+margin-left: 30px;
+width: 700px;
+}
+
+.set_time_bg input
+{
+width: 58px;
+float: left;
+background-color: inherit;
+border: none;
+font-size: 30px;
+color: #fff;
+padding: 10px 0;
+text-align:center;
+cursor:pointer;
+}
+
+.set_time_bg input.active
+{
+background-color:#36b5e5;
+width:50px;
+height:30px;
+border-top:solid 4px #82cce7;
+border-left:solid 4px #82cce7;
+border-right:solid 4px #82cce7;
+border-bottom:solid 4px #225b6e;
+text-align:center;
+color:#fff;
+font-size:24px;
+margin-right:2px;
+cursor:pointer;
+}
+
+.dashboard_set_timedate
+{
+float:right;
+margin-right:80px;
+margin-bottom:10px;
+}
+
+.dashboard_set_timedate input
+{
+background-color:#545454;
+width:30px;
+height:25px;
+border:none;
+text-align:center;
+}
+.dashboard_setpm_time
+{
+width: 265px;
+float: left;
+margin-left: 94px;
+margin-top: 10px;
+}
+input.active
+{
+background-color:#36b5e5;
+width:30px;
+height:25px;
+border-top:solid 4px #82cce7;
+border-left:solid 4px #82cce7;
+border-right:solid 4px #82cce7;
+border-bottom:solid 4px #225b6e;
+text-align:center;
+color:#fff;
+
+cursor:pointer;
+}
+
+.dashbord_set_time_popup_but
+{
+float:right;
+margin-right:30px;
+}
+
+
+body
+{
+background-color:#d6d9de;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/*-----add patient list*/
+
+div.scrollbar1 {
+margin: 0px;
+height: 420px;
+width: 690px;
+
+}
+
+
+.dashboard_patient_rightpart {
+width: 692px;
+background-color:#C1C2C3;
+float: left;
+}
+
+.dashboard_patient_rightpart_bg {
+height: 50px;
+background-color: #dedfe0;
+border: 1px solid #ccc;
+text-align:center;
+}	
+
+
+.learn_patient_content_align select
+{
+width:220px;
+padding:10px;
+background: #f5f5f5;
+background: -moz-linear-gradient(top, #f5f5f5 0%, #ececec 24%, #c8c8c8 81%, #c2c2c2 95%, #c3c3c3 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(24%,#ececec), color-stop(81%,#c8c8c8), color-stop(95%,#c2c2c2), color-stop(100%,#c3c3c3));
+background: -webkit-linear-gradient(top, #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%);
+background: -o-linear-gradient(top, #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%);
+background: -ms-linear-gradient(top, #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%);
+background: linear-gradient(to bottom, #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#c3c3c3',GradientType=0 );
+border-radius: 5px;
+padding: 10px;
+}
+
+.dashboard_box_bg {
+background-color: #f1f1f1;
+border-bottom: solid 4px #a6a9b8;
+border-radius: 5px;
+float: left;
+width: 640px;
+
+margin-left: 20px;
+margin-top: 13px;
+}
+
+.dashboard_box_bg_img
+{
+float:left;
+width:100px;
+margin:10px;
+}
+
+.dashboard_box_bg_text a
+{
+float: left;
+margin: 0px;
+padding: 40px 10px;
+font-size: 24px;
+color: #666;
+}
+
+
+.PatientList_part_bg {
+background-color: #f0f0f0;
+width: 640px;
+border-bottom: solid 5px #a6a9b8;
+border-radius: 5px;
+float: left;
+margin-left:0px;
+margin-bottom:10px;
+
+}
+
+.patient_img_left{
+float: left;
+width: 100px;
+margin: 10px;
+}
+.patient_address {
+margin: 15px 20px;
+width: 250px;
+float: left;
+}
+
+.patient_address h2 {
+line-height: 35px;
+}
+
+.edit_sub_button {
+width: 230px;
+float: left;
+margin: 15px 0px;
+}
+
+.edit_sub_button li {
+float: left;
+margin-right: 10px;
+margin-top: 10px;
+}
+
+.edit_sub_button li a {
+background-color: #04aefc;
+padding: 10px 30px;
+border-bottom: solid 4px #0492d4;
+border-radius: 5px;
+float: left;
+color: #fff;
+text-decoration: none;
+font-size: 18px;
+}
+
+.edit_sub_button li a.last1 {
+background-color: #f4377b;
+padding: 10px 30px;
+border-bottom: solid 4px #c83166;
+border-radius: 5px;
+float: left;
+color: #fff;
+text-decoration: none;
+font-size: 18px;
+}
+
+

@@ -1,0 +1,115 @@
+<div class="intileSignUp">
+  <div class="row">
+    <div class="EligibilityHeader">
+      <div class="col-md-6 col-sm-6 col-xs-6"> <img src="/gladstone/portal/bloom/app/assets/image/headingIcon.png"> </div>
+      <div align="right" class="col-md-6 col-sm-6 col-xs-6">
+        <p>3/6</p>
+      </div>
+    </div>
+  </div>
+  <h1 class="heading">Prescription</h1>
+  <p class="subHeading">Where can we confirm your blood glucose monitoring prescription?</p>
+  <form class="SignUpProcess" method="post" ng-submit="addDoctorAddress()" name="myForm" novalidate><!--action="#/shippingAddress"-->
+    <label class="item-input item-floating-label"> <span class="input-label has-input">Doctor&rsquo;s name</span>
+    <input type="text" class="form-control" placeholder="Doctor&rsquo;s Name" ng-model="Dname" name="Dname" ng-required='!pharmacy'  />
+    <span  class="errorMsg" ng-show="myForm.Dname.$dirty && myForm.Dname.$invalid">
+        <span ng-show="myForm.Dname.$error.required">Doctor&rsquo;s name is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span></span>
+    </label>
+    
+    <div class="col-xs-6 city citymp0">
+  
+  
+<label class="item-input item-floating-label"> <span class="input-label has-input">City</span>
+    <input type="text" ng-model="Dcity" placeholder="City" class="form-control" name="Dcity"   ng-required='!pharmacy'  />
+     <span  class="errorMsg" ng-show="myForm.Dcity.$dirty && myForm.Dcity.$invalid"> 
+        <span ng-show="myForm.Dcity.$error.required">City is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span></span>
+    </label>
+</div>
+
+<div class="col-xs-6 state statepr0">
+  
+  
+<label class="item-input item-floating-label"> <span class="input-label has-input">State</span>
+    <div class="paddingRight0">
+        <select class="form-control select-icon" ng-model="Dstate" id="Dstate" name="Dstate"   ng-required='!pharmacy' >
+			<option  ng-selected="{{state.stateId == Dstate}}" ng-repeat="state in states" value="{{state.stateId}}">{{state.stateCode}}</option>
+        </select>
+        <span  class="errorMsg" ng-show="myForm.Dstate.$dirty && myForm.Dstate.$invalid"> 
+            <span ng-show="myForm.Dstate.$error.required">State is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+            </span>
+      </div>
+  
+    </label>
+  
+ 
+</div>
+
+<p class="weneed greenColor">We need your doctor &rsquo;s info to ensure your prescription and supplies are up-to-date.</p>
+
+<div class="clearfix paddingLeft0">
+        <div class="checkbox preferred">
+          <p><input type="checkbox"  ng-model="pharmacy"  id="pharmacy" ng-checked="pharmacy" ng-click="checkPharmacy();" /> <label class="color-theme" for="pharmacy">Please confirm with my pharmacy.</label></p>
+        </div>
+      </div>
+
+<div ng-show="pharmacy">
+ <label class="item-input item-floating-label item-img"> <span class="input-label has-input">Pharmacy name</span>
+    <input type="text" class="form-control" placeholder="Pharmacy name" ng-model="Fname" name="Fname"  ng-required='pharmacy'  /><!--<div class="near text-right">Near 97330</div>
+  <img src="/gladstone/portal/bloom/app/assets/image/Location.png" class="inputRightImg">-->
+        <span  class="errorMsg" ng-show="myForm.Fname.$dirty && myForm.Fname.$invalid"> 
+            <span ng-show="myForm.Fname.$error.required">Pharmacy name is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+            </span>
+    </label>
+     <label class="item-input item-floating-label"> <span class="input-label has-input">Business address</span>
+    <input type="text" ng-model="Baddress" name="Baddress" placeholder="Business address" class="form-control"   ng-required='pharmacy'  />
+     <span  class="errorMsg" ng-show="myForm.Baddress.$dirty && myForm.Baddress.$invalid"> 
+        <span ng-show="myForm.Baddress.$error.required">Business address is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+		</span>
+    </label>
+    
+    <div class="col-xs-6 city citymp0">
+  
+  
+<label class="item-input item-floating-label"> <span class="input-label has-input">City</span>
+    <input type="text" ng-model="Pcity" name="Pcity" placeholder="City" class="form-control"  ng-required='pharmacy'  />
+     <span  class="errorMsg" ng-show="myForm.Pcity.$dirty && myForm.Pcity.$invalid"> 
+        <span ng-show="myForm.Pcity.$error.required">City is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span></span>
+    </label>
+  
+ 
+</div>
+
+<div class="col-xs-6 state statepr0">
+  
+  
+<label class="item-input item-floating-label"> <span class="input-label has-input">State</span>
+    <div class="paddingRight0">
+        <select class="form-control ng-pristine ng-valid ng-touched select-icon" ng-model="Pstate" id="Pstate" name="Pstate"  ng-required='pharmacy' >
+        <option  ng-selected="{{state.stateId == Pstate}}" ng-repeat="state in states" value="{{state.stateId}}">{{state.stateCode}}</option>
+        </select>
+      </div>
+     <span  class="errorMsg" ng-show="myForm.Pstate.$dirty && myForm.Pstate.$invalid"> 
+        <span ng-show="myForm.Pstate.$error.required">State is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span></span>
+    </label>
+  
+ 
+</div>
+
+ </div>
+    
+     <div class="form-group  check-condition loader-container">
+    <ion-spinner icon="dots" class="spinner-dark" id="loadingIcon" style="display:none;"></ion-spinner>
+      <div class="col-sm-6 col-xs-6 padding0 "> <a ng-href="#/shippingAddress">
+        <p class="back-button"><strong>BACK</strong></p>
+        </a> </div>
+      
+       <div class="col-md-6 col-sm-6 col-xs-6 padding0 mt0" align="right">
+        
+        <button type="submit" class="btn btn-default btn-DarkSky" ng-disabled="myForm.$invalid">NEXT <img src="/gladstone/portal/bloom/app/assets/image/left-arrow.png"> </button>
+        
+
+      </div>
+    </div>
+    <p class=" paddingLeft0 text-center_text">Having trouble? <a href="#/havingTrouble" class="link">Get help enrolling.</a> </p>
+  </form>
+</div>

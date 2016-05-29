@@ -1,0 +1,636 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+.footerDiv {
+	width:100%;
+	height:52px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+html{
+ overflow: auto;
+ }
+body {
+	padding:0px;
+	margin:0px;
+	background: #f6f6f6 none repeat scroll 0 0;
+	font-family: SourceSansPro-Regular;
+}
+h1, h2, h3, h4, h5, h6, p, span, img, ol, ul, li, a, div, table, td, tr {
+	padding:0px;
+	margin:0px;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+select, select:focus{
+	outline:0 none;
+}
+@media(min-width:1200px) {
+.container {
+	width:1000px;
+}
+}
+@font-face {
+font-family:'SourceSansPro-Regular';
+src:url('../fonts/SourceSansPro-Regular.eot');
+src:url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceSansPro-Regular.woff2') format('woff2'), url('../fonts/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf') format('truetype'), url('../fonts/SourceSansPro-Regular.svg#glyphicons_halflingsregular') format('svg')
+}
+
+@font-face {
+font-family:'sourcesanspro-semibold';
+src:url('../fonts/sourcesanspro-semibold.eot');
+src:url('../fonts/sourcesanspro-semibold?#iefix') format('embedded-opentype'), url('../fonts/sourcesanspro-semiboldr.woff2') format('woff2'), url('../fonts/sourcesanspro-semibold.woff') format('woff'), url('../fonts/sourcesanspro-semibold.ttf') format('truetype'), url('../fonts/sourcesanspro-semibold.svg') format('svg')
+}
+
+.heading{
+	font-family: SourceSansPro-Regular;
+	font-size: 28px;
+	color: #6AC5AD;
+	line-height: 36px;
+	padding-bottom:10px;
+}
+.subHeading, label {
+	font-family: SourceSansPro-Regular;
+	font-size: 19px;
+	color: rgba(0,0,0,0.54);
+	line-height: 24px;
+	font-weight:normal;
+	padding: 0 !important;
+}
+label {
+	font-family: SourceSansPro-Regular;
+	font-size: 16px;
+	color: rgba(0,0,0,0.54);
+	line-height: 24px;
+	font-weight:normal;
+	padding: 0 !important;
+}
+.intileSignUp {
+    background: #f6f6f6 none repeat scroll 0 0;
+    float: left;
+    padding: 15px 15px 90px;
+    width: 100%;
+}
+.EligibilityHeader p{
+    color: #b6b6b6;
+    font-size: 25px;
+ font-family:SourceSansPro-Regular;
+}
+.EligibilityHeader p a.klink{
+    color: #b6b6b6;
+    font-size: 25px;
+	font-family:SourceSansPro-Regular;
+}
+.EligibilityHeader img{
+	margin-bottom: 10px;
+    width: 65px;
+}
+.form-group {
+    float: left;
+    width: 100%;
+	font-family:SourceSansPro-Regular;
+}
+
+.SignUpProcess input,
+.SignUpProcess select {
+    border:0;
+    font-size: 16px;
+	border-bottom:2px solid #e0e0e0;
+	background:transparent;
+	box-shadow: 0 0 0;
+    height: 50px;
+    padding: 0;
+	border-radius: 0;
+	color:rgba(0,0,0,0.86);
+}
+.SignUpProcess textarea {
+    border:0;
+    font-size: 17px;
+	border-bottom:2px solid #e0e0e0;
+	background:transparent;
+	box-shadow: 0 0 0;
+    padding: 0;
+	border-radius: 0;
+	margin-top: 15px;
+}
+.form-control:focus {
+    border-bottom: 3px solid #7acebb;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 0px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+.check-condition input {
+    height: auto;
+    /*opacity: 0;
+	background:url(../../images/input-icons.png);*/
+}
+.btn.btn-default.btn-DarkGrey {
+    background: #cbcbcb none repeat scroll 0 0;
+    border: 0 none;
+    color: #969696;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 33px;
+	text-shadow:none !important;
+}
+.check-condition .btn.btn-default.btn-DarkGrey {
+    float: right;
+	text-shadow: 0 0 0;
+	font-weight: normal;
+}
+.link{
+	font-family: SourceSansPro-Regular;
+	font-size: ;
+	color: #6AC5AD !important;
+	margin-top:5px;
+	/*line-height: 20px;*/
+}
+.iAgree{
+
+	color: #6AC5AD !important;
+	
+}
+.SignUpProcess p{
+    color: #666;
+    float: left;
+    font-size: 17px;
+    text-align: justify;
+    width: 100%;
+}
+.SignUpProcess p .link{
+font-size: 17px;
+}
+.check-condition label {
+    color: #7acebb;
+	font-weight:500;
+}
+
+.btn {
+    font-family: sourcesanspro-semibold;
+}
+
+button.btn.btn-DarkSky.btn-default {
+   /* background: #6ac5ad none repeat scroll 0 0;*/
+    border: 0 none;
+   
+    font-size:16px;
+    padding: 7px 20px;
+	text-shadow:none !important;
+	/*font-weight: bold;*/
+}
+.Left{
+	float:left;
+}
+.Right{
+	float:right;
+}
+.Pharmacy-name {
+    border-bottom: 2px solid #ccc;
+    float: left;
+    width: 100%;
+}
+.Pharmacy-name .subHeading {
+    font-size: 21px;
+    padding-top: 15px;
+	font-family:SourceSansPro-Regular;
+}
+.Pharmacy-name .subHeading img {
+    width: 19px;
+}
+.Prescription {
+    background: rgba(0, 0, 0, 0) url("/gladstone/portal/bloom/app/assets/image/icon-HC3.png") no-repeat scroll 98% center / 56px auto;
+    color: #62c7ae;
+    float: left;
+    font-size: 21px;
+    margin: 20px 0;
+    padding-right: 27%;
+    width: 100%;
+}
+.V_Point li {
+    color: #6ac5ad;
+    font-size: 19px;
+	padding:5px 0;
+	font-family:SourceSansPro-Regular;
+	list-style: outside none disc;
+}
+.V_Point li span{
+    color: #666;
+}
+.V_Point {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 0 4% 20px;
+}
+.healthCoching h2 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 21px;
+    margin: 10px 0;
+	font-family: SourceSansPro-Regular;
+	font-weight: bold;
+}
+
+.hend-icon {
+    background: rgba(0, 0, 0, 0) url("/gladstone/portal/bloom/app/assets/image/icon-HC1.png") no-repeat scroll right center / 95px auto;
+    color: rgba(0, 0, 0, 0.5);
+    float: left;
+    font-size: 21px;
+    margin: 20px 0;
+    padding-right: 15%;
+    width: 100%;
+	font-family: SourceSansPro-Regular;
+}
+.control-label {
+    margin: 10px 0 0;
+    padding: 0 15px;
+}
+.confirmation p {
+    font-size: 15px;
+    line-height: 30px;
+}
+.shipping h2 {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 21px;
+    margin: 8px 0;
+}
+.shipping a {
+    color: #66c1a9;
+}
+.shipping {
+    border-top: 1px solid #ccc;
+    float: left;
+    margin-top: 15px;
+    padding-top: 10px;
+    width: 100%;
+}
+.WhatHappensNext p {
+    color: rgba(0, 0, 0, 0.54);
+    float: left;
+    font-size: 19px;
+    margin: 10px 0;
+	width: 100%;
+}
+.WhatHappensNext span {
+    float: left;
+    margin: 0 10px;
+}
+.WhatHappensNext img {
+    width: 30px;
+}
+.next {
+    float: left;
+    padding: 30px 0 15px;
+    text-align: center;
+    width: 100%;
+}
+.next a {
+    color: #66c1a9;
+    font-size: 21px;
+}
+.next span {
+	padding-left:10px;    
+}
+.paddingRight0{
+	padding-right:0px;
+}
+.paddingLeft0{
+	padding-left:0px;
+}
+.back-button {
+    color: #6AC5AD !important;
+    font-size: 16px !important;
+	font-family: sourcesanspro-semibold !important;
+}
+.color-grey{
+	color:#666 !important;
+}
+.height20{
+	float: left; 
+	width: 100%; 
+	height: 20px;}
+	
+.header {
+	background: #04aefc none repeat scroll 0 0;
+    border-bottom: 4px solid #0492d4;
+    padding: 6px 7px;
+	float:left;
+	width:100%;
+}
+.Footer {
+    background: #04aefc none repeat scroll 0 0;
+    float: left;
+    padding-bottom: 7px;
+    padding-right: 5px;
+    width: 100%;
+}
+.footer-fix {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+.Footer p {
+    color: #fff;
+    font-size: 21px;
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 15px;
+}
+
+span.agree {
+    float: right;
+    margin-left: 31px;
+    margin-top: 0;
+}
+.item-input{
+	padding:0px;
+}
+.SignUpProcess span.input-label.has-input{
+	color:#6AC5AD;
+	display: inline;
+}
+.EligibilityHeader {
+    float: left;
+    width: 100%;
+}
+.Pharmacy-name {
+    margin-top: 15px;
+    padding: 11px 0;
+}
+.checkbox.needDCT input {
+    margin: 6px 4px;
+}
+.needDCT .color-grey {
+    margin-left: 30px;
+}
+.padding0{
+	padding:0px;
+	margin-top:10px;
+}
+input[type=checkbox] {
+     -ms-transform: scale(1.5); 
+	-moz-transform: scale(1.5); 
+	-webkit-transform: scale(1.5);
+	-o-transform: scale(1.5); 
+}
+input[type=checkbox]:focus {
+outline:none;
+}
+/*.check-condition input {
+    height: 25px;
+    width: 25px;
+	border:none !important;
+}*/
+.marginTop0{
+	margin-top:0px;
+}
+.control-label{
+	color:#6AC5AD;
+}
+.preferred {
+    padding-left: 20px;
+}
+.checkError {
+    color: #6AC5AD;
+    display: block;
+    font-size: 17px;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+.Special-instructions {
+    float: left;
+    margin: 10px 0;
+    width: 100%;
+}
+.Special-instructions p {
+    margin-top: 8px;
+}
+.confirmation .subHeading {
+    font-size: 18px !important;
+}
+/*input[type="radio"]:checked:before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 4px;
+    left: 2px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #7acebb;
+	z-index:999;
+}
+input[type="radio"]:checked:after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -7px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    left: -2px;
+    z-index: 0;
+    border: 2px solid;
+}*/
+.preferred label + p,
+.preferred input + p
+{
+	margin-top: 20px;
+}
+
+.preferred p > input
+{
+	padding: 0;
+	margin: 0;
+	height: 16px;
+	width: 16px;
+	float: left;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+.preferred p > input[type=checkbox]{
+	margin:0 !important;
+}
+.preferred p > label 
+{ 
+	color: rgba(0, 0, 0, .54);
+    line-height: 16px;
+    margin-left: -22px;
+    padding: 0 0 0 22px !important;
+	-moz-transition: color 1s ease; 
+	-o-transition: color 1s ease; 
+	-webkit-transition: color 1s ease; 
+	transition: color 1s ease; 
+	max-width:initial !important;
+}
+.preferred p:not(#foo) > input + label
+{
+	background: url("/gladstone/portal/bloom/app/assets/image/gr_custom-inputs2.png") 0 -1px no-repeat;
+	height: 18px;
+}
+.preferred p:not(#foo) > input[type=radio] + label									{ background-position: 0 -161px; }
+.preferred p:not(#foo) > input[type=radio]:checked + label 							{ background-position: 0 -241px; }
+.preferred p {
+    margin: 5px 0;
+}
+.preferred p:not(#foo) > input[type=checkbox]:checked + label 						{ background-position: 0 -80px; }
+
+.color-theme{
+	color:#7acebb;
+}
+.citymp0 {
+    margin: 0;
+    padding: 0;
+}
+.statepr0 {
+    padding-right: 0;
+}
+.paddingLeft0.text-center_text {
+    text-align: center;
+}
+.subHeading_weneed {
+    color: #fff;
+}
+.weneed {
+    color: #6ac5ad;
+    margin-top: 20px;
+}
+.checkbox.preferred {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.checkbox.preferred.check {
+    padding-top: 10px;
+}
+.check-condition {
+    margin-top: 20px;
+}
+.col-sm-6.col-xs-6.padding0.text-laft {
+    color: #6ac5ad;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.col-md-12.col-sm-12.col-xs-6.padding0.text-right {
+    margin-top: 20px;
+}
+.inputRightImg {
+    bottom: 35px;
+    height: 18px;
+    position: absolute;
+    right: 0;
+    width: auto;
+}
+.item-img {
+    position: relative;
+}
+
+.boxCont h4 {
+	border-top: 2px solid #e0e0e0;
+	margin: 20px 0 8px;
+	padding-top: 10px;
+}
+button[type=button]{
+     background: #6ac5ad none repeat scroll 0 0;
+	  color: #fff;
+}
+
+button[type=submit]:enabled {
+     background: #6ac5ad none repeat scroll 0 0;
+	  color: #fff;
+}
+
+button[type=submit]:disabled {
+  background: rgba(79,79,79,0.26) none repeat scroll 0 0;
+  color:#000;
+}
+/*.spinner svg {
+  height: 85px !important;
+    left: 50%;
+    position: absolute;
+    top: 70%;
+    width: 19% !important;
+	 z-index:1100;
+	 fill: #6ac5ad !important;
+}*/
+
+.loader-container {
+    position: relative;
+}
+
+.spinner svg {
+    fill: #6ac5ad !important;
+    height: 64px !important;
+    left: 50%;
+    margin: -27px 0 0 -32px;
+    position: absolute;
+    top: 50%;
+    width: 64px !important;
+    z-index: 1100;
+}
+.modal-backdrop.fade {
+    opacity: 0.02;
+	 z-index:1045;
+}
+.errorMsg
+{
+font-family: SourceSansPro-Regular!important;;
+font-size: 14px!important;;
+color: rgba(184,0,22,0.54) !important;
+line-height: 14px!important;;
+}
+.errorMsg img {
+    float: right;
+    height: 16px;
+    max-width: 100%;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.greenColor
+{
+color:#6ac5ad !important;
+}
+.link.inboxTxt {
+    padding: 0 0 0 12px;
+}
+.checkbox.preferred.mt0,.padding0.mt0 { margin-top:0;}
+
+.padding0.mt0.mtd2 {
+    margin-top: 3px;
+}
+.modal-footer {
+    border:  none;
+}
+.errorMsgTitle {
+    font-size: 21px;
+}
+.control-label.popErrorMsg {
+  font-size: 21px;
+color: rgba(184,0,22,0.54);
+}
+.btn.btn-default.closeBtn {
+    font-size: 16px;
+    padding: 10px 24px;
+}
+.close {
+    font-size: 45px;
+}
+select.select-icon{
+ background: rgba(0, 0, 0, 0) url("/gladstone/portal/bloom/app/assets/image/caretGray.png") no-repeat scroll 100% center;
+    / border: 0 none; /
+    width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    box-shadow: 0 0 0;
+}

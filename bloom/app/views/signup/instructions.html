@@ -1,0 +1,66 @@
+<div class="intileSignUp">
+  <div class="row">
+    <div class="EligibilityHeader">
+      <div class="col-md-6 col-sm-6 col-xs-6"> <img src="/gladstone/portal/bloom/app/assets/image/headingIcon.png" /> </div>
+      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+        <p>5/6</p>
+      </div>
+    </div>
+  </div>
+  <h1 class="heading">Contact information</h1>
+  <p class="subHeading">How should we get in touch with you?</p>
+  <form  class="SignUpProcess" method="post" ng-submit="addInstructions();" name="myForm" >
+    <label class="item-input item-floating-label"> <span class="input-label">Email address</span>
+    <input  type="email" class="form-control" placeholder="Email address" ng-model="emailAddress"  ng-blur="validate=true" name="emailAddress" ng-keyup="matchEmail();"  required />
+<span  class="errorMsg" ng-show="myForm.emailAddress.$dirty && myForm.emailAddress.$invalid">
+<span ng-show="myForm.emailAddress.$error.required && validate">Email address is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+ <span ng-show="myForm.emailAddress.$error.email && validate">Invalid email address.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+</span>
+    </label>
+    <label class="item-input item-floating-label"> <span class="input-label">Confirm email address</span>
+    <input  type="email" class="form-control" placeholder="Confirm email address"  ng-blur="validate=true" ng-model="emailAddressConfirm" name="emailAddressConfirm" ng-keyup="matchEmail();"  required />
+<span  class="errorMsg" ng-show="myForm.emailAddressConfirm.$dirty && myForm.emailAddressConfirm.$invalid">
+<span ng-show="myForm.emailAddressConfirm.$error.required && validate">Confirm email address is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+ <span ng-show="myForm.emailAddressConfirm.$error.email && validate">Invalid email address.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+</span>
+    </label>
+     <div ng-show="emailMatch"   class="errorMsg">Email do not match!<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></div>
+     <div ng-show="emailError"   class="errorMsg">Email address is already in use.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></div>
+    <label class="item-input item-floating-label"> <span class="input-label">Phone number</span>
+    <input  type="text" class="form-control" placeholder="Phone number"  ng-minlength="10"  ng-model="phoneNumber" ng-blur="validate=true"  name="phoneNumber" required />
+<span  class="errorMsg" ng-show="myForm.phoneNumber.$dirty && myForm.phoneNumber.$invalid">
+<span ng-show="myForm.phoneNumber.$error.required && validate">Phone number is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+<span ng-show="myForm.phoneNumber.$error.minlength && validate">Phone number must be minimum 10 characters.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" />
+</span>
+    </label>
+	<div class="form-group">
+      <div class="col-md-12 check-condition preferred">
+        <div class="radio">
+          <p><input type="radio"  name="preferred" value="email" id="email"  ng-model="preferred"  required />
+		   <label  for="email">Email preferred.</label></p>
+        </div>
+        <div class="radio">
+          <p> <input type="radio" id="phone"   name="preferred" ng-model="preferred" value="phone"  />
+		  <label for="phone">Phone calls preferred.</label></p>
+        </div>
+<span  class="errorMsg" ng-show="myForm.preferred.$dirty && myForm.preferred.$invalid">
+<span ng-show="myForm.preferred.$error.required">preferred is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+</span>
+      </div>
+    </div>
+    <label class="item-input item-floating-label"> <span class="input-label">Special instructions</span>
+    <textarea placeholder="Special instructions" class="form-control" rows="3" ng-model="specialInstructions" name="specialInstructions"></textarea>
+    </label>
+    
+     <div class="form-group check-condition loader-container">
+    <ion-spinner icon="dots" class="spinner-dark" id="loadingIcon" style="display:none;"></ion-spinner>
+      <div  class="col-md-6 col-sm-6 col-xs-6 padding0"> <a ng-href="#/eligibility">
+        <p class="back-button"><strong>BACK</strong></p>
+        </a> </div>
+      <div align="right" class="col-md-6 col-sm-6 col-xs-6 padding0 mt0">
+        <button class="btn btn-default btn-DarkSky" type="submit"  ng-disabled="emailMatch || emailError || myForm.$invalid">NEXT <span><img src="/gladstone/portal/bloom/app/assets/image/left-arrow.png"></span></button>
+      </div>
+    </div>
+    <p class=" paddingLeft0 text-center_text">Having trouble? <a href="#/havingTrouble" class="link">Get help enrolling.</a> </p>
+  </form>
+</div>

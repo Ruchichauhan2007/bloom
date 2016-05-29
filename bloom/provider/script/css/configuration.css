@@ -1,0 +1,74 @@
+.config h1 {
+	border-bottom: 2px solid #8a8c98;
+	font-size: 23px;
+	/*margin: 0 20px;*/
+	padding: 16px 0;
+	text-align:center;
+}
+.config h2 {
+	font-size: 23px;
+	margin: 0 20px;
+	padding: 10px 0;
+}
+.contentDiv {
+	border-bottom: 2px solid #8a8c98;
+	margin: 0 20px;
+	padding: 20px 0;
+	float:left;
+	width:96%;
+}
+.contentDiv > button {
+	background-color: #03aeff;
+	border-color: -moz-use-text-color -moz-use-text-color #0395d1;
+	border-radius: 7px;
+	border-style: none none solid;
+	border-width: medium medium 5px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 19px;
+	margin: 10px 0;
+	padding: 9px 20px;
+}
+.col-lg-6.inputtext {
+	padding: 0;
+	margin-top: 10px;
+}
+.col-lg-6.inputtext input {
+	border: 1px solid;
+	padding: 4px;
+	width: 100%;
+}
+input[type="reset"].resetButton {
+    background-color: #d6d9de !important;
+    border-bottom: none;
+    border-radius: 0px;
+    color: #999;
+}
+input.saveBtn[type="submit"] {
+    background-color: #93c47d;
+    border: 2px solid #999;
+    color: #fff;
+    cursor: pointer;
+    font-size: 22pt;
+    margin-top: 6px;
+    padding: 8px;
+    text-align: center;
+	border-radius: none;
+}
+.config a{
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 20px;
+}.config > p.activediv {
+color:#03aeff;
+background-color:none !important;
+}
+.btngrp {
+    float: left;
+    width: 100%;
+    padding: 10px 15px;
+}
+.btngrp button.btn.btn-green {
+    border: none;
+    background-color: #1AC778;
+}

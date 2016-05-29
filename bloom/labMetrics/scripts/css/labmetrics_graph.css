@@ -1,0 +1,86 @@
+#empty-message {
+}
+path {
+    fill: none;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+    opacity: 0.3;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 5px;
+    border-color: black;
+    margin: auto auto;
+}
+th, td {
+    border: 1px solid #999;
+    background-color: white;
+    padding: 2px 5px 2px 5px !important;
+    text-align: center;
+}
+.main-content {
+    clear: both;
+    background-color: #D8D8D8;
+    width: 100%;
+}
+.legend rect {
+    fill: white;
+    stroke: black;
+    opacity: 0.8;
+}
+.center-div {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+	float:left;
+}
+#graph-title {
+    text-align: center;
+    font-size: 30px;
+}
+#context-patient {
+    text-align: center;
+    height: 50px;
+}
+.line-title {
+    font-size: 18px;
+}
+.blue-bar a {
+    background-color: #bdedff !important;
+}
+#segment-select {
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: auto;
+    margin-top: auto;
+    visibility: hidden;
+}
+#topbar {
+    margin-top: 15px;
+}
+#selectedPatient {
+  margin: 10px auto;
+/* width: 50%; */
+text-align: center;
+float: center;
+display: inline-block;
+float: right;
+margin-right: 20px;
+}
+#selectedPatient img
+{
+border:solid 2px #fff;
+}
+select {
+    background: linear-gradient(to bottom, #f5f5f5 0%, #ececec 24%, #c8c8c8 81%, #c2c2c2 95%, #c3c3c3 100%);
+    font-size: 20px !important;
+    vertical-align: top;
+    margin-top: 10px !important;
+    vertical-align: middle;
+    width: 220px;
+    float: left;
+}

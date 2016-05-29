@@ -1,0 +1,63 @@
+<div class="intileSignUp">
+  <div class="row">
+    <div class="EligibilityHeader">
+      <div class="col-md-6 col-sm-6 col-xs-6"> <img src="/gladstone/portal/bloom/app/assets/image/headingIcon.png" /> </div>
+      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+        <p>1/6</p>
+      </div>
+    </div>
+  </div>
+  <h1 class="heading">Verify your eligibility</h1>
+  <p class="subHeading"> Who are we enrolling today?</p>
+  <form  class="SignUpProcess" method="post" ng-submit="signup()" name="myForm"><!--action="#/shippingAddress"-->
+    <label class="item-input item-floating-label"> <span class="input-label">First Name</span>
+    <input class="form-control" type="text" placeholder="First Name" ng-model="fname" name="fname" required />
+    
+<span  class="errorMsg" ng-show="myForm.fname.$dirty && myForm.fname.$invalid">
+<span ng-show="myForm.fname.$error.required">First name is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+</span>
+
+
+    </label>
+    <label class="item-input item-floating-label"> <span class="input-label">Last Name</span>
+    <input class="form-control" type="text" placeholder="Last Name" ng-model="lname" name="lname"  required  />
+    <span  class="errorMsg" ng-show="myForm.lname.$dirty && myForm.lname.$invalid">
+    <span ng-show="myForm.lname.$error.required">Last name is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+    </span>
+
+    </label>
+    <label class="item-input item-floating-label"> <span class="input-label">Date of Birth - MM/DD/YYYY</span>
+    <input class="form-control" type="text" placeholder="Date of Birth - MM/DD/YYYY" ng-model="dob"  name="dob"   required  />
+    <span  class="errorMsg" ng-show="myForm.dob.$dirty && myForm.dob.$invalid">
+    <span ng-show="myForm.dob.$error.required">Date of Birth is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+    </span>
+    </label>
+    <div class="form-group">
+      <label class="col-md-12 control-label" for="textinput">Employer</label>
+      <div class="paddingRight0"  >
+        <select class="form-control select-icon"  ng-model="employer" id="employer" name="employer"   required="required">
+            <option ng-repeat="employer in employers" value="{{employer.institutionName}}"  ng-selected="{{employer.institutionName == institutionName}}" >{{employer.employerName}}</option>
+        </select>
+    <span  class="errorMsg" ng-show="myForm.employer.$dirty && myForm.employer.$invalid">
+    <span ng-show="myForm.employer.$error.required">Employer name is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+    </span>
+      </div>
+    </div>
+        <p  class="errorMsg" ng-show="msg">{{msg}}<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></p>
+    <div class="form-group check-condition loader-container">
+    <ion-spinner icon="dots" class="spinner-dark" id="loadingIcon" style="display:none;"></ion-spinner>
+      <div class="col-md-6 col-sm-6 col-xs-6 paddingLeft0">
+        <div class="checkbox preferred  mt0">
+          <p><input type="checkbox" ng-model="agree"   required  id="agree" /> <label class="color-theme iAgree" for="agree" >I AGREE</label></p>
+        </div>
+      </div>
+      <div  align="right" class="col-md-6 col-sm-6 col-xs-6 padding0">
+        <button class="btn btn-default btn-DarkSky" type="submit" ng-disabled="myForm.$invalid">VERIFY</button>
+      </div>
+    </div>
+    <p class="col-md-12 paddingLeft0" >By verifying your eligibility and using Kannact,
+      you are agreeing to our <a href="#/termsService" class="link" target="_blank">Terms of Service</a> and <a href="#/privacyPolicy" class="link" target="_blank">Privacy Policy</a>. If you do not agree, you cannot
+      use Kannact.</p>
+    <p class=" paddingLeft0 text-center_text">Having trouble? <a  style="cursor:pointer" ng-click="setUserData();" class="link"> Get help enrolling.</a> </p>
+  </form>
+</div>

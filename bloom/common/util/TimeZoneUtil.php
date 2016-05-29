@@ -1,0 +1,1 @@
+<?php setcookie("timezoneOffset", $_GET["timezoneOffset"],0,'/', '', false, true);?>

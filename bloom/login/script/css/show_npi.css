@@ -1,0 +1,84 @@
+.ADD_Detail_NPI.table-responsive h2 {
+    border-bottom: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.btnedit {
+    margin-top: 15px;
+    padding-right: 28px;
+    text-align: right;
+}
+.btnedit1{
+	padding-right: 43px;
+}
+.nmaePatFormat {
+    float: left;
+    font-size: 15px;
+    padding-left: 35px;
+    padding-top: 4px;
+}
+#moredetail,#lessDetail {
+    cursor: pointer;
+}
+.input-group-addon button#npiSearchPrescription {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    padding: 0;
+}
+#npi-form .input-group-addon {
+    padding: 0 17px;
+}
+.LeftFormRX span.input-group-addon {
+  padding: 0px 16px;
+}
+.LeftFormRX .glyphicon-search:before {
+  font-size: 17px;
+  color: #ccc;
+}
+#npiSearchPrescription .glyphicon-search:before {
+  font-size: 17px;
+  color: #ccc;
+}
+.modal-body .name {
+    font-size: 15px;
+}
+.modal-body .moredetail {
+  float: left;
+  font-size: 14px;
+  text-align: right;
+  width: 100%;
+}
+
+.modal-body .lessDetail {
+  float: left;
+  font-size: 14px;
+  text-align: right;
+  width: 100%;
+  padding: 0 12px;
+}
+
+
+.modal-body .ADD_Detail_NPI.table-responsive {
+  border: 0 none;
+  margin: 10px 0px 0px;
+  min-height: 93px;
+}
+.ADD_Detail_NPIMain {
+  float: left;
+  width: 100%;
+  min-height: 50px;
+}
+form#sendFax-form {
+  width: 87%;
+  float: left;
+}
+.close img {
+    margin: 0px 0 0 !important;
+    width: 37px;
+}
+#survletModalNPI .modal-body {
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

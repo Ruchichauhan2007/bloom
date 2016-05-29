@@ -1,0 +1,65 @@
+<div class="intileSignUp">
+  <div class="row">
+    <div class="EligibilityHeader">
+      <div class="col-md-6 col-sm-6 col-xs-6"> <img src="/gladstone/portal/bloom/app/assets/image/headingIcon.png" /> </div>
+      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+        <p>2/6</p>
+      </div>
+    </div>
+  </div>
+  <h1 class="heading">Shipping address</h1>
+  <p class="subHeading">Where should we send your no cost
+    glucometer and testing supplies?</p>
+  <form  method="post" class="SignUpProcess" ng-submit="addShipingAddress()" name="myForm">
+    <label class="item-input item-floating-label"> <span class="input-label">Mailing address</span>
+    <input  type="text" class="form-control" placeholder="Mailing address" ng-model="addressLine" name="addressLine" required />
+    <span  class="errorMsg" ng-show="myForm.addressLine.$dirty && myForm.addressLine.$invalid">
+    <span ng-show="myForm.addressLine.$error.required">Mailing address is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+    </span>
+    </label>
+    <div class="row">
+      <div class="col-md-6">
+        <label class="item-input item-floating-label"> <span class="input-label">City</span>
+        <input type="text" class="form-control" class="form-control" placeholder="City" class="form-control" ng-model="city" name="city"   required   />
+        <span  class="errorMsg" ng-show="myForm.city.$dirty && myForm.city.$invalid">
+        <span ng-show="myForm.city.$error.required">City is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+        </span>
+        </label>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="col-md-12 control-label marginTop0" for="textinput">State</label>
+          <div class="paddingRight0" >
+            <select class="form-control select-icon" ng-model="stateId" id="stateId"  name="stateId"  required   >
+				<option  ng-selected="{{state.stateId == stateId}}" ng-repeat="state in states" value="{{state.stateId}}">{{state.stateCode}}</option>
+            </select>
+            <span  class="errorMsg" ng-show="myForm.stateId.$dirty && myForm.stateId.$invalid">
+            <span ng-show="myForm.stateId.$error.required">State is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label class="item-input item-floating-label"> <span class="input-label">Zip Code</span>
+        <input  type="text" class="form-control" placeholder="Zip Code" ng-model="postalCode" name="postalCode"   required />
+            <span  class="errorMsg" ng-show="myForm.postalCode.$dirty && myForm.postalCode.$invalid">
+            <span ng-show="myForm.postalCode.$error.required">Zip code is required.<img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" /></span>
+            </span>
+        </label>
+      </div>
+      <div class="col-md-6"> </div>
+    </div>
+    <div class="form-group check-condition loader-container">
+    <ion-spinner icon="dots" class="spinner-dark" id="loadingIcon" style="display:none;"></ion-spinner>
+      <div class="col-md-6 col-sm-6 col-xs-6 paddingLeft0">
+        <!--<p class="back-button"><strong>START OVER </strong></p>-->
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6 padding0" align="right">
+        <button class="btn btn-default btn-DarkSky" type="submit"   ng-disabled="myForm.addressLine.$dirty && myForm.addressLine.$invalid || myForm.city.$dirty && myForm.city.$invalid || myForm.stateId.$dirty && myForm.stateId.$invalid || myForm.postalCode.$dirty && myForm.postalCode.$invalid">NEXT <img src="/gladstone/portal/bloom/app/assets/image/left-arrow.png" /></button>
+      </div>
+    </div>
+    <p class=" paddingLeft0 text-center_text">Having trouble? <a href="#/havingTrouble" class="link">Get help enrolling.</a> </p>
+  </form>
+</div>

@@ -1,0 +1,346 @@
+body{padding:0px; margin:0px; font-family:Arial, Helvetica, sans-serif;}
+h1,h2,h3,h4,h5,h6,p,span,img,ol,ul,li,a,div,table,td,tr{ padding:0px; margin:0px;}
+
+@media(min-width:1200px){
+.container{ width:1000px;}
+}
+.NPI_Card {
+    background: none repeat scroll 0 0 #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 0 #a6a9b8;
+    float: left;
+    margin-top: 10px;
+    padding: 0 0 4px;
+    width: 100%;
+}
+.NPI_CardDOB p {
+    color: #4a4a4a;
+    font-size: 15px;
+}
+.NPI_CardDOB h1 {
+    color: #353535;
+    font-size: 25px;
+    padding-bottom: 3px;
+}
+.col-lg-3.NPI_CardBttn {
+    text-align: right;
+}
+.closing.bttnGrp {
+    float: right;
+    margin-right: 12px;
+    margin-top: -39px;
+}
+.employeeDetail {
+    background: none repeat scroll 0 0 #f0f0f0;
+    float: left;
+    padding: 10px 0 8px;
+    width: 100%;
+}
+.NPI_CardDetails {
+    float: left;
+    margin-top: 6px;
+    width: 100%;
+}
+.NPI_CardDetails > h1 {
+    background: none repeat scroll 0 0 #e2e1e1;
+    color: #353535;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 9px 0;
+    text-align: center;
+	margin-bottom: 8px;
+}
+.NPI_CardDetails > p {
+    padding: 15px 70px;
+	color:#353535;
+	border-bottom:1px solid #e2dfdf;
+	font-size: 15px;
+}
+.NPI_CardDetails a {
+    float: left;
+    padding: 14px 145px 10px;
+    text-decoration: underline;
+}
+.NPI_CardDOB > a {
+    text-decoration: underline;
+}
+.NPI_CardImg img {
+    width: 100%;
+}
+.NPI_CardImg {
+    width: 14%;
+}
+.NPI_CardBttn {
+    text-align: right;
+    width: 36%;
+}
+.NPI_Card p {
+    padding-bottom: 5px;
+	  font-size: 13px;
+}
+.border_NPI {
+    background: #7d7d7d none repeat scroll 0 0;
+    float: left;
+    height: 2px;
+    margin: 5px 0;
+    width: 100%;
+}
+.NPI_CardDOB.NPI_CardDOB_Upload h1 {
+    font-size: 19px;
+}
+.NPI_CardBttn1 h1 {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.NPI_CardBttn12 {
+    text-align: right;
+}
+.ADD_Detail_NPI h1 {
+    background: #e2e1e1 none repeat scroll 0 0;
+    color: #353535;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    padding: 9px 0;
+    text-align: center;
+}
+.ADD_Detail_NPI.ADD_Detail_NPI_Upload {
+    padding: 0;
+}
+button.btn.Change-NPI.btn-default {
+    background: #81e7b9 none repeat scroll 0 0;
+    border-color: #3d9e72;
+    border-width: 0 0 4px;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+button.btn.Change-NPI-orange.btn-default {
+    background: #e29345 none repeat scroll 0 0;
+    border-color: #9b6c3d;
+    border-width: 0 0 4px;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+	width: 80px;
+}
+.lessCardUpload {
+    border-top: 1px solid #ccc;
+    float: left;
+    margin-top: 6px;
+    width: 100%;
+}
+
+
+/*Popup*/
+.modal-header {
+    background: url(../../images/Model-Head-BG.png) repeat-x scroll 0 0;
+    padding: 6px 0;
+}
+.modal-header .close {
+    margin-top: -6px;
+    opacity: 1;
+	margin-right: 0;
+}
+h4#myModalLabel {
+    margin-left: 10px;
+}
+.modal-content {
+    background: #e8e8e8 none repeat scroll 0 0;
+	border-radius: 0;
+}
+.close img {
+  width: 37px;
+  margin: 3px 0px 0 0;
+}
+.modal-body .table-responsive {
+    border: 1px solid #ccc;
+    margin: 15px 0;
+}
+.modal-body .table {
+    margin-bottom: 0;
+}
+.modal-footer .btn.btn-default {
+    background: #76cbf2 none repeat scroll 0 0;
+    border-color: #76bdde;
+    border-width: 0 0 4px;
+    color: #fff;
+    width: 100px;
+	font-size:20px;
+}
+.modal-footer .btn.btn-primary {
+    background: #1adb82 none repeat scroll 0 0;
+    border-color: #18ab67;
+    border-width: 0 0 4px;
+    color: #fff;
+    width: 100px;
+	font-size:20px;
+}
+.modal-footer {
+    padding-right: 29px;
+}
+.modal-body input#appendedtext {
+    border-radius: 0;
+}
+.input-group-addon {
+    border-radius: 0;
+}
+.PendingFax h1 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.PendingFax thead {
+    background: #0492d4 none repeat scroll 0 0;
+    color: #fff;
+}
+.selected {
+    background: #4b79a1 none repeat scroll 0 0;
+    color: #fff;
+}
+.PendingFax .table-responsive {
+    text-align: center;
+}
+.PendingFax .table-responsive th{
+    text-align: center;
+}
+.selected a {
+    color: #fff;
+}
+.PendingFax .table tbody img {
+    width: 15px;
+}
+table.table {
+    border: 1px solid #ccc;
+    margin: 0;
+}
+.bttnSubmit .btn.btn-success {
+    background: #1adb82 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 5px;
+    padding: 4px 15px;
+	font-size:17px;
+	border-bottom:4px solid #36a071;
+}
+.bttnSubmit {
+    margin-top: 10px;
+    text-align: right;
+}
+.modal-content, .modal-header, .modal-body, .modal-footer{
+    float: left;
+    width: 100%;
+}
+.col-md-6.SearchInfo {
+    padding: 0;
+}
+.SearchInfo p {
+    font-size: 13px;
+	margin-bottom:5px;
+}
+.searchCardNPI {
+    background: #d4d4d4 none repeat scroll 0 0;
+    border-bottom: 4px solid #afafaf;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 7px 0;
+}
+.headingPopNPI {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.Fax-history h1 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.Fax-history .table-responsive tr {
+    text-align: center;
+}
+.Fax-history .table-responsive th{
+    text-align: center;
+}
+.PrescriptionTab{
+	background:url(../../images/Tab-NPI.png) repeat-x;
+	padding: 6px 0;
+}
+.PrescriptionTab li{
+	list-style:none;
+	display:inline;
+}
+.PrescriptionTab a {
+    color: #262626;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+.PrescriptionTab .active a {
+    background: rgba(0, 0, 0, 0) url("../../images/hover.png") repeat-x scroll 0 center / 8px 41px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.selected:nth-child(2n+1) td, .selected:nth-child(2n+1) th{
+	background:#4b79a1 none repeat scroll 0 0 !important;
+}
+.content_lib_button {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #eeedf2 0%, #e6e5ea 17%, #e3e4e6 20%, #e3e4e8 22%, #d6d6de 44%, #c9c9d3 76%, #bebdcb 98%, #bbbac8 100%) repeat scroll 0 0;
+    border: 1px solid #8f8d8d;
+    height: 40px;
+    width: 100%;
+}
+.content_lib_button li {
+    border-right: 2px solid #cccccc;
+    float: left;
+    margin-left: 10px;
+    margin-top: 3px;
+    text-align: center;
+    width: 50px;
+}
+.form-group {
+  float: left;
+  width:100%;
+}
+.Fax-history.FormRX {
+  margin-top: 15px;
+}
+button.btn-Blue {
+  border: 1px solid transparent;
+  background: #04AEFC;
+  border-bottom: 4px solid #0492D4;
+  font-size: 21px;
+  color: #fff;
+  padding: 6px 0px;
+  border-radius: 5px;
+  width:100px;
+}
+button.btn-Orange {
+  border: 1px solid transparent;
+  background: #FF8900;
+  border-bottom: 4px solid #C85C03;
+  font-size: 21px;
+  color: #fff;
+  padding: 6px 0px;
+  border-radius: 5px;
+  width:100px;
+}
+.RXFormDetail {
+  text-align: right;
+}
+.PreP_Detail1 {
+  background: #F4F4F4;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+button.btn-GreenEdit {
+  border: 1px solid transparent;
+  background: #1adb82;
+  margin-left: 10px;
+  border-bottom: 4px solid #18ab67;
+  font-size: 21px;
+  color: #fff;
+  padding: 6px 0px;
+  border-radius: 5px;
+  width:100px;
+}

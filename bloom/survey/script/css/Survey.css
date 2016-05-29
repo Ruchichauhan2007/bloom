@@ -1,0 +1,102 @@
+body {
+	padding:0px;
+	margin:0px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p, span, img, ol, ul, li, a, div, table, td, tr {
+	padding:0px;
+	margin:0px;
+}
+ @media(min-width:1200px) {
+.container {
+width:1000px;
+}
+}
+.survey-history h1 {
+	border-bottom: 2px solid;
+	color: #5c5c5c;
+	font-family: arial;
+	font-size: 22px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+.surveyTitle h2 {
+	background: #04aefc none repeat scroll 0 0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 5px;
+	padding: 10px;
+	border-right: 1px solid #fff;
+}
+.CreateDate,
+.modifiedDate,
+.modified, 
+.surveyTitle {
+	padding:0px;
+}
+.modified h2 {
+	background: #005e89 none repeat scroll 0 0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: normal;
+	margin-top: 5px;
+	padding: 10px;
+}
+.surveyCard{
+	
+    background: -moz-linear-gradient(90deg, rgba(203,205,208,1) 0%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(203,205,208,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(90deg, rgba(203,205,208,1) 0%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(90deg, rgba(203,205,208,1) 0%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(90deg, rgba(203,205,208,1) 0%, rgba(255,255,255,1) 100%); /* ie10+ */
+    background: linear-gradient(0deg, rgba(203,205,208,1) 0%, rgba(255,255,255,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cbcdd0',GradientType=0 ); /* ie6-9 */
+	
+	float:left;
+	width:100%;
+	border:1px solid #ccc;
+	margin: 5px 0;
+}
+.CreateDate h3 {
+    color: #005e89;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.CreateDate p {
+    color: #7a7b7b;
+    padding: 5px 10px;
+}
+.modifiedDate p {
+    color: #7a7b7b;
+    padding: 5px 0px;
+}
+.surveyCard.active {
+    background: #005e89 none repeat scroll 0 0;
+}
+.surveyCard.active .modifiedDate p,
+.surveyCard.active .CreateDate p,
+.surveyCard.active .CreateDate h3 {
+    color: #fff;
+}
+.surveyCard:hover {
+    background: #005e89 none repeat scroll 0 0;
+}
+.surveyCard:hover .modifiedDate p,
+.surveyCard:hover .CreateDate p,
+.surveyCard:hover .CreateDate h3 {
+    color: #fff;
+}
+.learn_box_content.cardTitle {
+    padding-top: 15px !important;
+}
+.learn_box_content_Status_button .proceeTime {
+    font-size: 14px;
+    padding-top: 25px;
+	text-align:right;
+}
+.modificationDate{
+    font-size: 14px;
+    padding-top: 25px;
+	text-align:right;
+}

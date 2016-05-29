@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="/gladstone/portal/bloom/dashboard/script/css/dashboard.css">
+<link href="/gladstone/portal/bloom/messages/script/css/message.css" rel="stylesheet" type="text/css">
+<!-- <script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/query.min_1.7.1.js"></script> 
+<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/moment.js"></script>-->
+<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/post-data.js"></script>
+<script type="text/javascript" src="/gladstone/portal/bloom/messages/script/js/messages_constants.js"></script>
+<script type="text/javascript" src="/gladstone/portal/bloom/messages/script/js/messages.js"></script>
+<div id="messages-content">
+    <p id="selectedPatient" style="float:right; height:40px;">
+        <span></span>
+        <img id="patient-avatar" src="/gladstone/portal/bloom/portalLearn/images/learn_patient_img.jpg" alt="">
+            <!--<div align="center-left">
+            <input type="image" onClick="javascript:exportToPDF()" name="btnExportPDF" id="btnExportPDF" img src="/gladstone/portal/bloom/dashboard/images/pdfbutton.jpg"/>
+            </div>-->
+        </span>
+    </p>
+    <script>
+		window.location.hash = '/message';
+		$('#btnExportPDF').show();
+
+    $(function() {
+        if ($('#contextPatientName').val() != "") {
+            $('#selectedPatient').find('img').attr('src', $('#contextPatientImage').val());
+            $('#selectedPatient').find('span').html($('#contextPatientName').val());
+        } 
+		else {
+            $('#selectedPatient').hide();
+        }
+		var userType=$("#userType").val();
+		if(userType.toUpperCase() =="PATIENT")
+		{
+		    $('#selectedPatient').hide();
+			
+		}
+		else
+		{
+		
+			$('#urgent').hide();
+		}
+    });
+    </script>
+    <style>
+    #messages-content {
+        text-align: center;
+    }
+    #selectedPatient {
+        float: none;
+    }
+	#light{
+	z-index:9999 !important;
+	}
+	#okey_close{
+
+margin-top:50px;
+}
+	#okey_close.cancelButton {
+    background-color: rgb(4, 174, 252);
+    border-bottom: 5px solid #0492d4;
+    border-radius: 5px;
+    color: #fff;
+    height: 44px;
+    margin-right: 5px;
+    width: 100px;
+	padding-left: 40px;
+	margin-top:0px;
+}
+#yesResponse.nextButton {
+    background-color: #1adb82;
+    border-color: #18ab67;
+    border-radius: 5px;
+    border-style: none none solid;
+    border-width: medium medium 5px;
+    color: #fff;
+    cursor: pointer;
+    height: 44px;
+    margin: 0 15px;
+    padding: 3px;
+    text-align: center;
+    width: 100px;
+	}
+    </style>
+</div>
+<div class="col-md-8 padd-top20">
+<div class="dashboard_patient_rightpart card-container">
+    <div class="dashboard_box_bg">
+        <div class="dashboard_box_bg_text">
+			<a href="#" onClick="javascript:showMessageBox()">New Message</a>
+        </div>
+    </div>
+
+    <!-- <div class="scrollbar1 scroll-outer" style="overflow:auto;">-->
+    <div class="content scroll-inner">
+
+        <div class="scrollbar1 scroll-outer">
+            <div class="content scroll-inner">
+                <div id="PatientList_part_bg">
+                    <div style="width:100%;left:50%;margin-left:-20px;position:absolute;">
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="border-radius:0px;">
+                <div class="modal-body" id="sending_message">
+                    <P>Sending Message...</P>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--<div class="col-md-4 padd-top50">
+			<div class="sidebar-filter">
+				<div class="card">
+					<div class="filter-tabs">
+						<div class="padd-15">
+							<button class="btn btn-neutral">All</button>
+							<button class="btn btn-default active">Pre Meal</button>
+							<button class="btn btn-neutral">Post Meal</button>
+						</div>
+						<div class="divider"></div>
+						<div class="padd-15">
+							<button class="btn btn-default active">7 Days</button>
+							<button class="btn btn-neutral">14 Days</button>
+							<button class="btn btn-neutral">30 Days</button>
+						</div>
+				</div>
+			</div>
+</div>
+-->

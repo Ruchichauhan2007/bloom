@@ -1,0 +1,555 @@
+/*
+ * Globals
+ */
+
+body {
+
+  font-family: 'Source Sans Pro', Arial;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+
+.btn-gray{
+background-color: #bbbbbb;
+border-left: 4px none #777777;
+border-radius: unset;
+font-size: 22pt;
+font-weight: normal;
+height: 42px;
+padding: 0;
+}
+.btn-gray.active
+{
+	border-bottom:solid 5px #00affe;
+}
+.btn-green{
+background-color: #1adb82;
+color: #fff;
+border-radius: 5px;
+border-bottom: solid 5px #18ab67;
+border-left: none;
+border-top: none;
+border-right: none;
+cursor: pointer;
+font-size: 17px;
+margin-bottom: 8px;
+ padding: 9px 25px;
+}
+
+#wrap{
+min-height: 100%;
+height: auto !important;
+height: 100%;
+}
+.login-nav-container .nav > li > a {
+ text-decoration: none;
+color: rgba(0,0,0,0.54);
+text-transform: capitalize;
+font-weight: 400;
+transition: all 0.3s linear;
+padding: 12px 15px 12px 25px;
+}
+
+.login-nav-container .nav>li>a:focus, .nav>li>a:hover{
+	background: transparent;
+	color: rgba(0,0,0,0.54);
+}
+	
+.dashboardCardsDropDown {
+margin-left: 9px;
+font-size:22px;
+height:48px;
+}
+.notes {
+    border-radius: 5px;
+}
+.dashboardCardsDropDown select
+{
+	height:36px;
+}
+.dashboardCardsDropDown span
+{
+	margin-top:5px;
+}
+#selectedPatient {
+	float:left;
+
+	text-algin:center;
+}
+#selectedPatient span{
+	font-size:22px;
+}
+
+div.scrollbar1 {
+    margin: 0;
+}
+.footer {
+    background-color: #f5f5f5;
+    bottom: 0;
+    height: 47px;
+    position: absolute;
+    width: 100%;
+}
+
+.footer a.footer-links{
+font-weight: bold; font-size: 17px; margin-top: 9px;
+}
+
+.dashboardCards {
+	width: 100%;
+    margin-bottom: 15px;
+	float:left;
+	min-height: 116px;
+	position: relative;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+}
+.message_box_bg{
+    background-color: #fff;
+    border-radius: 0;
+    float: left;
+    margin: 0;   
+	padding: 15px 20px;	
+    width: 90% !important;
+}
+.message_box_bg .message_box_bg_blue {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 15px;
+    padding: 0;
+    float: left;
+}
+.message_box_bg .message_box_bg_blue h2 {
+    font-size: 18px;
+    padding: 0;
+    float: left;
+    color: #858585;
+}
+.message_box_bg .message_box_bg_blue h4 {
+    font-size: 16px;
+    padding: 0;
+    float: right;
+    color: #c5c5c5;
+    text-transform: uppercase;
+}
+.message_box_bg .message_text_cl {
+    margin: 0;
+    float: left;
+	width: 100%;
+}
+.message_text_cl h3 {
+    padding: 0;
+    text-align: justify;
+    width: 100%;
+    word-break: keep-all;
+    color: #858585;
+    font-size: 16px;
+}
+a.message-box-btn.yellow-card-action {
+    background: #f8cd93;
+}
+a.message-box-btn.blue-card-action {
+    background: #a2c2ee;
+}
+a.message-box-btn.green-card-action {
+    background: #b1ded1;
+}
+a.message-box-btn.red-card-action {
+    background: #d8888f;
+}
+a.message-box-btn.purple-card-action {
+    background: #bb88ba;
+}
+a.message-box-btn {
+    width: 10%;
+    position: absolute;
+    float: right;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    color: #fff;
+    border-bottom: 1px solid #92afd7;
+}
+a.message-box-btn img {
+    margin-top: 15px;
+    width: 32px;
+}
+.btn-icon{
+	width: 32px;
+    height: 32px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    background: transparent url(../../../dashboard/images/review.svg) no-repeat top center !important;
+    border: none;
+    color: #fff;
+}
+span.patient-status{
+	font-size: 16px !important;
+	color:#858585 !important;
+}
+#menu-content.col-md-12 .dashboardCards {
+    margin: 5px 3px 5px 24px;
+}
+#menu-content.col-md-12 .dashboardCards .text-left{
+	position:relative;
+	left:-52px;
+}
+#menu-content.col-md-12 .dashboardCards .right-card{
+	position:relative;
+	right:-24px;
+}
+.right-card{
+	position:relative;
+	right:2px;
+}
+#menu-content.col-md-12 .dashboardCards .revewied-text-left{
+	position:relative;
+	left:-40px;
+}
+.dashboardCards h5{   
+ font-size: 17px;
+ margin-bottom: -10px;
+	}
+.second-h5{
+	font-size:14px !important;
+	margin-top:-3px !important;
+	margin-left:-15px !important;
+}
+.second-h5-b{
+	font-size:;
+	margin-top:-3px !important;
+	margin-left:;
+}
+.third-h5{
+	font-size:14px !important;
+	margin-top:6px !important;
+	margin-left:-15px !important;
+}
+.third-h5-b{
+	font-size:;
+	margin-top:-2px !important;
+	margin-left:-15px !important;
+}
+
+#footer {
+    background: linear-gradient(to bottom, #01b7c5 0%, #09a9b7 15%, #0fa1ae 22%, #12a0ae 24%, #24858e 52%, #415f69 91%, #45565e 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+      }
+ #footer  a {
+ color: #fff;
+ 
+ }
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+.dashboardCards h4
+{
+font-size:18px;
+color:#444;
+}
+.second-h4{
+	font-size:14px !important;
+}
+
+.dashboardCards h3
+{
+color:#888;
+}
+/* change 25*/
+.col-md-1 .dashboard_img
+{
+border-radius: 50%;
+border: solid 2px #FFF;
+width: 42px;
+height: 42px;
+}
+/* end*/
+.col-md-12 .pro_img
+{
+float: right;
+margin-top: -44px;
+font-size: 17px;
+padding-right: 15%;
+color: #999;
+margin-right: 11px;
+
+}
+.col-md-2 .pro_name
+{
+background-color: #1ADB82;
+padding-bottom: 64px;
+margin: -10px -15px -9px -12px;
+padding-top: 6px;
+color: #FFF;
+text-align: center;
+border-radius: 0px 5px 0px 0px;
+}
+
+.lastName
+{
+margin-left: -2px;
+background-color: #1ADB82;
+color: #FCF7F7;
+font-size: 12pt;
+text-align: center;
+font-weight: 700;
+padding-top: 14px;
+float:right;
+ width: 18.667%;
+
+}
+.dob
+{
+float: right;
+font-size: 12pt;
+text-align: right;
+margin-top: 7px !important;
+
+}
+.vital
+{
+ margin-top:-10px !important;
+}
+
+ .dashboard_patient_status_img {
+border: solid 2px;
+border-color: #b7b9bd;
+text-align: center;
+background-color: #fff;
+float: left;
+width: 100%;
+}
+.pull-right {
+float: right!important;
+margin-right: 18px;
+margin-top: 214px;
+}
+.dashboard_patient_status_replace {
+
+height: 40px;
+background-color: #e0f0b2;
+width: 100% !important;
+font-size: 16px;
+color: #8d986b;
+text-align: center;
+line-height: 34px;
+text-align:center;
+}
+.dashboard_top_nav {
+background: url(../../../dashboard/images/top-nav.png) repeat !important;
+width: 100%;
+height: 33px;
+}
+.dashboard_top_nav li a.active {
+background: url(../../../dashboard/images/hover.png) repeat  !important;
+font-weight: normal;
+
+}
+.time_date
+{
+text-align: right;
+position: relative;
+top: -14px;
+/*left: -34px;*/
+color:#888;
+font-size:18pt;
+}
+.time_date_vital
+{
+text-align: right;
+position: relative;
+top: -14px;
+left: -34px;
+color:#888;
+font-size:18pt;
+}
+.type
+{
+width:95%;
+}
+.PDF_VIEWED,.video_VIEWED
+{
+font-size: 12pt;
+margin-right: 10px;
+margin-top: 0px !important;
+}
+
+
+/* add patient drop down */
+
+ .custom-dropdown--large {
+    font-size: 1.5em;
+}
+
+.custom-dropdown--small {
+    font-size: .7em;
+}
+
+.custom-dropdown__select{
+    font-size: inherit; /* inherit size from .custom-dropdown */
+	padding:0 !important;
+    margin: 0; /* remove default margins */
+	
+}
+
+.custom-dropdown__select--white {
+   
+    background: linear-gradient(to bottom, #f5f5f5 0%,#ececec 24%,#c8c8c8 81%,#c2c2c2 95%,#c3c3c3 100%); 
+	box-shadow: 0px 0px 3px #000; 
+}
+
+@supports (pointer-events: none) and
+      ((-webkit-appearance: none) or
+      (-moz-appearance: none) or
+      (appearance: none)) {
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .custom-dropdown__select {
+        padding-right: 2.5em; /* accommodate with the pseudo elements for the dropdown arrow */
+        border: 0;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+		height:40px;
+		width:218px;
+		
+    }
+
+    .custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+		background:url(../../images/arrow_bg.png) no-repeat right; 
+		
+    }
+
+    .custom-dropdown::after { /*  Custom dropdown arrow */
+        content: "";
+      
+        font-size: .625em;
+        
+        right: 1.2em;
+      
+		background:url(../../images/arrow_bg.png) no-repeat right;  
+		
+    }
+
+    .custom-dropdown::before { /*  Custom dropdown arrow cover */
+        width: 3em;
+        right: 0; top: 0; bottom: 0;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .custom-dropdown__select[disabled] {
+        color: rgba(0,0,0,.3);
+    }
+
+    .custom-dropdown.custom-dropdown--disabled::after {
+        color: rgba(0,0,0,.1);
+    }
+
+    /* White dropdown style */
+    .custom-dropdown--white::before {
+        bottom: .0em ;
+    }
+
+    .custom-dropdown--white::after {
+        color: rgba(0,0,0,.9);
+    }
+
+    /* FF only temp fix */
+
+    @-moz-document url-prefix() {
+        .custom-dropdown__select             { padding-right: .9em }
+        .custom-dropdown--large .custom-dropdown__select { padding-right: 1.3em }
+        .custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
+
+
+
+
+/* end*/
+
+
+.col-md-1.AdminImg {
+    padding: 0;
+}
+.col-md-3.ActionPlan {
+    padding: 0 4px;
+    text-align: right;
+}
+
+.col-md-12.Bttn_group_review {
+    padding: 0 23px;
+}
+.col-md-6.Admin > h5 {
+    color: #888;
+    
+}
+
+.navbar-brand>img{
+	width: 80%;
+}
+
+.btn-primary{
+	background: rgba(97,35,105,0.80);
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12),
+	0px 2px 2px 0px rgba(0,0,0,0.24);
+	border-radius: 2px;
+}
+
+.page-header{
+	padding: 20px 0;
+	display: block;
+}
+
+.page-header .title{
+	display: block;
+	color: #7fcebb;
+}
+
+.page-header .sub-title{
+	font-size: 16px;
+	font-weight: 600;
+	color: #666;
+	margin-bottom: 10px;
+}
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gladstone</title>
+<!--css files-->
+<link rel='stylesheet prefetch' href='/gladstone/portal/bloom/app/assets/css/ionic.min.css'>
+<link rel="stylesheet" type="text/css" href="/gladstone/portal/bloom/common/script/css/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" href="/gladstone/portal/bloom/common/script/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/gladstone/portal/bloom/app/assets/css/intile.css">
+<link rel="stylesheet" type="text/css" href="/gladstone/portal/bloom/app/assets/css/responsive.css">
+</head>
+<body  ng-app="starter">
+<div id="wrapper">
+
+<!--start header area-->
+<!--<div class="container">
+  <div class="header">
+    <div class="col-md-6"> <a href="#"><img src="/gladstone/portal/bloom/app/assets/image/bloomlogo.png" /></a> </div>
+  </div>
+</div>-->
+<!--content area div-->
+<div class="modal-backdrop fade" id="fadeDivLoading" style="display:none;"></div>
+<!--<ion-spinner icon="dots" class="spinner-dark" id="loadingIcon" style="display:none;"></ion-spinner>-->
+<div class="container contentAreaHeight" ng-view=""></div>
+<!--start footer area-->
+<!--<div class="footerDiv">
+  <div class="container">
+    <div class="Footer">
+      <div class="col-md-6"> </div>
+      <div class="col-md-6" align="right">
+        <p>Copyright kannact 2015</p>
+      </div>
+    </div>
+  </div>
+</div>-->
+</div>
+
+<div class="modal fade" id="errorPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="reset" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title errorMsgTitle" id="errorPopupLabel">Message</h4>
+      </div>
+      <div class="modal-body">
+          <div>
+            <label for="message-text" class="control-label popErrorMsg">Error occurred,please contact Kannact support.</label>
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default closeBtn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--libarary js-->
+<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/query.min_1.7.1.js"></script>
+<script src="/gladstone/portal/bloom/app/views/scripts/lib/spinner.js"></script>
+<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/auth-helper.js"></script>
+<script src='/gladstone/portal/bloom/app/views/scripts/lib/ionic.bundle.js'></script>
+<script src="/gladstone/portal/bloom/app/views/scripts/lib/angular-route.js"></script>
+<script src="/gladstone/portal/bloom/app/views/controllers/signupControllers.js"></script>
+<script src="/gladstone/portal/bloom/app/views/scripts/app/signupapp.js"></script>
+<script src="/gladstone/portal/bloom/common/script/js/bootstrap.min.js"></script>
+</body>
+</html>

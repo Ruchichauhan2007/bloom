@@ -1,0 +1,161 @@
+@media (max-width:767px) {
+.heading {
+    font-size: 25px;
+}
+.subHeading, label {
+    font-size: 16px;
+}
+.SignUpProcess input, .SignUpProcess select, .SignUpProcess textarea{
+	font-size: 16px;
+}
+.btn.btn-default.btn-DarkGrey,
+button.btn.btn-DarkSky.btn-default {
+    font-size: 16px;
+}
+.next img, .check-condition button img {
+    width: 18px;
+}
+.hend-icon{
+	font-size: 18px;
+}
+.Footer p, .Pharmacy-name .subHeading, .healthCoching h2, .shipping h2 {
+    font-size: 18px;
+}
+.SignUpProcess p, .Prescription, .confirmation p {
+    font-size: 14px;
+}
+.SignUpProcess  p  .link{
+	font-size:14px !important;
+}
+.checkError 
+{
+	font-size:14px !important;
+}
+.next a, .WhatHappensNext p, .EligibilityHeader p, .V_Point li {
+    font-size: 16px;
+}
+.WhatHappensNext img {
+    width: 45px;
+}
+.back-button{
+	font-size:13px !important;
+}
+.link{
+	margin-top:6px;
+}
+}
+@media (max-width:616px) {
+.heading {
+    font-size: 20px;
+}
+.subHeading, label {
+    font-size: 14px;
+}
+.SignUpProcess input, .SignUpProcess select, .SignUpProcess textarea{
+	font-size: 14px;
+}
+.btn.btn-default.btn-DarkGrey,
+button.btn.btn-DarkSky.btn-default {
+    font-size: 14px;
+}
+.next img, .check-condition button img {
+    width: 16px;
+}
+.hend-icon{
+	font-size: 16px;
+	 padding-right: 28%;
+}
+.Footer p, .Pharmacy-name .subHeading, .healthCoching h2, .shipping h2 {
+    font-size: 16px;
+}
+.Prescription, .confirmation p {
+    font-size: 13px;
+}
+.next a, .WhatHappensNext p, .EligibilityHeader p, .V_Point li {
+    font-size: 14px;
+}
+.WhatHappensNext img {
+    width: 40px;
+}
+.errorMsg
+{
+font-size: 12px!important;;
+}
+.errorMsg img {
+    float: right;
+    height: 10px;
+    max-width: 100%;
+}
+.checkError 
+{
+	font-size:14px !important;
+}
+@media (max-width:414px) {
+.heading {
+    font-size: 16px;
+}
+.subHeading, label {
+    font-size: 12px;
+}
+.SignUpProcess input, .SignUpProcess select, .SignUpProcess textarea{
+	font-size: 12px;
+}
+.btn.btn-default.btn-DarkGrey,
+button.btn.btn-DarkSky.btn-default {
+    font-size: 12px;
+}
+.next img, .check-condition button img {
+    width: 14px;
+}
+.hend-icon{
+	font-size: 14px;
+	 padding-right: 38%;
+}
+.Footer p, .Pharmacy-name .subHeading, .healthCoching h2, .shipping h2 {
+    font-size: 14px;
+}
+.SignUpProcess p, .Prescription, .confirmation p,.SignUpProcess p .link {
+    font-size: 12px;
+}
+.SignUpProcess  p  .link{
+	font-size:12px !important;
+}
+.checkError 
+{
+	font-size:12px !important;
+}
+.next a, .WhatHappensNext p, .EligibilityHeader p, .V_Point li {
+    font-size: 13px;
+}
+.WhatHappensNext img {
+    width: 40px;
+}
+.back-button{
+	font-size:13px !important;
+}
+.form-control {
+    height: 30px !important;
+}
+/* Container Max- Min width settings */
+.container {
+    max-width: 320px;
+    min-width: 288px;
+    padding: 0;
+}
+.intileSignUp {
+    padding: 16px;
+}
+#wrapper {
+    overflow: auto;
+}
+.link{
+	margin-top:-2px !important;
+}
+.checkbox.preferred,.padding0 { margin-top:7px;}
+.checkbox.preferred.mt0,.padding0.mt0 { margin-top:0;}
+}
+@media (max-width:524px) {
+.link{
+ margin-top:-4px;
+}
+}

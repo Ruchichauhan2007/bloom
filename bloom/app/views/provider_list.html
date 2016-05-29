@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/gladstone/portal/bloom/dashboard/script/css/dashboard.css">
+
+<!-- Delete  patient dialog -->
+<div class="dashboard_patient_rightpart card-container">
+	<div class="compare_models mCustomScrollbar _mCS_1">
+		<div class="mCustomScrollBox mCS-light-thin mCS-mouse-over" id="mCSB_1" style="position: relative; height: 100%; max-width: 100%; ">
+			<div class="dashboard_box_bg">
+				<!--<div class="dashboard_box_bg_img">
+					<a href="#/add_prov"  id = "add_prov"  onclick="openPageWithAjax('../../provider/pages/portal_addProvider.php','','menu-content',event)">
+						<img src="/gladstone/portal/bloom/dashboard/images/addpatient.png" alt=""></a>
+				</div>-->
+				<div class="dashboard_box_bg_text">
+					<span class="number-of-listing">10 Providers</span>
+					<a href="#/add_prov" id = "add_prov" onclick="openPageWithAjax('../../provider/pages/portal_addProvider.php','','menu-content',event)">
+						Add New Provider
+					</a>
+				</div>
+			</div>
+			<div id="content">
+				<div style="width:100%; text-align:center;">
+					<button type="button" ng-repeat="letter in alphabet" ng-click="selectCategory(letter)" style="width:24px;" ng-class="{ 'no-result': selectedCategory === letter && !filteredItems.length }">
+						{{letter}}
+					</button>
+				</div>
+			</div>
+			<div class="ProviderList_part_bg cardPanel" ng-repeat="x in providers | orderBy: 'lastName' | filter:search" ng-attr-id="{{x.entityId}}">
+					<!--<div class="col-lg-2 col-sm-2 col-xs-2 patient_img_left">
+						<a href="#" ng-click="editProvider(x.entityId);"><img class="default_img" src="/gladstone/portal/bloom/common/images/DEFAULT.png" alt=""></a>
+					</div>-->
+					<div class="row patient_address">
+						<div class="col-md-6 name">{{ x.lastName }} {{ x.firstName }} {{ x.credentials}}</div>
+						<div class="col-md-3 date">{{ x.specialityCode}}</div>
+						<div class="col-lg-3 col-sm-4 col-xs-4 edit_sub_button">
+							<ul id="bttnGroup121">
+								<li><a href="#" class="btn-neutral" ng-click="editProvider(x.entityId);">Edit</a></li>
+							</ul>
+						</div>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+</div>

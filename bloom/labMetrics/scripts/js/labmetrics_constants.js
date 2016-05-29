@@ -1,0 +1,4 @@
+var INSERT = 1;
+var PAT_TAKEN_MANUAL = 'PAT_TAKEN_MANUAL';
+var EMR = 'EMR';
+var GLUCOSE_VITALS = "Glucose";

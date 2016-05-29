@@ -1,0 +1,48 @@
+<link href="/gladstone/portal/bloom/dashboard/script/css/dashboard.css" rel="stylesheet" type="text/css">
+<link href="/gladstone/portal/bloom/dashboard/script/css/supplies.css" rel="stylesheet" type="text/css">
+
+<div id="button-content">
+</div>
+<div id="supply-container">
+    <div class="dashboard_top_nav">
+        <ul>
+            <li>
+                <a href="#">Profile</a>
+            </li>
+            <li>
+                <a href="#">Devices</a>
+            </li>
+            <li>
+                <a href="#">Device Schedule</a>
+            </li>
+            <li>
+                <a href="#" class="active">Supplies</a>
+            </li>
+            <li>
+                <div id="topbar-patient" class="inline-container">
+                    <div class="right" id="dob"></div>
+                    <div class="left" id="name">J</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/query.min_1.7.1.js"></script>
+<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/gladstone/portal/bloom/dashboard/script/js/supplies_special_order.js"></script>
+
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="border-radius:0px;">
+      <div class="modal-header">
+        <h4 class="modal-title" id="confirmTitle">Special Order</h4>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer" style="border-top:0px solid black;">
+        <input class="cancelButton reset" type="reset" name="C" value="Cancel" data-dismiss="modal"></input>
+        <input class="nextButton submit" type="submit" name="S" value="Place Order" id="placeOrder"></input>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

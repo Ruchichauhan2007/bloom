@@ -1,0 +1,865 @@
+@media (min-width:992px) and (max-width:1199px) {
+.login_leftpart_form {
+    float: left;
+    width: 70%;
+}
+.login_logo_right_img {
+    width: 30%;
+	float: left;
+}
+.container {
+    width: 100% !important;
+}
+.row.buttonHeight {
+    width: 160%;
+}
+.col-lg-2.commen_rightPart > input {
+    float: left;
+}
+.login_Update_cont {
+    float: left;
+    width: 50% ;
+}
+.login_Usrnam_content {
+    float: left;
+    width: 50%;
+}
+.provider_form_leftsection {
+    float: left;
+    width: 49%;
+}
+.provider_mid {
+    float: left;
+    width: 6%;
+}
+.provider_form_rightsection {
+    float: left;
+    width: 45%;
+}
+
+}
+@media (min-width:768px) and (max-width:991px) {
+
+.buttonHeight {
+margin-top: 0;
+float: left;
+width: 100%;
+margin-bottom: 55px;
+}
+.col-lg-2.commen_rightPart {
+padding: 0;
+width: 10%!important;
+float: left;
+margin-left: 1%;
+margin-right: 1%;
+}
+
+input#submitNewpassword {
+margin-top: 0 !important;
+}
+.commen_rightPart {
+float: left;
+margin:0 30px 0 18px !important;
+}
+.col-lg-2.commen_rightPart input {
+float: left;
+}
+.buttonHeight {
+    width: 100%;
+}
+#imageContainer > ul#imageBox {
+    margin-left: 0;
+    max-width: 473px;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+}
+#submit_button.submit {
+float: left !important;
+margin-bottom: 23px !important;
+margin-left: 5px !important;
+margin-top: 2px !important;
+margin-right: 0px !important;
+}
+.Winimages {
+margin-left: 0 !important;
+}
+.but_pin {
+margin-right: 20px;
+width: 100% !important;
+float: left;
+margin-top: 5px;
+}
+input#cancel {
+float: left;
+margin: 1px 10px !important;
+}
+.Login_choose_button {
+    margin-left: 208px !important;
+}
+.login_logo_right_img {
+    float: none !important;
+    margin: 0 !important;
+    text-align: center;
+}
+.container {
+    width: 100% !important;
+}
+.wapper {
+    padding: 0 5px;
+}
+.login_leftpart_form {
+    text-align: center;
+}
+.password_Lchoose_button {
+    margin-left: 31% !important;
+}
+.login_Update_cont {
+    float: left;
+    width: 100% ;
+}
+.login_Usrnam_content {
+    float: left;
+    width: 100%;
+}
+.login_gallery_pin {
+    float: left;
+    margin-top: 26px;
+    padding: 0 13px;
+    width: 100%;
+}
+.login_gallery_pin input[type="submit"] {
+    margin-bottom: 30px;
+    margin-left: 20px;
+	margin-right: 28px;
+}
+.login_gallery_pin input[type="reset"] {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.provider_form_leftsection {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_mid {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_form_rightsection {
+    float: left;
+	width: 98%;
+	margin-left: 3%;
+}
+.provider_form {
+    text-align: left;
+}
+input#middle_initial {
+width: 8%;
+}
+input#last_name {
+width: 22%;
+}
+.login-ChooseAuth {
+    padding-left: 0px !important;
+}
+}
+@media (max-width:767px) {
+.login_logo_right_img {
+    float: none !important;
+    margin: 0 !important;
+    text-align: center;
+}
+.container {
+    width: 100%;
+}
+.wapper {
+    padding: 0 5px;
+}
+#lightbox.white_content {
+    left: 20px !important;
+    top: 72px !important;
+    width: 280px !important;
+}
+}
+@media (width:600px) {
+.col-lg-2.commen_rightPart {
+padding: 0;
+width: 18%!important;
+float: left;
+margin-left: 3%;
+}
+input#middle_initial {
+width: 5%;
+}
+.login_leftpart_form {
+    text-align: center;
+}
+.password_Lchoose_button {
+    width: 100%;
+}
+.login_Update_cont {
+    float: left;
+    width: 100% ;
+}
+.login_Usrnam_content {
+    float: left;
+    width: 100%;
+}
+.login_Update_cont {
+    float: left;
+    width: 100% ;
+}
+.login_Usrnam_content {
+    float: left;
+    width: 100%;
+}
+.login_Authentica_img {
+    float: left;
+    margin: 12px 24px 0;
+    width: 100%;
+}
+.login_Authentica_img > a {
+    float: left;
+    width: 100%;
+}
+#imageContainer > ul#imageBox {
+    overflow-x: scroll;
+    width: 120%;
+}
+#imageContainer {
+    padding: 0 10px;
+}
+.login_gallery_pin {
+    float: left;
+    margin-top: 26px;
+    padding: 0 13px;
+    width: 100%;
+}
+.login_gallery_pin input[type="submit"] {
+    margin-bottom: 30px;
+    margin-left: 20px;
+	margin-right: 28px;
+}
+.login_gallery_pin input[type="reset"] {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.provider_form_leftsection {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_mid {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_form_rightsection {
+    float: left;
+    width: 100%;
+}
+.provider_form {
+    text-align: left;
+}
+}
+@media (min-width:500px) and (max-width:668px) {
+.buttonHeight {
+margin-top: 0;
+float: left;
+width: 100%;
+margin-bottom: 55px;
+}
+.col-lg-2.commen_rightPart {
+padding: 0;
+width: 18%!important;
+float: left;
+margin-left: 1%;
+margin-right: 1%;
+}
+
+input#submitNewpassword {
+margin-top: 0 !important;
+}
+
+.but_pin {
+margin-right: 20px;
+width: 100% !important;
+float: left;
+margin-top: 5px;
+}
+input#cancel {
+float: left;
+}
+.Winimages {
+margin-left: 0 !important;
+}
+#imageContainer > ul#imageBox {
+    margin-left: 0;
+    max-width: 473px;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+	height: 246px !important;
+}
+#submit_button.submit {
+float: left !important;
+margin-bottom: 23px !important;
+margin-left: 5px !important;
+margin-top: 2px !important;
+margin-right: 0px !important;
+}
+#imageContainer {
+    max-width: 100%;
+}
+.Login_choose_button {
+     margin-left: 208px;
+}
+.provider_button {
+margin-bottom: 57px;
+}
+input#middle_initial {
+width: 8%;
+}
+input#last_name {
+width: 22%;
+}
+footer{position:relative !important;}
+.login_leftpart_form {
+    float: left;
+    width: 55%;
+}
+.login_logo_right_img {
+    float: left !important;
+    width: 40% !important;
+}
+.login_leftpart_form {
+    margin-bottom: 5px;
+    margin-top: 5%;
+    padding-left: 0;
+}
+input[type="submit"] {
+	margin: 6px 0 2px !important;
+}
+.login_leftpart_form p {
+    padding: 5px 2px 0 !important;
+}
+.login_logo_right_img > img {
+    width: 100%;
+	margin-top: 55px;
+}
+.login_leftpart_form input[type="text"]{
+	margin:0px !important;
+	width:100% !important;
+}
+.password_Lchoose_button {
+    width: 100% !important;
+}
+body {
+    background-size: 100% 100% !important;
+    height: auto !important;
+}
+.login_Update_cont {
+    float: left;
+    width: 100% ;
+}
+.login_Usrnam_content {
+    float: left;
+    width: 100%;
+}
+.login_Authentica_img {
+    float: left;
+    margin: 12px 24px 0;
+    width: 100%;
+}
+.login_Authentica_img > a {
+    float: left;
+    width: 100%;
+}
+.login_gallery_pin {
+    float: left;
+    margin-top: 26px;
+    padding: 0 13px;
+    width: 100%;
+	margin-bottom: 40px;
+}
+.login_gallery_pin input[type="submit"] {
+    float: right;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 41px !important;
+	margin-top: 0 !important;
+    
+}
+.login_gallery_pin input[type="reset"] {
+    margin-bottom: 30px;
+    margin-left: 20px;
+	margin-top:0px !important;
+}
+.provider_form_leftsection {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_mid {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_form_rightsection {
+    float: left;
+	width: 98%;
+	margin-left: 3%;
+}
+.provider_form {
+    text-align: left;
+}
+.login_leftpart_form input[type="password"] {
+	width: 243px;
+}
+p.version_p{ margin-bottom: 50px;}
+.login_leftpart_form input[type="password"]{ margin-left:0px !important;}
+}
+@media (max-width:482px) {
+
+.col-lg-2.commen_rightPart {
+width: 42% !important;
+float: left;
+margin-top: 10px;
+margin-left: 21px;
+margin-bottom: 30px;
+}
+
+input#submitNewpassword {
+margin-top: -1px !important;
+}
+#preview {
+    left: -78px;
+    position: absolute;
+    top: 439px;
+}
+
+.login_leftpart_form input[type="text"]{
+	margin:0px !important;
+	width:100% !important;
+}
+.provider_input > input#emailVal {
+    width: 100%;
+}
+.login_leftpart_form input[type="password"]{
+	margin:0px !important;
+	width:100% !important;
+}
+.login_leftpart_form {
+    margin-bottom: 5px;
+    margin-top: 5%;
+    padding-left: 0;
+}
+.password_Lchoose_button {
+    width: 100% !important;
+}
+.login_Update_cont {
+    float: left;
+    width: 100% ;
+}
+.login_Usrnam_content {
+    float: left;
+    width: 100%;
+}
+.login_passwor_text {
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+}
+body {
+    background-size: 100% 100% !important;
+    height: auto !important;
+}
+.login_Required {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+}
+#passwordStrength {
+    margin-bottom: 5px;
+    width: 100% !important;
+}
+.footerlink_left > a {
+    font-size: 15px !important;
+}
+.footerlink_right > a {
+    font-size: 15px !important;
+}
+.login-ChooseAuth {
+    padding-top: 83px;
+	padding-left:0px !important;
+}
+.login_Authentica_img p{ float:none !important;}
+#imageContainer > ul#imageBox {
+    overflow-x: scroll;
+    width: 96%;
+}
+#imageContainer {
+    padding: 0 10px;
+}
+.login_gallery_pin {
+    float: left;
+    margin-top: 26px;
+    padding: 0 13px;
+    width: 100%;
+}
+.login_gallery_pin input[type="submit"] {
+    float: right;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 41px !important;
+    margin-top: 350px !important;
+}
+.login_gallery_pin input[type="reset"] {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.provider_form_leftsection {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_mid {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_form_rightsection {
+    float: left;
+    width: 100%;
+}
+.provider_form {
+    text-align: center;
+}
+.provider_button {
+margin-bottom: 30px;
+}
+.login_Authentica_img {
+    margin-left: 0;
+}
+.login_comm_usr > input {
+    height: 32px;
+    margin-top: 24px;
+    width: 147px;
+}
+.login_comm_usr{line-height: 28px !important;}
+.login_strong_password {
+    display: none;
+}
+#imageContainer > ul#imageBox {
+    height: 247px;
+    margin-left: 0;
+    max-width: 238px;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+}
+#imageContainer {
+    max-width: 100%;
+}
+.Login_choose_button {
+    margin-top: 150px;
+	margin-left:0px;
+}
+#pin_form > input#firstpin {
+    height: 45px;
+    width: 40px;
+}
+#pin_form > input#secondpin {
+    height: 45px;
+    width: 40px;
+}
+#pin_form > input#thirdpin {
+    height: 45px;
+    width: 40px;
+}
+#pin_form > input#fourthpin {
+    height: 45px;
+    width: 40px;
+}
+#submit_button.submit {
+margin-top: 18px !important;
+float: right;
+margin-right: 0px !important;
+}
+
+.Winimages {
+margin-left: 0 !important;
+}
+input#cancel {
+margin-right: 7px;
+margin-top: 18px;
+}
+#submit_button.submit {
+float: left !important;
+margin-bottom: 23px !important;
+margin-left: 5px !important;
+margin-top: 2px !important;
+margin-right: 0px !important;
+}
+}
+@media (max-width:414px) {
+.but_pin {
+margin-right: 20px;
+float: left;
+margin-bottom: 30px;
+}
+}
+@media (width:480px) {
+footer{position:relative !important;}
+.login_leftpart_form {
+    float: left;
+    width: 55%;
+}
+.login_logo_right_img {
+    float: left !important;
+    width: 40% !important;
+}
+.login_leftpart_form {
+    margin-bottom: 5px;
+    margin-top: 5%;
+    padding-left: 0;
+}
+input[type="submit"] {
+	margin: 6px 0 2px !important;
+}
+.login_leftpart_form p {
+    padding: 5px 2px 0 !important;
+}
+.login_logo_right_img > img {
+    width: 100%;
+}
+.provider_button {
+margin-bottom: 10px;
+}
+#submit_button.submit {
+float: left !important;
+margin: 18px 0px!important;
+}
+}
+@media (width:640px) {
+body {
+    background-size: 100% 100% !important;
+    height: 100% !important;
+}
+}
+@media (max-width:384px) {
+input[type="submit"] {
+	margin: 6px 0 2px !important;
+}
+.login_leftpart_form p {
+    padding: 5px 2px 0 !important;
+}
+.row.buttonHeight {
+margin-bottom: 30px;
+}
+
+.provider_button {
+margin-bottom: 45px !important;
+
+}
+}
+@media (max-width:375px) {
+.login_leftpart_form {
+    margin-bottom: 5px;
+    margin-top: 5%;
+    padding-left: 0;
+}
+input[type="submit"] {
+	margin: 6px 0 2px !important;
+}
+.login_leftpart_form p {
+    padding: 5px 2px 0 !important;
+}
+.login_logo_right_img > img {
+    width: 66%;
+}
+.auth_but {
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.login_gallery_pin input[type="password"] {
+	width: 45px;
+}
+.login_gallery_pin input[type="reset"] {
+    margin-top: 10px;
+}
+.login_gallery_pin input[type="submit"] {
+    margin-top: 10px !important;
+}
+.wrapper2 {
+margin: 0 auto 12px !important;
+}
+input#reset_submit {
+margin-right: -29px !important;
+margin-bottom: 0 !important;
+}
+}
+@media (min-width:730px) and (max-width:740px) {
+
+.buttonHeight {
+margin-top: 0;
+float: left;
+width: 100%;
+margin-bottom: 46px;
+}
+.col-lg-2.commen_rightPart {
+padding: 0;
+width: 18%!important;
+float: left;
+margin-left: 1%;
+}
+
+input#submitNewpassword {
+margin-top: 0 !important;
+}
+
+footer{position:relative !important;}
+.login_leftpart_form {
+    float: left;
+    width: 55%;
+}
+p.version_p{ margin-bottom: 50px;}
+.login_leftpart_form input[type="password"]{ margin-left:0px !important;}
+.login_logo_right_img {
+    float: left !important;
+    width: 40% !important;
+}
+.login_leftpart_form {
+    margin-bottom: 5px;
+    margin-top: 5%;
+    padding-left: 0;
+}
+input[type="submit"] {
+	margin: 6px 0 2px !important;
+}
+.login_leftpart_form p {
+    padding: 5px 2px 0 !important;
+}
+.login_logo_right_img > img {
+    width: 100%;
+	margin-top:55px;
+}
+.login_leftpart_form input[type="text"]{
+	margin:0px !important;
+	width:100% !important;
+}
+.password_Lchoose_button {
+    width: 100% !important;
+}
+body {
+    background-size: 100% 100% !important;
+    height: auto !important;
+}
+.login_Update_cont {
+    float: left;
+    width: 100% ;
+}
+.login_Usrnam_content {
+    float: left;
+    width: 100%;
+}
+.login_Authentica_img {
+    float: left;
+    margin: 12px 24px 0;
+    width: 100%;
+}
+.login_Authentica_img > a {
+    float: left;
+    width: 100%;
+}
+.login_gallery_pin {
+    float: left;
+    margin-top: 26px;
+    padding: 0 13px;
+    width: 100%;
+	margin-bottom: 40px;
+}
+.login_gallery_pin input[type="submit"] {
+    float: right;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 41px !important;
+	margin-top: 0 !important;
+    
+}
+.login_gallery_pin input[type="reset"] {
+    margin-bottom: 30px;
+    margin-left: 20px;
+	margin-top:0px !important;
+}
+.provider_form_leftsection {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_mid {
+    float: left;
+    width: 100%;
+	margin: 15px 0;
+}
+.provider_form_rightsection {
+    float: left;
+	width: 98%;
+	margin-left: 3%;
+}
+input#middle_initial {
+width: 5%;
+}
+.provider_form {
+    text-align: left;
+}
+.login_leftpart_form input[type="password"] {
+	width: 243px;
+}
+.provider_button {
+margin-bottom: 57px;
+}
+.provider_input {
+width: 83% !important;
+margin-left: 104px;
+}
+#imageContainer > ul#imageBox {
+    margin-left: 0;
+    max-width: 235px;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+}
+#imageContainer {
+    max-width: 100%;
+}
+.Login_choose_button {
+     margin-left: 208px !important;
+}
+#imageContainer > ul#imageBox {
+    margin-left: 0;
+    max-width: 473px;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+	height: 246px !important;
+}
+#submit_button.submit {
+float: left !important;
+margin-bottom: 23px !important;
+margin-left: 5px !important;
+margin-top: 2px !important;
+margin-right: 0px !important;
+}
+.Winimages {
+margin-left: 0 !important;
+}
+.but_pin {
+margin-right: 20px;
+width: 100% !important;
+float: left;
+margin-top: 5px;
+}
+input#cancel {
+float: left;
+}
+}
