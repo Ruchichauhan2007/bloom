@@ -157,7 +157,7 @@ padding-top: 25px;
 			<li id="menu-content-container" onClick="filterMenu(this);" class="<?php echo constantAppResource::$COMMON_MENU_TEXT_TRACK_BIOMETRICES;?>"><a href="#" onClick="openPageWithAjax('../../vitals/pages/setPath.php','','menu-content','',this)" id="headerBiomatric"><img  alt="" title="Track Biometrics">Biometrics</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-			<li  onClick="filterMenu(this)"><a href="#">Profile</a></li>
+			<li  onClick="filterMenu(this),openPageWithAjax('../../dashboard/pages/portal_addPatient.php','','menu-content',event,this)"><a href="#">Profile</a></li>
 			<li  onClick="filterMenu(this)"><a href="#">Support</a></li>
             <li class=""><a href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/login/pages/logout.php">Log Out</a></li>
           </ul>

@@ -56,7 +56,7 @@ window.location.hash = '/report';
                                  <?php
 									 $i = 0;
 									 foreach($allKannactReportConfig as $report)
-									 {
+									 {
 										if(!is_null($report))
 										{
 											  if($i == 0)

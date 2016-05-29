@@ -43,6 +43,7 @@
 }
 		
 ?>
+<div class="col-md-8 padd-top20"> 
 <div id="div_form">
       <form action="" method="post" id="reviewAlert" onSubmit="postForm('<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/patientcare/pages/reviewAlert.php','reviewAlert','menu-content',event)">
         
@@ -92,6 +93,16 @@
         </div>
       </form>
     </div>
+    </div>
+     <div class="col-md-4 padd-top50">
+			<div class="sidebar-filter">
+				<div class="card">
+					<div class="filter-tabs">
+						
+				</div>
+			</div>
+        </div>
+</div>
 <script>
 
  $(document).ready(function() { 

@@ -228,7 +228,7 @@ width:40px;
 				 <li><a href="#" onClick="openPageWithAjax('../../survey/pages/showSurvey.php','','menu-content',event,this)">Survey</a></li> 
 			</ul>
 		</div>
-		<div class="nav Biometrics">
+		<div class="nav Biometrics" style='display:none'>
 			<div class="page-header">
 				<span class="title">Biometrics</span>
 			</div>
@@ -236,7 +236,7 @@ width:40px;
 				<?php echo $data;?>
 			</ul>
 		</div>
-		<div class="nav Profile">
+		<div class="nav Profile" style='display:none'>
 			<div class="page-header">
 				<span class="title">Profile</span>
 			</div>
@@ -244,7 +244,7 @@ width:40px;
 				<li><a href="#" onClick="openPageWithAjax('../../dashboard/pages/portal_addPatient.php','','menu-content',event,this)">Profile</a></li> 
 			</ul>
 		</div>
-		<div class="nav Support">
+		<div class="nav Support" style='display:none'>
 			<div class="page-header">
 				<span class="title">Support</span>
 			</div>

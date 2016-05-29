@@ -85,7 +85,8 @@ $("#deviceConfigID").val(deviceConfigId);
 	<div class="card-container">
 	  <div class="col-lg-12 assessments">
 		  <div class="pull-left">
-			<h3 class="page-title"><select name="vitalName" id="vitalName">
+			<h3 class="page-title">
+			<select name="vitalName" id="vitalName">
 			<?php
 			 foreach($devicelist as $device)
 			 {
@@ -165,17 +166,11 @@ $("#deviceConfigID").val(deviceConfigId);
 	  <div class="col-lg-12 Blood_Pressure_Inner1">
 		<div class="row Graph_Body_Weight">
 		  <div class="col-md-6">
-			<ul class="days_GBW">
-			  <li class="days selectedDate"><a href="#">7 Days</a></li>
-			  <li class=" days"><a href="#">30 Days</a></li>
-			  <li class="days"><a href="#">90 Days</a></li>
-			</ul>
 		  </div>
 		  <?php
 		  if($vitalType == "Blood Glucose")
 		  {
 		  ?>
-		<div align="right" class="pre-post-meal Blood-Glucose-Graph"><a  style="cursor:pointer"><span data="ALL" class="active">All</span></a><a style="cursor:pointer"><span data="PRE">Pre-Meal</span></a><a  style="cursor:pointer"><span data="POST">Post-Meal</span></a> </div>
 		<input type="hidden" id="meal-type" />
 		  <?php
 		  }
@@ -211,8 +206,8 @@ $("#deviceConfigID").val(deviceConfigId);
 		  {
 		  ?>
 						<div class="padd-15 pre-post-meal ">
-							<button class="btn btn-neutral" data="ALL">All</button>
-							<button class="btn btn-default active" data="PRE">Pre Meal</button>
+							<button class="btn btn-neutral active"  data="ALL">All</button>
+							<button class="btn btn-default " data="PRE">Pre Meal</button>
 							<button class="btn btn-neutral" data="POST">Post Meal</button>
 						</div> 
 						<input type="hidden" id="meal-type" />
@@ -222,9 +217,9 @@ $("#deviceConfigID").val(deviceConfigId);
 						
 						<div class="divider"></div>
 						<div class="padd-15 days_GBW">
-							<button class="btn btn-default active">7 Days</button>
-							<button class="btn btn-neutral">14 Days</button>
-							<button class="btn btn-neutral">30 Days</button>
+							<button class="btn btn-default days selectedDate active">7 Days</button>
+							<button class="btn btn-neutral days">14 Days</button>
+							<button class="btn btn-neutral days ">30 Days</button>
 						
 						</div>
 

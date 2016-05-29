@@ -284,7 +284,7 @@ padding: 0 0 0 4px;
 				</div>
 			</div>
 
-			<div class="nav Patient">
+			<div class="nav Patient" style='display:none'>
 				<div class="page-header">
 					<span class="title">Patients</span>
 					<!--<span class="sub-title">Tap cards to mark them as reviewed.</span>-->
@@ -310,16 +310,14 @@ padding: 0 0 0 4px;
 					</li>
 					<li><a href="#" class="patient" onClick="openPageWithAjax('../../dashboard/pages/portal_addPatient.php?edit=true&patientId=this.id&type=EDIT','','menu-content',event,this)">Profile</a>
 					</li>
-					<li><a href="#" paginate="true" onClick="openPageWithAjax('../../reports/pages/report_weekly_dashboard.php','','menu-content',event,this)">Reports</a>
-					</li>
-					<li><a href="#" onClick="openPageWithAjax('../../provider/pages/configuration.php','','menu-content',event,this)">Supplies</a>
+					<li><a href="#" paginate="true"  onClick="openPageWithAjax('../../reports/pages/report_weekly_dashboard.php','','menu-content',event,this)">Reports</a>
 					</li>
 					<li><a href="#" paginate="true" onClick="openPageWithAjax('../../survey/pages/showSurvey.php','','menu-content',event,this)">Surveys</a>
 					</li>
 				</ul>
 			</div>
 
-			<div class="nav Provider">
+			<div class="nav Provider" style='display:none'>
 				<div class="page-header">
 					<span class="title">Provider</span>
 					<!--<span class="sub-title">Tap cards to mark them as reviewed.</span>-->
@@ -346,7 +344,7 @@ padding: 0 0 0 4px;
 				</ul>
 			</div>
 			
-			<div class="nav Support">
+			<div class="nav Support" style='display:none'>
 				<div class="page-header">
 					<span class="title">Support</span>
 					<!--<span class="sub-title">Tap cards to mark them as reviewed.</span>-->
@@ -373,12 +371,6 @@ function filterMenu(currentMenu)
 		$("div.Patient").show();
 		$("div.Patient div span").text('Patient');
 		openPageWithAjax('../../dashboard/pages/portal_patientList.php','','menu-content','',currentMenu);
-	}
-	else if(activeMenu == "Provider")
-	{
-		$("."+activeMenu).show();
-		openPageWithAjax('../../provider/pages/portal_providerList.php','','menu-content','',currentMenu);
-		
 	}
 	else{
 			$("."+activeMenu).show();

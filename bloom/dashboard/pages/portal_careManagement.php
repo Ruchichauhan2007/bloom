@@ -163,10 +163,56 @@ $("#patIdGraph").val("<?php echo $patientInfo->{patientId}; ?>");
 	});
 </script>
 <script src="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/dashboard/script/js/portal_careManagement_graph.js"></script>
-<div class="col-md-8 padd-top20">
 
 <div class="mytab">
-   <input type="hidden" name="patIdGraph" id="patIdGraph"  />
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" id="addPatientMenu">
+    <li role="presentation" ><a data="openPageWithAjax('../../dashboard/pages/portal_addPatient.php?edit=true&patientId=<?php echo $patientId; ?>&type=EDIT','','menu-content',event,this)"  onClick="openPageWithAjax('../../dashboard/pages/portal_addPatient.php?edit=true&patientId=<?php echo $patientId; ?>&type=EDIT','','menu-content',event,this)" aria-controls="tab1" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab" onClick="openPageWithAjax('../../dashboard/pages/patient_moreDetails.php?patientId=<?php echo $patientInfo->{patientId} ?>&type=EDIT&edit=true','','menu-content',event,this)"
+     data="openPageWithAjax('../../dashboard/pages/patient_moreDetails.php?patientId=<?php echo $patientInfo->{patientId} ?>&type=EDIT&edit=true','','menu-content',event,this)">Support</a></li>
+    <li role="presentation"  class="active"><a onClick="openPageWithAjax('../../dashboard/pages/portal_prescribingProvider.php?patientId=<?php echo $patientInfo->{patientId} ?>&type=EDIT','','menu-content',event,this)" data="openPageWithAjax('../../dashboard/pages/portal_prescribingProvider.php?patientId=<?php echo $patientInfo->{patientId} ?>&type=EDIT','','menu-content',event,this)">Prescription</a></li>
+ <li role="presentation" id="tab_supplies">
+        <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"  
+          onClick="openPageWithAjax('../../dashboard/pages/portal_addSupplies.php?patientId=<?php echo $patientInfo->{patientId} ?>&patientLastName=<?php echo $patientInfo->{lastName} ?>&patientFirstName=<?php echo $patientInfo->{firstName} ?>&type=EDIT','','menu-content',event,this)" 
+          data="openPageWithAjax('../../dashboard/pages/portal_addSupplies.php?patientId=<?php echo $patientInfo->{patientId} ?>&patientLastName=<?php echo $patientInfo->{lastName} ?>&patientFirstName=<?php echo $patientInfo->{firstName} ?>&type=EDIT','','menu-content',event,this)">
+          Supplies
+        </a>
+      </li>
+    <li role="presentation"><a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab" onClick="openPageWithAjax('../../dashboard/pages/portal_addDevices.php?patientId=<?php echo $patientInfo->{patientId} ?>&patientLastName=<?php echo $patientInfo->{lastName} ?>&patientFirstName=<?php echo $patientInfo->{firstName} ?>&type=EDIT','','menu-content',event,this)" data="openPageWithAjax('../../dashboard/pages/portal_addDevices.php?patientId=<?php echo $patientInfo->{patientId} ?>&patientLastName=<?php echo $patientInfo->{lastName} ?>&patientFirstName=<?php echo $patientInfo->{firstName} ?>&type=EDIT','','menu-content',event,this)">Devices</a></li>
+    <li role="presentation"><a href="#tab7" aria-controls="tab7" role="tab" data-toggle="tab" onClick="openPageWithAjax('../../dashboard/pages/portal_addDeviceSchedule.php?patientId=<?php echo $patientInfo->{patientId} ?>&type=EDIT','','menu-content',event,this)" data="openPageWithAjax('../../dashboard/pages/portal_addDeviceSchedule.php?patientId=<?php echo $patientInfo->{patientId} ?>&type=EDIT','','menu-content',event,this)">Device Schedule</a></li>
+<li role="management"><a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab" onClick="openPageWithAjax('../../dashboard/pages/portal_careManagement.php?patientId=<?php echo $patientInfo->{patientId} ?>&type=EDIT','','menu-content',event,this)" data="openPageWithAjax('../../dashboard/pages/portal_careManagement.php?patientId=<?php echo $patientInfo->{patientId} ?>&type=EDIT','','menu-content',event,this)">Care Management</a></li>
+  </ul>
+  <div class="pDet">
+     <a href="#" id="showNotesBtn">Notes</a>
+    <div class="pName">
+   <?php 
+	$patName =  $patientInfo->{lastName}." ".$patientInfo->{firstName};
+	$patDisplayName = "";
+	 if(strlen($patName) > 23) 
+	{
+	 $patDisplayName = substr($patName,0,23).'...' ;
+	 echo $patDisplayName;
+	 }
+	 else
+	 {
+	 	echo $patName;
+	 }
+	
+	 ?>
+    </div>
+     <div class="pDate">
+    <?php
+	if($dateOfsBirthStr!= "")
+	{
+	$dateOfB = "DOB";
+	echo $dateOfB." ". $dateOfsBirthStr;
+	}
+	?>
+
+	</div>
+ 
+  </div>
+  <input type="hidden" name="patIdGraph" id="patIdGraph"  />
    <input type="hidden" name="updateCommunicationid" id="updateCommunicationid"  value="<?php echo $updateCommunicationid; ?>"/>
     <input type="hidden" name="dashcard" id="dashcard"  value="<?php echo $dashcard; ?>"/>
     <?php
@@ -178,6 +224,7 @@ $("#patIdGraph").val("<?php echo $patientInfo->{patientId}; ?>");
 	}
 	?>
    
+<div class="col-md-8 padd-top20">
 
   <!-- Tab panes -->
   <div class="container-fluid">

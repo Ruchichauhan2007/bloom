@@ -48,96 +48,92 @@ $("#deviceConfigID").val(deviceConfigId);
 <link type="text/css" rel="stylesheet" href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/vitals/scripts/css/bloodPressure.css" />
 
 <div class="col-md-8 padd-top20">
+	<div class="card-container">
+
   <div class="col-lg-12 assessments">
-    <div class="row">
-      <div class="col-md-6">
-        <h3>
-		 <select name="vitalName" id="vitalName">
-        <?php
-         foreach($devicelist as $device)
-	  {
-	  	$measurementName = $device->{measurementName1};
-		if($measurementName == "Diastolic")
-		{
-		$measurementName = "Blood Pressure" ;
-		}
-		else if($measurementName == "Pulse")
-			{
-			$measurementName = "Blood Oxygen" ;
+		  <div class="pull-left">
+			<h3 class="page-title">
+			<select name="vitalName" id="vitalName">
+			<?php
+			 foreach($devicelist as $device)
+			 {
+				$measurementName = $device->{measurementName1};
+				if($measurementName == "Diastolic")
+				{
+				$measurementName = "Blood Pressure" ;
+				}
+				else if($measurementName == "Pulse")
+				{
+				$measurementName = "Blood Oxygen" ;
+				}
+			
+				 if($device->{fkdeviceConfigId} == $_POST["deviceConfigId"])
+				{
+				?>
+					<option value="<?php echo $device->{fkdeviceConfigId}; ?>" selected="selected"><?php echo $measurementName;?></option>
+				  
+					<?php
+				} 
+				else
+				{
+				  ?>
+					<option value="<?php echo $device->{fkdeviceConfigId}; ?>"><?php echo $measurementName;?></option>
+				  
+					<?php
+				}  
 			}
-	   if($device->{fkdeviceConfigId} == $_POST["deviceConfigId"])
-			{
-			?>
-				<option value="<?php echo $device->{fkdeviceConfigId}; ?>" selected="selected"><?php echo $measurementName;?></option>
-			  
-				<?php
-			} 
-			else
-			{
-			  ?>
-				<option value="<?php echo $device->{fkdeviceConfigId}; ?>"><?php echo $measurementName;?></option>
-			  
-				<?php
-			}  
-		}  
-		 ?>
-           </select>
-</h3>
-      </div>
-      <?php
-	  /*$userType = strtoupper($_COOKIE['type']); 
-	  if($userType == "PATIENT")
-	  {*/
-	  ?>
-	  
-      <div class="col-md-6" align="right">
-      <?php
-	  if($vitalType == "Blood Pressure")
-	  {
-	  ?>
-       <h3><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_bloodPressure_entry.php?inputType=BLOOD_PRESSURE','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></h3>
-      <?php
-	  }
-	  else if($vitalType == "Body Weight")
-	  {
-	  ?>
-       <h3><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_bodyWeight_entry.php?inputType=WEIGHT_SCALE','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></h3>
-      <?php
-	  }
-	  else if($vitalType == "Blood Oxygen")
-	  {
-	  ?>
-       <h3><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_bloodOxygen_entry.php?inputType=PULSE_OXIMETER','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></h3>
-      <?php
-	  }
-	  	else if($vitalType == "Peak Flow")
-	  {
-	  ?>
-       <h3><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_peakFlow_entry.php?inputType=PEAK_FLOW_METER','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></h3>
-      <?php
-	  }  
-      else if($vitalType == "Blood Glucose")
-	  {
-	  ?>
-       <h3><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_glucose_entry.php?inputType=GLUCOSE','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></h3>
-      <?php
-	  }  
-	  ?>
-       
-      </div>
-      <?PHP
-	  //}
-	  ?>
-    </div>
-  </div>
-  <div class="col-lg-12 Blood_Pressure_Inner1">
+			 ?>
+			   </select></h3>
+		  </div>
+		  <?php
+		/*  $userType = strtoupper($_COOKIE['type']); 
+		  if($userType == "PATIENT")
+		  {*/
+		  ?>
+		  
+		  <div>
+		  <?php
+		  if($vitalType == "Blood Pressure")
+		  {
+		  ?>
+		   <h3 class="neutral-text"><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_bloodPressure_entry.php?inputType=BLOOD_PRESSURE','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)">Add Manual Reading</a></h3>
+		  <?php
+		  }
+		  else if($vitalType == "Body Weight")
+		  {
+		  ?>
+		   <h3 class="neutral-text"><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_bodyWeight_entry.php?inputType=WEIGHT_SCALE','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)">Add Manual Reading</a></h3>
+		  <?php
+		  }
+		  else if($vitalType == "Blood Oxygen")
+		  {
+		  ?>
+		   <h3 class="neutral-text"><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_bloodOxygen_entry.php?inputType=PULSE_OXIMETER','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)">Add Manual Reading</a></h3>
+		  <?php
+		  }
+			else if($vitalType == "Peak Flow")
+		  {
+		  ?>
+		   <h3 class="neutral-text"><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_peakFlow_entry.php?inputType=PEAK_FLOW_METER','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)">Add Manual Reading</a></h3>
+		  <?php
+		  }  
+		  else if($vitalType == "Blood Glucose")
+		  {
+		  ?>
+		   <h3 class="neutral-text"><a href="javascript:void(0);" onClick="openPageWithAjax('../../vitals/pages/vitals_glucose_entry.php?inputType=GLUCOSE','deviceConfigID=<?php echo $_POST["deviceConfigId"];?>&contextPId=<?php echo $patientId; ?>','menu-content',event,this)">Add Manual Reading</a></h3>
+		  <?php
+		  }  
+		  ?>
+		   
+		  </div>
+		  <?PHP
+		 // }
+		  ?>
+	  </div>
+
+	  <div class="col-lg-12 Blood_Pressure_Inner1">
     <div class="row Graph_Body_Weight">
       <div class="col-md-6">
-        <ul class="days_GBW">
-          <li class="days selectedDate"><a href="#">7 Days</a></li>
-          <li class=" days"><a href="#">30 Days</a></li>
-          <li class="days"><a href="#">90 Days</a></li>
-        </ul>
       </div>
 
     </div>
@@ -159,20 +155,16 @@ $("#deviceConfigID").val(deviceConfigId);
   </div>
   </div>  
 </div>
+</div>
 <div class="col-md-4 padd-top50">
 			<div class="sidebar-filter">
 				<div class="card">
 					<div class="filter-tabs">
-						<div class="padd-15">
-							<button class="btn btn-neutral">All</button>
-							<button class="btn btn-default active">Pre Meal</button>
-							<button class="btn btn-neutral">Post Meal</button>
-						</div>
 						<div class="divider"></div>
-						<div class="padd-15">
-							<button class="btn btn-default active">7 Days</button>
-							<button class="btn btn-neutral">14 Days</button>
-							<button class="btn btn-neutral">30 Days</button>
+						<div class="padd-15 days_GBW">
+							<button class="btn btn-default days selectedDate active">7 Days</button>
+							<button class="btn btn-neutral days">14 Days</button>
+							<button class="btn btn-neutral days ">30 Days</button>
 						</div>
 				</div>
 			</div>

@@ -131,7 +131,8 @@ include 'controller/portal_prescribingProvider_controller.php';
 	</div>
  
   </div>
-    
+     <div class="col-md-8 padd-top20"> 
+
     <!-- Tab panes -->
     <div class="tab-content col-md-12">
       <div role="tabpanel" class="tab-pane active" id="tab3">
@@ -582,6 +583,9 @@ include 'controller/portal_prescribingProvider_controller.php';
      
     </div>
   </div>
+  </div>
+  
+  
   <script src="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/dashboard/script/js/jquery.resizableColumns.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/store.js/1.3.14/store.min.js"></script>  
   <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -609,6 +613,7 @@ include 'controller/portal_prescribingProvider_controller.php';
     </div>
   </div>
 </div>
+
 <!-- Notes & History : START -->
 <link href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/common/script/css/notes-history.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">

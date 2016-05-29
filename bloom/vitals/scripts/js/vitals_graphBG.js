@@ -59,21 +59,21 @@ function getLastWeek(){
     var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
     return lastWeek ;
 }
-function getLast3Months(){
+function getLastTwoWeek(){
    // var today = new Date();
-    var last3Months = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 90);
-    return last3Months ;
+    var lastTwoWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 14);
+    return lastTwoWeek ;
 }
 function loadGraph()
 {
 	var obj=[];
 	var obj2=[];
 	var mealType = $("#meal-type").val();
+//	console.log(patVitalInfos);
 	patVitalInfos.forEach(function(d, i) {
-	//alert(mealType);
+//	alert(mealType);
 	if(d.mealType == mealType)
 	{
-		//console.log();
 		if( new Date(d.vitalTime) >= new Date(limit) && new Date(d.vitalTime) <= today)
 		{
 				unitName1 = d.unitName1;
@@ -236,7 +236,7 @@ function loadGraph()
       	}]
       });
 	}
-	else if($(".selectedDate").text() == "30 Days")
+	else if($(".selectedDate").text() == "14 Days")
 	{
 		 var chart = new CanvasJS.Chart("chartContainer",{
       	title :{
@@ -245,7 +245,7 @@ function loadGraph()
       	},
       	axisX: {	
 				valueFormatString: "DD-MMM" ,
-				interval: 7,
+				interval: 4,
 				intervalType: "day",
 				labelFontColor: "rgb(0,75,141)",
 				minimum: new Date(limit),
@@ -311,7 +311,7 @@ function loadGraph()
       	}]
       });
 	}
-	else if($(".selectedDate").text() == "90 Days")
+	else if($(".selectedDate").text() == "30 Days")
 	{
 		  var chart = new CanvasJS.Chart("chartContainer",{
       	title :{
@@ -320,7 +320,7 @@ function loadGraph()
       	},
       	axisX: {	
 				valueFormatString: "DD-MMM" ,
-				interval: 30,
+				interval: 7,
 				intervalType: "day",
 				labelFontColor: "rgb(0,75,141)",
 				minimum: new Date(limit),
@@ -389,6 +389,9 @@ function loadGraph()
       		dataPoints : obj2
       	}]
       });
+	}
+	else{
+		alert($(".selectedDate").text());
 	}
  
 	  chart.render();
@@ -488,14 +491,16 @@ $(document).ready(function()
 		
 		$('div.pre-post-meal').on('click', 'button', function() {
     $('.pre-post-meal button.active').removeClass('active');
-	var deviceName = $("#vitalName option:selected").text();
+	var deviceName = $("#vitalName option:selected").text();vitalName
+//	var deviceName = $("#vitalName").text();
+	
     $(this).addClass('active');
-	if(deviceName == "Glucose")
+	if(deviceName.trim() == "Glucose")
 	{
 			$("#meal-type").val($(this).attr('data'));
 			mealType = $("#meal-type").val();
 			clearGraph();
-
+			
 	}
 });
 
@@ -509,25 +514,29 @@ if (id == "" || isNaN(id)) {
 	 getVitalsGraphData(id);
 	
 $('.days_GBW').on('click', 'button', function() {
+	console.log('clicked');
 
     $('.days_GBW button.active').removeClass('active');
+    $('.days_GBW button').removeClass('selectedDate');
     $(this).addClass('active');
-	if($(".active").text() == "7 Days")
+    $(this).addClass('selectedDate');
+	if($(".selectedDate.active").text() == "7 Days")
 	{
 		 limit = getLastWeek();
 	}
-	else if($(".active").text() == "30 Days")
+	else if($(".selectedDate.active").text() == "14 Days")
+	{
+		 
+		 limit =getLastTwoWeek();
+	}
+	else if($(".selectedDate.active").text() == "30 Days")
 	{
 		 limit = getLastmonth();
-	}
-	else if($(".active").text() == "90 Days")
-	{
-		 limit = getLast3Months();
 	}	
 	//console.log(patVitalInfos+"mmmmmmmmmmmmm");
 	//if(patVitalInfos != "[ ]")
 	//{
-		clearGraph();
+		clearGraph(limit);
 	//}
 
 });
@@ -548,7 +557,6 @@ function clearGraph() {
     $("#chartContainer").html("");
 	$("tbody#tbodyId").html("");
 	loadGraph("");
-	//alert()
 }
 else
 {

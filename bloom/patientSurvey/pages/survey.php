@@ -1,17 +1,3 @@
-<script>
-$(function(){
- if ($("#menu-content").attr('class') =='col-md-12')
-	$("#menu-content").attr('class','col-md-9');
-
-$('#portal-menu').hide("0",function(){
-		 if ($('#portal-menu').is(':hidden'))
-		{
-			$("#menu-content").attr('class','col-md-12');
-		}
-	});
-});
-</script>
-
 <?php include('controller/survey_controller.php');
 $count = 0;
 $summaryPages = "";

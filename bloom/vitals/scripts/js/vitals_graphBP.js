@@ -60,10 +60,10 @@ function getLastWeek(){
     var lastWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7);
     return lastWeek ;
 }
-function getLast3Months(){
+function getLastTwoWeek(){
    // var today = new Date();
-    var last3Months = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 90);
-    return last3Months ;
+    var lastTwoWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 14);
+    return lastTwoWeek ;
 }
 function loadGraph()
 {
@@ -245,7 +245,7 @@ function loadGraph()
       	}]
       });
 	}
-	else if($(".selectedDate").text() == "90 Days")
+	else if($(".selectedDate").text() == "14 Days")
 	{
 		  var chart = new CanvasJS.Chart("chartContainer",{
       	title :{
@@ -254,7 +254,7 @@ function loadGraph()
       	},
       	axisX: {	
 				valueFormatString: "DD-MMM" ,
-				interval: 30,
+				interval: 4,
 				intervalType: "day",
 				labelFontColor: "rgb(0,75,141)",
 				minimum: new Date(limit),
@@ -402,10 +402,12 @@ if (id == "" || isNaN(id)) {
 }
 	 getVitalsGraphData(id);
 	
-$('.days_GBW').on('click', 'li', function() {
+$('.days_GBW').on('click', 'button', function() {
 
-    $('.days_GBW li.selectedDate').removeClass('selectedDate');
+    $('.days_GBW button.selectedDate').removeClass('selectedDate');
+    $('.days_GBW button').removeClass('active');
     $(this).addClass('selectedDate');
+    $(this).addClass('active');
 	if($(".selectedDate").text() == "7 Days")
 	{
 		 limit = getLastWeek();
@@ -414,9 +416,9 @@ $('.days_GBW').on('click', 'li', function() {
 	{
 		 limit = getLastmonth();
 	}
-	else if($(".selectedDate").text() == "90 Days")
+	else if($(".selectedDate").text() == "14 Days")
 	{
-		 limit = getLast3Months();
+		 limit = getLastTwoWeek();
 	}	
 	//console.log(patVitalInfos+"mmmmmmmmmmmmm");
 	//if(patVitalInfos != "[ ]")

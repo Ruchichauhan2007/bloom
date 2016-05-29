@@ -129,20 +129,12 @@ var inputType = "<?php echo $inputType; ?>";
 			<div class="sidebar-filter">
 				<div class="card">
 					<div class="filter-tabs">
-						<div class="padd-15">
-							<button class="btn btn-neutral">All</button>
-							<button class="btn btn-default active">Pre Meal</button>
-							<button class="btn btn-neutral">Post Meal</button>
-						</div>
-						<div class="divider"></div>
-						<div class="padd-15">
-							<button class="btn btn-default active">7 Days</button>
-							<button class="btn btn-neutral">14 Days</button>
-							<button class="btn btn-neutral">30 Days</button>
-						</div>
+						
+						
+					</div>
 				</div>
 			</div>
-</div>    
+</div>
 <script>
 $(document).ready(function()
 {

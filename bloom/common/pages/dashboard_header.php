@@ -193,7 +193,7 @@ padding-top: 25px;
 				</li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-		  <li  onClick="filterMenu(this)"><a href="#">Provider</a></li>
+		  <li  onClick="filterMenu(this),openPageWithAjax('../../adherenceReport/pages/adherenceReportList.php','currentPage=1&extractType=WEEKLY','menu-content',event,this)"><a href="#">Provider</a></li>
 				<?php }
 				?>
 				<li  onClick="filterMenu(this)"><a href="#">Support</a></li>

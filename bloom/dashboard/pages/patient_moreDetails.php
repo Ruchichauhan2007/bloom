@@ -178,21 +178,6 @@ function hideMenu(availableMenu)
 $(document).ready(function()
 {
 controlMenu();
-$(function(){
-	 if ($("#menu-content").attr('class') =='col-md-12')
-		$("#menu-content").attr('class','col-md-9');
-
-	$('#portal-menu').hide("0",function(){
-			 if ($('#portal-menu').is(':hidden'))
-			{
-				$("#menu-content").attr('class','col-md-12');
-			}
-		});
-	});
-
-
-
-
 	$(".captial").focusout(function(){
 		var arr = $(this).val().split(' ');
 		var result = "";
