@@ -40,7 +40,7 @@ foreach($accessList as $access)
 		$accessLevel = $access->{accessLevel};
 	}
 }
-echo $accessLevel;
+//echo $accessLevel;
  $count = count($surveyPage->{questions});
 
  $countDescriptive = 0;
@@ -159,6 +159,7 @@ function getAllShowIf(html)
 	}
 }
 </script>
+<div class="col-md-8 padd-top20">
 <div class="col-lg-12 assessments">
     <div class="row">
       <div class="col-md-6">
@@ -422,6 +423,15 @@ function getAllShowIf(html)
         </div>
       </div>
   </form>
+  </div>
+<div class="col-md-4 padd-top50">
+  <div class="sidebar-filter">
+	<div class="card">
+		<div class="filter-tabs">
+        </div>
+    </div>
+   </div>
+</div>
   <script>
   setTimeout(function(){loadData(); },1000);
   function loadData() {

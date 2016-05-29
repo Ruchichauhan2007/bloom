@@ -19,7 +19,7 @@ $status = "";
 ?>
 <link rel="stylesheet" type="text/css" href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/patientSurvey/script/css/Survey.css">
 
-
+<div class="col-md-8 padd-top20">
 <div class="col-lg-12 survey">
 <?php
 //var_dump($survey);
@@ -216,6 +216,16 @@ else
 </div>
 </form>
 </div>
+</div>
+<div class="col-md-4 padd-top50">
+  <div class="sidebar-filter">
+	<div class="card">
+		<div class="filter-tabs">
+        </div>
+    </div>
+   </div>
+</div>
+                    
 <script>
 function contentReport()
 {
