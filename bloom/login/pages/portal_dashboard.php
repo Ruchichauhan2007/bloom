@@ -113,8 +113,6 @@
    color:#00affe;
    }
    select#cards, #startDate, #endDate{
-   font-size:16px;
-   font-weight:normal!important;
    }
    h1.credentials {
    float: left;
@@ -177,7 +175,7 @@
 .card-header{
 	padding: 15px;
     border-bottom: 1px solid #dcdcdc;
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 .sidebar-filter .nav li{
 	height: auto;
@@ -226,11 +224,11 @@
 }
 .card-content{
 	overflow: hidden;
+	padding: 15px;
 }
 .serchByDate{
 	margin-bottom: 20px;
-	border-top: 1px solid #e0e0e0;
-	padding-top: 15px; 
+	padding-top: 0; 
 }
 .serchByDate .date input{
 	padding:0 10px 0 0;
@@ -249,9 +247,13 @@
 	text-decoration: underline;
 }
 .filter-bydate{
-	padding:0 20px 20px 0;
-	text-align: right;
-	text-transform: uppercase;
+	padding: 0;
+    text-align: right;
+    float: left;
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    margin: 10px 0
 }
 .filter-bydate a{
 	color: rgba(0,0,0,0.3);
@@ -279,16 +281,23 @@
 	font-weight: 600;
 }
 .btn-neutral-default{
-	background: transparent;
+	background: transparent !important;
     border: none;
     padding: 0;
     text-transform: uppercase;
-    color: rgba(0,0,0,0.38);
+    color: rgba(0,0,0,0.38) !important;
     font-weight: 600;
     font-size: 14px;
 }
 .btn-neutral-default:focus, .btn-neutral-default:hover{
 	color: #6AC5AD !important;
+}
+.input-icon{
+	position: absolute;
+    right: 15px;
+	cursor: pointer;
+    top: 32px;
+    width: 18px;
 }	
 </style>
 <div class="wrapper2">
@@ -308,6 +317,7 @@
 	  <link rel='stylesheet prefetch' href='/gladstone/portal/bloom/app/assets/css/ionic.min.css'>
 	  <link rel="stylesheet" type="text/css" href="/gladstone/portal/bloom/app/assets/css/intile.css">
 	<link href='../../common/script/css/custom-fonts.css' rel='stylesheet' type='text/css'>
+	<script src='/gladstone/portal/bloom/app/views/scripts/lib/ionic.bundle.js'></script>
    <script src="../../common/script/js/jquery.cookie.js"> </script>
    <script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/moment.js"></script>
    <script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/post-data.js"></script>
@@ -315,9 +325,7 @@
    <!-- Vendor: Angular, followed by our custom Javascripts -->
    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
-   <script type="text/javascript" src="/gladstone/portal/bloom/vitals/scripts/js/bootstrap-datetimepicker.min.js"></script>
-   <script type="text/javascript" src="../../common/script/js/jquery.slimscroll.min.js"> </script>
-
+   <script type="text/javascript" src="/gladstone/portal/bloom/vitals/scripts/js/bootstrap-datetimepicker.min.js"></script>   
 
 <script type="text/javascript">
     /*$(function(){
@@ -1013,30 +1021,20 @@ console.log(availableMenus);
 
 <div class="serchByDate">
                            <div id="cleanderDiv" class="row">
-							<div class="col-md-12">
                               <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class='input-group date' id='datetimepicker1'>
-                                       <input type='text' placeholder="From" class="form-control" id="startDate" name="startDate"/>
-                                       <span class="input-group-addon" style="border-radius:0;background: #fff; border: 0px none; box-shadow: 0px 0px 0px;">
-                                          <!-- <span class="glyphicon glyphicon-calendar"></span>-->
-                                          <img src="/gladstone/portal/bloom/login/images/date-range.svg">
-                                       </span>
-                                    </div>
-                                 </div>
+								<label id='datetimepicker1' class="item-input item-floating-label"> 
+									<span id="startDate" name="startDate" class="input-label">From</span>
+									<input class="form-control" type="text" id="startDate" name="startDate" placeholder="From">
+									<img src="/gladstone/portal/bloom/login/images/date-range.svg" class="input-icon">
+								</label>
                               </div>
                               <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class='input-group date group float-input' id='datetimepicker2'>
-                                       <input type='text' placeholder="To" class="form-control" id="endDate" name="endDate"/>
-                                       <span class="input-group-addon" style="border-radius:0;background: #fff;border: 0px none; box-shadow: 0px 0px 0px;">
-                                          <!-- <span class="glyphicon glyphicon-calendar"></span>-->
-                                          <img src="/gladstone/portal/bloom/login/images/date-range.svg">
-                                       </span>
-                                    </div>
-                                 </div>
+								<label id='datetimepicker2' class="item-input item-floating-label"> 
+									<span id="startDate" name="endDate" class="input-label">To</span>
+									<input class="form-control" type="text" id="endDate" name="endDate" placeholder="To">
+									<img src="/gladstone/portal/bloom/login/images/date-range.svg" class="input-icon">
+								</label>
                               </div>
-							  </div>
                            </div>
                            <input type="hidden" name="searchCard" />
                            <input type="hidden" name="currentPage"  value="1" />
@@ -1273,4 +1271,3 @@ $(window, document, undefined).ready(function() {
 
 });
 </script>
-<script src='/gladstone/portal/bloom/app/views/scripts/lib/ionic.bundle.js'></script>

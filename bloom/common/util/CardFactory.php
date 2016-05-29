@@ -25,9 +25,9 @@ $userType = $_COOKIE['type'];
 			foreach($contentDatas as $contentData)
 			{
 				$avatar = $ptcard->{avatar};
-				if($avatar === "DEFAULT.PNG" OR $avatar === "")
+				if($avatar === "default.svg" OR $avatar === "")
 				{
-					$imgPath = "/gladstone/portal/bloom/common/images/DEFAULT.png";
+					$imgPath = "/gladstone/portal/bloom/common/images/default.svg";
 				}
 				else
 				{
@@ -99,7 +99,7 @@ $userType = $_COOKIE['type'];
 				// Education Content - VIDEO or PDF
 			else if($dbCardType == "PDF_NEW" OR $dbCardType == "VIDEO_NEW" OR $dbCardType == "PDF_VIEWED" OR $dbCardType == "VIDEO_VIEWED")
 			{
-			 $cardColor = "";
+			 $cardColor = "purple-card-action";
 			if($dbCardType == "PDF_NEW" OR $dbCardType == "PDF_VIEWED" )			$imageNamePath = "../images/dashboard_content_pdf.jpg";
 			else if($dbCardType == "VIDEO_NEW" OR $dbCardType == "VIDEO_VIEWED")		$imageNamePath = "../images/dashboard_content_video.png";
 		
@@ -113,26 +113,23 @@ $userType = $_COOKIE['type'];
 			{
 				$viewed = "Viewed";
 			}
-			$htmlCard = $htmlCard.$reviewDiv."<div class='col-md-2 Prov_img_on_dashbord'>
-			<a href='#' class='".$cardColor."'>
-			<img src='".$imageNamePath."'id=".$ptcard->{patientId}."_".$ptcard->{cardType}."  class='pdf_video'  alt='".$patientName."' name='".$imgPath."' onclick='Cards(this.id);'	border='0'/></a>
-		</div>
-		<div class='col-md-6 Admin text-left'>
-			<h4 class=''>".$patientName."</h4>
-			<h2>".$title."</h2>
-			<h3 class='yellow-card-h3'><i>".$viewed."</i></h3>
-		</div>
-		<div class='col-md-3 ActionPlan right-card'>
-			<button class='btn btn-green' id=".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}." onclick='reviewedDashboardCards(".$ptcard->{dashboardDetailId}.", event);'>Review</button>
-		
-		</div>
-		<div class='col-md-1 AdminImg right-card'>
-			<img class='dashboard_img' src='".$imgPath."' />
-		</div>
-		<div class='col-md-4 PatCardTime PatCardTime2'>
-			<h5 class='time_date second-h5-b text-left'>".$ptcard->{createTimestamp}."</h5>
-		</div>
-		</div>";
+			$htmlCard = $htmlCard.$reviewDiv."
+			<div class='message_box_bg Admin text-left ".$vitalTrends."'>
+					<div class='message_box_bg_blue'>
+					<h2>".$patientName."</h2>
+					<h4>".$ptcard->{createTimestamp}."</h4>
+					<h3 class='yellow-card-h3'><i>".$viewed."</i></h3>
+					</div>
+					<div class='desc'>".$title."</div>
+					<div class='message_text_cl'>
+						<h2>".$reading." <span class='patient-status ".$dbCardType."'>".$vitalName."<span></h2>
+					</div>
+				</div>
+				<a class='message-box-btn ".$cardColor."'>
+					<img src='".$imageNamePath."'id=".$ptcard->{patientId}."_".$ptcard->{cardType}."  class='pdf_video'  alt='".$patientName."' name='".$imgPath."' onclick='Cards(this.id);'	border='0'/>
+					<button class='btn-icon' id=".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}." onclick='reviewedDashboardCards(".$ptcard->{dashboardDetailId}.", event);'></button>
+				</a>
+			</div>";
 		}
 		else if($dbCardType == "CALL_MISSED_INCOMING" OR $dbCardType == "CALL_MISSED_OUTGOING" OR $dbCardType == "CALL_SERVICED_INCOMING" OR $dbCardType == "CALL_SERVICED_OUTGOING"){
 			$cardColor = "";
@@ -226,7 +223,7 @@ $userType = $_COOKIE['type'];
 			{
 			  $cardColor = "red-card-action";
 			  if($contentData->{keyTonecard} == "true") $imageNamePath = "../images/ketone_out_of_range.png";
-				else                                               $imageNamePath = "../images/dashboard_outof_range.png";
+				else                                               $imageNamePath = "../images/vitals-default.png";
 				if($reading >600)
 				{
 					  $reading = "HI";
@@ -240,7 +237,7 @@ $userType = $_COOKIE['type'];
 			{
 			$cardColor = "green-card-action";
 			if($contentData->{keyTonecard} == "true") $imageNamePath = "../images/ketone_acceptable.png";
-			else                                                $imageNamePath = "../images/dashboard_vitals_accept.jpg";
+			else                                                $imageNamePath = "../images/vitals-default.png";
 			}
 			else if($dbCardType == "VITALS_MISSED")
 			{
@@ -296,7 +293,7 @@ $userType = $_COOKIE['type'];
 			if($ptcard->{alertNotification} == "true" && $dbCardType == "VITALS_OUT_OF_RANGE")
 			{
 			 
-			 $imageNamePath = "../images/vital_alert.png";	 
+			 $imageNamePath = "../images/vitals-default.png";	 
 			 $clickFunction = 'alertCards(this.id);';
 			  $onClick = 'alertCards(this.id);';
 			 $divClass ="vitals";
@@ -309,10 +306,6 @@ $userType = $_COOKIE['type'];
 			$onClick = "Cards(this.id);";
 		
 			}
-			
-			
-			
-			
 			
 			
 			$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg Admin text-left ".$vitalTrends."'>
@@ -380,7 +373,7 @@ $userType = $_COOKIE['type'];
 							if(strlen($title) >= 20)
 							$title = $title.'...';
 			$viewed="";
-			$cardColor = "";
+			$cardColor = "blue-card-action";
 			if($dbCardType == "ACTION_PLAN")
 			{
 				$imageNamePath = "../images/dashboard_action_plan.png";
@@ -391,32 +384,27 @@ $userType = $_COOKIE['type'];
 				$viewed = "Viewed";
 			}
 		
-			$htmlCard = $htmlCard.$reviewDiv."<div class='col-md-2 Prov_img_on_dashbord'>
-			<a href='#' class='".$cardColor."'>
-					<img src='".$imageNamePath."' id=".$ptcard->{patientId}."_".$ptcard->{cardType}."  class='patient'  alt='".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."' name='".$imgPath."' onclick='Cards(this.id);'	border='0'/></a>
-			</a>
-		</div>
-		<div class='col-md-6 Admin text-left'>
-			<h4 class=''>".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."</h4>
-			<h2 class=''>".$title."</h2>
-			<h3  class='yellow-card-h3'><i>".$viewed."</i></h3>
-		</div>
-		<div class='col-md-3 ActionPlan right-card'>
-			<button class='btn btn-green' id=".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}." onclick='reviewedDashboardCards(".$ptcard->{dashboardDetailId}.", event);'>Review</button>
-		
-		</div>
-		<div class='col-md-1 AdminImg right-card'>
-			<img class='dashboard_img' src='".$imgPath."' />
-		</div>
-		<div class='col-md-4 PatCardTime PatCardTime2'>
-			<h5 class='time_date second-h5-b text-left'>".$ptcard->{createTimestamp}."</h5>
-		</div>
-		</div>";
+			$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg Admin text-left ".$vitalTrends."'>
+					<div class='message_box_bg_blue'>
+					<h2 class='".$dbCardType."'>".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."</h2>
+					<h4>".$ptcard->{createTimestamp}."</h4>
+					<h3 class=''>".$title."</h3>
+					</div>
+					<h3  class='yellow-card-h3'><i>".$viewed."</i></h3>
+					<div class='message_text_cl'>
+						<h2 class=' ".$dbCardType."'>".$reading." <span class='patient-status ".$dbCardType."'>".$vitalName."<span></h2>
+					</div>
+				</div>
+				<a class='message-box-btn ".$cardColor."'>
+					<img src='".$imageNamePath."' id=".$ptcard->{patientId}."_".$ptcard->{cardType}."  class='patient'  alt='".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."' name='".$imgPath."' onclick='Cards(this.id);'	border='0'/>
+					<button class='btn-icon' id=".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}." onclick='reviewedDashboardCards(".$ptcard->{dashboardDetailId}.", event);'></button>
+				</a>
+			</div>";
 		}
 		// Care Communication Card
 		if($dbCardType == "CARE_COMMUNICATION" && $ptcard->{alertNotification} != "true")
 		{
-		$cardColor = "";
+		$cardColor = "green-card-action";
 		$title = "Care Communication";
 
 		$messageCardIcon = "../images/careGreen.jpg";
@@ -425,34 +413,28 @@ $userType = $_COOKIE['type'];
 						if(strlen($providerName) == 17)
 							$providerName = $providerName.'..';
 							$careCommHeaderId  = $contentData->{careCommHeaderId};
-		$htmlCard = $htmlCard.$reviewDiv."<div class='col-md-2 Prov_img_on_dashbord'>
-		<a href='#' class='".$cardColor."'>
-		<img src='".$messageCardIcon."' id='".$ptcard->{patientId}."_".$ptcard->{cardType}."_".$ptcard->{dashboardDetailId}."'  class='care'  alt='".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."'  name='".$imgPath."' onclick='Cards(this.id);' careCommHeaderId='".$careCommHeaderId."'	border='0'/></a>
-
-
-		</a>
-		</div>
-		<div class='col-md-6 Admin text-left'>
-		<h4 class='second-h4'>".$name."</h4>
-		<h1 class='credentials second-h1'>".$contentData->{credentials}."</h1><h3 id=TITLE_".$ptcard->{dashboardDetailId}." class='URGENTtitle S-urgenttitle both-card-align'>".$title."</h3>
-		</div>
-		<div class='col-md-4 ActionPlan' style='text-align:right'>
-		<p>".$providerName."</p>
-		<button class='btn btn-green' id=".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}." onclick='reviewedDashboardCards(".$ptcard->{dashboardDetailId}.", event);'>REVIEW</button>
-
-		</div>
-	
-		<div class='col-md-5'>
-		<h5 class='time_date second-h5 text-left'>".$ptcard->{createTimestamp}."</h5>
-		</div>
-		</div>";
+		$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg text-left'>
+					<div class='message_box_bg_blue'>
+					<h2 class='".$dbCardType."'>".$name."</h2>
+					<h4>".$ptcard->{createTimestamp}."</h4>
+					</div>
+					<div class='desc'><p>".$providerName."</p></div>
+					<div class='message_text_cl'>
+						<h2 class=' ".$dbCardType."'>".$contentData->{credentials}." <span class='patient-status' id=TITLE_".$ptcard->{dashboardDetailId}." class='URGENTtitle S-urgenttitle both-card-align'>".$title."</span></h2>
+					</div>
+				</div>
+				<a class='message-box-btn ".$cardColor."'>
+					<img src='".$messageCardIcon."' id='".$ptcard->{patientId}."_".$ptcard->{cardType}."_".$ptcard->{dashboardDetailId}."'  class='care'  alt='".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."'  name='".$imgPath."' onclick='Cards(this.id);' careCommHeaderId='".$careCommHeaderId."'	border='0'/>
+				<button class='btn-icon' id=".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}." onclick='reviewedDashboardCards(".$ptcard->{dashboardDetailId}.", event);'></button>
+				</a>
+			</div>";
 		}
 		elseif($dbCardType == "STICKY_NOTE" && $ptcard->{alertNotification} == "true")
 		{
 		
-			 $cardColor = "";
+			 $cardColor = "yellow-card-action";
 			 $patientName = $ptcard->{patLastName}.' '.$ptcard->{patFirstName};
-			 $imageNamePath = "../images/vital_alert.png";	 
+			 $imageNamePath = "../images/vitals_default.png";	 
 			 $clickFunction = 'alertCards(this.id);';
 			  $onClick = 'openPageWithAjax("../../patientcare/pages/reviewAlert.php","patientId='.$ptcard->{patientId}.'&reviewId='.$ptcard->{dashboardDetailId}.'","menu-content",event,this);';
 			 $divClass ="notes";
@@ -487,7 +469,7 @@ $userType = $_COOKIE['type'];
 
 		else if($dbCardType == "CARE_COMMUNICATION" && $ptcard->{alertNotification} == "true")
 		{
-			 $cardColor = "";
+			 $cardColor = "red-card-action";
 			 $patientName = $ptcard->{patLastName}.' '.$ptcard->{patFirstName};
 			 $imageNamePath = "../images/redCare.jpg";	 
 			 $clickFunction = 'openPageWithAjax("../../dashboard/pages/portal_careManagement.php","patientId='.$ptcard->{patientId}.'","menu-content",event,this);';
@@ -503,27 +485,21 @@ $userType = $_COOKIE['type'];
 				//var_dump($contentData->{providerFirstName});
 
 						
-			$htmlCard = $htmlCard.$reviewDiv."<div class='col-md-2'>
-			<a href='#' class='".$cardColor."'>
-			<img src='".$imageNamePath."' id='".$ptcard->{patientId}."_".$ptcard->{cardType}."_".$ptcard->{dashboardDetailId}."'  class='".$divClass."'  alt='".$patientName."' name='".$imgPath."'  onClick='Cards(this.id)' careCommHeaderId='".$careCommHeaderId."'	border='0'/>
-			</a>
-		</div>
-		<div class='col-md-6 Admin text-left'>
-			<h4 class='second-h4'>".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."</h4>
-			<h1 class='credentials second-h1'>".$contentData->{credentials}."</h1><h3 class='URGENT S-urgenttitle both-card-align'><span>URGENT<br/></span>".$title."</h3>
-		
-		</div>
-		<div class='col-md-4 ActionPlan' style='text-align:right'>
-		
-			<p>".$providerName."</p>
-			<button class='btn btn-green btn_".$divClass."' id='".$ptcard->{patientId}."_".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}."' onClick='reviewedDashboardCards(".$ptcard->{dashboardDetailId}.", event);' reviewId='".$ptcard->{dashboardDetailId}."' >REVIEW</button>
-		
-		</div>
-		
-		<div class='col-md-5'>
-			<h5 class='time_date second-h5 text-left'>".$ptcard->{createTimestamp}."</h5>
-		</div>
-		</div>";
+			$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg'>
+					<div class='message_box_bg_blue'>
+					<h2 class='".$dbCardType."'>".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."</h2>
+					<h4>".$ptcard->{createTimestamp}."</h4>
+					</div>
+					<div class='desc'><p>".$providerName."</p></div>
+					<div class='message_text_cl'>
+						<h2 class='".$contentData->{credentials}."'>URGENT <span class='patient-status URGENT S-urgenttitle both-card-align'>".$title."</span></h2>
+					</div>
+				</div>
+				<a class='message-box-btn ".$cardColor."'>
+					<img src='".$imageNamePath."' id='".$ptcard->{patientId}."_".$ptcard->{cardType}."_".$ptcard->{dashboardDetailId}."'  class='".$divClass."'  alt='".$patientName."' name='".$imgPath."'  onClick='Cards(this.id)' careCommHeaderId='".$careCommHeaderId."'	border='0'/>
+					<button class='btn-icon' id='".$ptcard->{patientId}."_".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}."' onClick='reviewedDashboardCards(".$ptcard->{dashboardDetailId}.", event);' reviewId='".$ptcard->{dashboardDetailId}."' ></button>
+				</a>
+			</div>";
 			}
 		
 			$reviewDiv = "";
@@ -585,9 +561,9 @@ $userType = $_COOKIE['type'];
 				
 			}
 					$avatar = $ptcard->{avatar};
-					if($avatar === "DEFAULT.PNG" OR $avatar === "")
+					if($avatar === "default.svg" OR $avatar === "")
 					{
-						$imgPath = "/gladstone/portal/bloom/common/images/DEFAULT.png";
+						$imgPath = "/gladstone/portal/bloom/common/images/default.svg";
 					}
 					else
 					{
@@ -624,8 +600,8 @@ $userType = $_COOKIE['type'];
 				}
 			else if($dbCardType == "VITALS_ACCEPTABLE")
 			{
-				$cardColor = "";
-				$imageNamePath = "../images/dashboard_vitals_accept.jpg";
+				$cardColor = "green-card-action";
+				$imageNamePath = "../images/vitals-default.png";
 			}
 			else if($dbCardType == "VITALS_MISSED")
 			{
@@ -639,7 +615,7 @@ $userType = $_COOKIE['type'];
 			else if($dbCardType == "VITALS_TREND")
 			{
 		
-				$cardColor = "";
+				$cardColor = "green-card-action";
 				$vitalName = "Weekly BP Testing";
 				$vitalTrends= "trend";
 				
@@ -678,7 +654,7 @@ $userType = $_COOKIE['type'];
 			if($ptcard->{alertNotification} == "true" && $dbCardType == "VITALS_OUT_OF_RANGE")
 			{
 			
-			 $imageNamePath = "../images/vital_alert.png";	 
+			 $imageNamePath = "../images/vitals_default.png";	 
 			 $clickFunction = 'alertCards(this.id);';
 			  $onClick = 'alertCards(this.id);';
 			 $divClass ="vitals";
@@ -697,30 +673,21 @@ $userType = $_COOKIE['type'];
 			
 			
 			
-			$htmlCard = $htmlCard.$reviewDiv."<div class='col-md-2 Prov_img_on_dashbord'>
-			<a href='#' class='".$cardColor."'>
-			<img src='".$imageNamePath."' id='".$ptcard->{patientId}."_".$ptcard->{cardType}."_".$vitalClass."_".$ptcard->{dashboardDetailId}."'  class='".$divClass."' cardType='".$vitalClass."' deviceId = ".$vitalId."  alt='".$patientName."' name='".$imgPath."' onClick='".$onClick."' reviewId='".$ptcard->{dashboardDetailId}."'	border='0'/>
-			</a>
-		</div>
-		<div class='col-md-6 Admin text-left ".$vitalTrends."'>
-			<h4 class='".$dbCardType."'>".$patientName."</h4>
-		
-			<h3 class='yellow-card-h3".$dbCardType."'>".$vitalName."</h3>
-			<h2 class='second-h2 ".$dbCardType."'>".$reading."</h2>
-			<h5 class='card-h5'>".$dueTimeSet."</h5>
-		
-		</div>
-		<div class='col-md-3 ActionPlan right-card'>
-			<button class='btn btn-green btn_".$divClass."' id='".$ptcard->{patientId}."_".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}."' onClick = '".$clickFunction."' reviewId='".$ptcard->{dashboardDetailId}."' >Review</button>
-		
-		</div>
-		<div class='col-md-1 AdminImg right-card'>
-			<img class='dashboard_img' src='".$imgPath."' />
-		</div>
-		<div class='col-md-4 PatCardTime'>
-			<h5 class='time_date second-h5-b pull-right right-side-h5'>".$ptcard->{createTimestamp}."</h5>
-		</div>
-		</div>";
+			$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg text-left ".$vitalTrends."'>
+					<div class='message_box_bg_blue'>
+					<h2 class='".$dbCardType."'>".$name."</h2>
+					<h2 class='".$dbCardType."'>".$patientName."</h2>
+					<h4>".$dueTimeSet."</h4>
+					</div>
+					<div class='message_text_cl'>
+						<h2 class=' ".$dbCardType."'>".$reading." <span class='patient-status'>".$vitalName."</span></h2>
+					</div>
+				</div>
+				<a class='message-box-btn ".$cardColor."'>
+					<img src='".$imageNamePath."' id='".$ptcard->{patientId}."_".$ptcard->{cardType}."_".$vitalClass."_".$ptcard->{dashboardDetailId}."'  class='".$divClass."' cardType='".$vitalClass."' deviceId = ".$vitalId."  alt='".$patientName."' name='".$imgPath."' onClick='".$onClick."' reviewId='".$ptcard->{dashboardDetailId}."'	border='0'/>
+					<button class='btn-icon btn_".$divClass."' id='".$ptcard->{patientId}."_".$ptcard->{dashboardDetailId}."_".$ptcard->{cardType}."' onClick = '".$clickFunction."' reviewId='".$ptcard->{dashboardDetailId}."' ></button>
+				</a>
+			</div>";
 	}
 		
 	}
@@ -959,7 +926,7 @@ function   addReviewedDashboardCards($portalcards, $type)
 					else if($dbCardType == "VITALS_ACCEPTABLE")
 					{
 					if($contentData->{keyTonecard} == "true") $imageNamePath = "../images/ketone_acceptable.png";
-					else                                                $imageNamePath = "../images/dashboard_vitals_accept.jpg";
+					else                                                $imageNamePath = "../images/vitals-default.png";
 					}
 					else if($dbCardType == "VITALS_MISSED")
 					{
@@ -1021,7 +988,7 @@ function   addReviewedDashboardCards($portalcards, $type)
 						//$reading = str_replace("--","",$reading);
 						$reading = $reading.'...';
 					}*/
-					 $imageNamePath = "../images/vital_alert.png";
+					 $imageNamePath = "../images/vitals_default.png";
 					 $onClick = 'alertCards(this.id);';
 					 $divClass ="vitals";	 
 					
@@ -1177,7 +1144,7 @@ function   addReviewedDashboardCards($portalcards, $type)
 				}
 				elseif($ptcard->{alertNotification} == "true" && $dbCardType == "STICKY_NOTE")
 				{
-					 $imageNamePath = "../images/vital_alert.png";	 
+					 $imageNamePath = "../images/vitals_default.png";	 
 					 $clickFunction = 'openPageWithAjax("../../patientcare/pages/reviewAlert.php","patientId='.$ptcard->{patientId}.'&reviewId='.$ptcard->{dashboardDetailId}.'","menu-content",event,this);';
 					  $onClick = 'openPageWithAjax("../../patientcare/pages/reviewAlert.php","patientId='.$ptcard->{patientId}.'&reviewId='.$ptcard->{dashboardDetailId}.'","menu-content",event,this);';
 					// $divClass ="vitals";
@@ -1366,7 +1333,7 @@ function   addReviewedDashboardCards($portalcards, $type)
 					}
 					else if($dbCardType == "VITALS_ACCEPTABLE")
 					{
-					$imageNamePath = "../images/dashboard_vitals_accept.jpg";
+					$imageNamePath = "../images/vitals-default.png";
 					}
 					else if($dbCardType == "VITALS_MISSED")
 					{
@@ -1423,7 +1390,7 @@ function   addReviewedDashboardCards($portalcards, $type)
 						//$reading = str_replace("--","",$reading);
 						$reading = $reading.'...';
 					}*/
-					 $imageNamePath = "../images/vital_alert.png";
+					 $imageNamePath = "../images/vitals_default.png";
 					 $onClick = 'alertCards(this.id);';
 					 $divClass ="vitals";	 
 					

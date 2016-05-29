@@ -22,7 +22,6 @@ include 'controller/login_userName_controller.php';
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
 <link href="../../common/script/css/common-css.css" rel="stylesheet" type="text/css">
 <link href="../../common/script/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <!-- Set the viewport width to device width for mobile -->

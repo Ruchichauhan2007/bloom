@@ -64,12 +64,11 @@ button[disabled], input[disabled] {
 	pointer-events: none;
     background: rgba(153,153,153,0.20);
     border-radius: 2px;
-    font-family: SourceSansPro-Semibold;
     font-size: 16px;
     color: #999999;
     letter-spacing: 0.5px;
     line-height: 20px;
-    padding: 8px;
+    padding: 8px 20px;
 }
 input[type="checkbox"], input[type="radio"] {
     padding: 0;
@@ -915,20 +914,18 @@ text-align: left;
     margin-left: 28px;
 }
 button[type='reset']
-{
-	font-family: SourceSansPro-Semibold; 
+{	
 	font-size: 16px; 
 	color: rgba(153,153,153,0.60); 
 	background-color:#fff;
 	letter-spacing: 0.5px; 
 	line-height: 20px; 
 	padding: 8px;
-	border: 1px solid rgba(153,153,153,0.40); 
+	border: none; 
 	border-radius: 2px;
 }
 #errorMsgDivd
 {
-font-family: SourceSansPro-Regular;
 font-size: 14px;
 color: rgba(184, 0, 22, 0.54);
 line-height: 18px;
