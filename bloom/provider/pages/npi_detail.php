@@ -121,6 +121,8 @@ $("#npi-form .New_Form_Bloom .textBoxDiv").eq(divLength-2).find(".buttons-group"
 <?php
 /*}*/
 ?>
+<div class="col-md-8 padd-top20">
+
 <div id="showNPIDetail">
 <?php
 
@@ -129,7 +131,7 @@ $("#npi-form .New_Form_Bloom .textBoxDiv").eq(divLength-2).find(".buttons-group"
 
 //var_dump($npiDetail);
 
- echo showNPIDetail($npiDetail); ?></div>
+ echo showNPIDetail($npiDetail); ?></div></div>
 
 <script type="text/javascript">
 	$(document).ready(function(){

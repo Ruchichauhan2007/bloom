@@ -32,6 +32,9 @@ $vitalType = $_POST["vitalType"];
 		else if( $page == "Survey")	$redirectTo	 = "/survey/pages/showSurvey.php";
 		else if( $page == "Faxes")	$redirectTo	 = "/provider/pages/pending_fax.php?selectPatientFax=true";
 		else if( $page == "selectPatient")	$redirectTo  = "/login/pages/portal_dashbaordWithPatient.php";
+		else{
+			$redirectTo  = "/login/pages/portal_dashbaordWithPatient.php";
+		}
 	}
 $currentPage = $_REQUEST["currentPage"];
 if($currentPage == "" && $setPatient != true)
@@ -121,8 +124,19 @@ $selectPatient = false;
 			$("#edit_"+id).show();
 			$("#delete_"+id).show();
 	  });
-      $('#mCSB_1 div.PatientList_part_bg').click(function(){
+      $('#mCSB_1 div.PatientList_part_bg').click(function(event){
+		  if(event.target.nodeName == "A"){
+			  
+		  }
+		  else{
+		  <?php if($redirectTo !="")
+		  {?>
 			setPatientValue($(this).attr('id'),'<?php $_SERVER['SERVER_NAME'];?>/gladstone/portal/bloom<?php echo $redirectTo;?>');
+		<?php
+		  }else{?>
+		  setPatientValue($(this).attr('id'),'<?php $_SERVER['SERVER_NAME'];?>/gladstone/portal/bloom/login/pages/portal_dashbaordWithPatient.php');
+		  <?php}?>
+		  }
 			// hidden values in header
 			var image = $(this).find('img').attr('src');
 			var name = $(this).find('h2').text();
