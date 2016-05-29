@@ -103,22 +103,6 @@
    background: #fff none repeat scroll 0 0;
    color: #000;
    }
-   select#cards{
-   background: rgba(0, 0, 0, 0) url("../images/d-icon.png") no-repeat scroll 145px center;
-   border: 0 none;
-   color: #41abfe;
-   font-weight: bold;
-   height: 42px;
-   position: relative;
-   z-index: 9;
-   appearance:none;
-   -moz-appearance:none; 
-   -webkit-appearance:none;
-   box-shadow:0 0 0;
-   }
-   select#cards:focus{
-   box-shadow:0 0 0;
-   }
    #cleanderDiv .glyphicon-calendar.glyphicon {
    font-size: 18px;
    }
@@ -321,6 +305,8 @@
       if($_COOKIE['type'] == "Patient" or $_COOKIE['type'] == "PATIENT") $hideFilter = TRUE;
       
       ?>
+	  <link rel='stylesheet prefetch' href='/gladstone/portal/bloom/app/assets/css/ionic.min.css'>
+	  <link rel="stylesheet" type="text/css" href="/gladstone/portal/bloom/app/assets/css/intile.css">
 	<link href='../../common/script/css/custom-fonts.css' rel='stylesheet' type='text/css'>
    <script src="../../common/script/js/jquery.cookie.js"> </script>
    <script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/moment.js"></script>
@@ -1000,7 +986,9 @@ console.log(availableMenus);
 						  <li onClick="CardFiter(this)"  value="Surveys" ><a href="#">Surveys</a></li>
 						</ul>
 					-->
-                    <select name="all_cards" id="cards" class="form-control" style="border: 0 none;color: #41abfe;font-weight: bold; height: 42px;">
+					<div class="form-group">
+					<label class="control-label">Type</label>
+                    <select name="all_cards" id="cards" class="form-control select-icon">
 							<option value="All" id="ALL" name="all_cards_option"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_ALLTYPES;?></option>
                             <option  id="all_cards_alert" value="Alert"  selected="selected"  name="all_cards_alert"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_ALERT;?></option>
 							<option  id="BIOMETRICS" value="Biometrics"  name="all_cards_biometrics"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_BIOMETRICS;?></option>
@@ -1019,6 +1007,7 @@ console.log(availableMenus);
 							?> 
 
 						</select>
+						</div>
 						
                         <form action="" name="search-form" id="search-form" onSubmit="dateSearch(event);" method="post">
 
@@ -1284,3 +1273,4 @@ $(window, document, undefined).ready(function() {
 
 });
 </script>
+<script src='/gladstone/portal/bloom/app/views/scripts/lib/ionic.bundle.js'></script>
