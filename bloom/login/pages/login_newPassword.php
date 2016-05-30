@@ -127,7 +127,12 @@ $("#submit").click(function(){
 	{
         $("#errorMsg").text("PASSWORD_MATCH_FAIL");
 		$(".errorMsgDiv").show();
-    } 
+		return false;
+    }
+	else{
+	return true;
+	}
+	
 	
 });
 $(window, document, undefined).ready(function() {

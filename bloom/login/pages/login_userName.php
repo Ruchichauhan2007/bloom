@@ -67,7 +67,7 @@ include '../../common/pages/header.php';
 		  <div class="actions">
 			<a href="reset_credential.php?page=forgot_password.php" class="pull-left"><?php echo constantAppResource::$LOGIN_BUTTON_FORGOT_PASSWORD;?></a><br>
 			<a href="reset_credential.php?page=account_recovery.php" class="pull-left"><?php echo constantAppResource::$LOGIN_BOTTON_FORGOT_USER_NAME;?></a>
-			<button type="button" id="Login_submit" name="next" class="button button-login" click="doLogin(login)" ng-disabled="loginForm.$invalid" >LOG IN
+			<button type="submit" id="Login_submit" name="next" class="button button-login" click="doLogin(login)" ng-disabled="loginForm.$invalid" >LOG IN
 				<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
 			</button>
 		  </div>
@@ -180,6 +180,7 @@ $(window, document, undefined).ready(function() {
 </script>
 
 <script>
+
 $(document).ready(function()
 {
 		$("#Login_submit").click(function()
@@ -190,7 +191,7 @@ $(document).ready(function()
 				setCookie("password", password)
 				login(token);
 			});
-			
+		return false;
 		});
 		
 		
