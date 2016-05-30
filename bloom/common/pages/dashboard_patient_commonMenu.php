@@ -240,9 +240,6 @@ width:40px;
 			<div class="page-header">
 				<span class="title">Profile</span>
 			</div>
-			<ul class="nav Profile">  
-				<li><a href="#" onClick="openPageWithAjax('../../dashboard/pages/portal_addPatient.php','','menu-content',event,this)">Profile</a></li> 
-			</ul>
 		</div>
 		<div class="nav Support" style='display:none'>
 			<div class="page-header">

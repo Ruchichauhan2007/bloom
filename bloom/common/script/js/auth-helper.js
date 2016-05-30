@@ -172,7 +172,7 @@ var token = "";
 		error: function (data) {
 		hideLoading();
 		//alert(data.statusText);
-		$("#errorMsg").text(data.statusText);
+		$("#errorMsg").text("Invalid email address or password.");
 		$(".errorMsgDiv").show();
 		
 		}

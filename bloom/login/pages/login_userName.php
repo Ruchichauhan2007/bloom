@@ -62,7 +62,7 @@ include '../../common/pages/header.php';
 			<label>Password</label>
 		  </div>
 		  <div class="group float-input errorMsgDiv"style="display:none" id="errorMsgDivd">
-		  <span id="errorMsg"> </span> <img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" alt="" />
+		  <span id="errorMsg"> </span> <img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" class="pull-right" alt="" />
 		  </div>
 		  <div class="actions">
 			<a href="reset_credential.php?page=forgot_password.php" class="pull-left"><?php echo constantAppResource::$LOGIN_BUTTON_FORGOT_PASSWORD;?></a><br>
