@@ -27,8 +27,9 @@
 				
 				if($portalRes != "" AND $portalRes->{errorMessage} == "")
 				{
-					//echo "<script> alert('Reset Credentials');</script>";
-					$msg="Your request for your username and/ or password has been sent. Please check the email associated with this account for a message with your information. Thank you.";
+					
+					$msg="Your request for your username and/ or password has been sent. Please check the email associated with this account for a message with your information. Thank you.";		
+					header("Location:forgot_password_message.php");
 					
 				}	
 				
@@ -51,7 +52,7 @@
 if(isset($_POST['submit_recovery']))
   { 
 	   $page_error="Reset Credentials";
-	  // echo "<script> alert('Reset Credentials');</script>";
+	  
 	   try
   		{	
 			

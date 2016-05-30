@@ -671,7 +671,7 @@ console.log(availableMenus);
 		
         function changeCards(e)
         {
-        	  var patientsValue = $("#providerActivity ul li.active").attr('value');
+        	  var patientsValue = $("#providerActivity ul li.active a").attr('value');
         	  var cardsVal = $("#cards").val()
       	  $('#cardType').val(cardsVal);
       	  $('#categoryFilter').val(patientsValue);
@@ -721,7 +721,7 @@ console.log(availableMenus);
         
          function dateSearch(e)
         {
-        	  var patientsValue = $("#providerActivity ul li.active").attr('value');
+        	  var patientsValue = $("#providerActivity ul li.active a").attr('value');
         	  var cardsVal = $("#cards").val();
       	  $('#cardType').val(cardsVal);
       	  $('#categoryFilter').val(patientsValue);
