@@ -41,18 +41,18 @@ font-weight:bold;
   </div>
  
   <div class="col-md-4 padd-top50">
-   <div class="sidebar-filter">
-     <div class="input-group serch_patlist" style="float: left;">
-        <input type="hidden" value="<?php echo $selectPatient;?>" id="currentPage" />
-        <input type="hidden" value="<?php echo $page;?>" id="Page" />
-        <input type="text" class="form-control" value="<?php echo $_REQUEST['searchStr']?>" id="searchInput" placeholder="Search" name="q" style="padding:6px 6px; border: inherit;"/>
-        <div class="input-group-btn search_but">
-        <button class="btn btn-neutral-default" id="patientSearch" type="button">Search</button>
-        </div>
-    </div>
-   </div>
-   <div class="push"></div>
-    <div class="padd-top50">
+   <div class="sidebar-filter p-md">
+		 <div class="form-group serch_patlist">
+				<input type="hidden" value="<?php echo $selectPatient;?>" id="currentPage" />
+				<input type="hidden" value="<?php echo $page;?>" id="Page" />
+				<label class="item-input serch-input"> 
+					<input type="text" class="form-control" value="<?php echo $_REQUEST['searchStr']?>" id="searchInput" placeholder="Search by name, DOB, phone..." name="q"/>
+				</label>
+				<div class="input-group-btn search_but">
+					<button class="btn btn-disabled btn-block" id="patientSearch" type="button">Search</button>
+				</div>
+			</div>
+	<div class="btn-sorting text-center">
 		<span class="searchLetters"><button value="a" onclick="getChar(this);">A</button></span>
 		<span class="searchLetters"><button value="b" onclick="getChar(this);">B</button></span>
 		<span class="searchLetters"><button value="c" onclick="getChar(this);">C</button></span>
@@ -80,6 +80,9 @@ font-weight:bold;
 		<span class="searchLetters"><button value="y" onclick="getChar(this);">Y</button></span>
 		<span class="searchLetters"><button value="z" onclick="getChar(this);">Z</button></span>
 		</div>
+   </div>
+
+    
 	</div>
    <div class="clear"></div>
  <!-- Confirm Delete Provider Modal --->

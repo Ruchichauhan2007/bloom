@@ -71,7 +71,7 @@
    border: medium none;
    box-shadow: none;
    padding: 6px 15px;
-   color: #7fcebb;
+   color: rgba(0,0,0,0.38);
    background: transparent;
    text-transform: uppercase;
    font-weight: 600;
@@ -298,6 +298,37 @@
 	cursor: pointer;
     top: 32px;
     width: 18px;
+}
+.btn-secondary{
+    border: 1px solid #999999 !important;
+	text-transform: uppercase;
+	border-radius: 2px !important;
+	color: #999999 !important;
+	background: transparent !important;
+}
+.btn-secondary:active{
+	background: rgba(153,153,153,0.10) !important;
+	border: 1px solid #999999 !important;
+	border-radius: 2px !important;
+}
+.btn-disabled{
+    background: rgba(153,153,153,0.20) !important;
+	color: #999999 !important;
+	border-radius: 2px !important;
+	text-transform: uppercase !important;
+	border: none !important;
+}
+.btn-secondary:active{
+	background: rgba(153,153,153,0.10) !important;
+	border: 1px solid #999999 !important;
+	border-radius: 2px !important;
+}
+.btn-primary{
+    background: rgba(97,35,105,0.80) !important;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12),
+	0px 2px 2px 0px rgba(0,0,0,0.24);
+	border-radius: 2px;
+	border: none !important;
 }	
 </style>
 <div class="wrapper2">
@@ -1053,7 +1084,7 @@ console.log(availableMenus);
                      </div>
 						<!-- Filter by Date-->
 						<div class="filter-bydate">
-						<button class="btn-neutral-default " type="submit">Filter</button>
+						<button class="btn btn-disabled btn-block" type="submit">Filter</button>
 						</div>
  </form>						
 					</div>

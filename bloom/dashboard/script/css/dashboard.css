@@ -1010,20 +1010,20 @@ border-bottom: solid 5px #18ab67!important;
 .serch_patlist
 {
 background-color: #fff;
-height: 40px;
 border: none;
 float:left;
 border-radius: 4px;
 }
-.serch_patlist input
+
+.serch-input
 {
-border:none !important;
-font-size: 22px;
-font-size: 16px;
-height: 40px;
-line-height: 40px;
-padding: 0 15px !important;
-color: #000 !important;
+	margin-bottom: 15px;
+}
+.item-input {
+    display: block;
+}
+.p-md{
+	padding: 16px !important;
 }
 .glyphicon-search:before {
 
@@ -1111,11 +1111,29 @@ font-size: 16px !important;
 }
 
 .btn{
-	min-height: 40px;
+	/*min-height: 40px;*/
 }
 
 .date{
     font-size: 16px;
     color: rgba(0,0,0,0.38);
     padding-top: 3px;
+}
+
+span.searchLetters
+{
+	padding-top:0px;
+}
+.btn-sorting{
+	float: left;
+    margin: 5px 0 16px 0;
+}
+.searchLetters button
+{
+	border:none;
+	padding: 0 3px;
+	background-color: transparent;
+	font-size: 14px;
+	font-weight: 600;
+	color: #7fcebb;
 }

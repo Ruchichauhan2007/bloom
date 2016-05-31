@@ -226,18 +226,6 @@ function getChar(ele)
 {
 font-weight:bold;
 }
-span.searchLetters
-{
-	float:left;
-	width:100%;
-	padding-top:0px;
-}
-.searchLetters button
-{
-	width:30px;
-	background:none !important;
-	border:none;
-}
 
 .PatientList_part_bg:hover {
     opacity: 1;
@@ -305,47 +293,51 @@ span.searchLetters
   </div>
 </div>
 </div>
-		 <div class="col-md-4 padd-top50">
-			<div class="sidebar-filter">
-				 <div class="input-group serch_patlist" style="float: left;">
-					<input type="hidden" value="<?php echo $selectPatient;?>" id="currentPage" />
-					<input type="hidden" value="<?php echo $page;?>" id="Page" />
-					<input type="text" class="form-control" value="<?php echo $_REQUEST['searchStr']?>" id="searchInput" placeholder="Search" name="q" style="padding:6px 6px; border: inherit;"/>
-					<div class="input-group-btn search_but">
-						<button class="btn btn-neutral-default" id="patientSearch" type="button">Search</button>
-					</div>
+
+<div class="col-md-4 padd-top50">
+	<div class="sidebar-filter p-md">
+			 <div class="form-group serch_patlist" style="float: left;">
+				<input type="hidden" value="<?php echo $selectPatient;?>" id="currentPage" />
+				<input type="hidden" value="<?php echo $page;?>" id="Page" />
+				<label class="item-input serch-input"> 
+					<input type="text" class="form-control" value="<?php echo $_REQUEST['searchStr']?>" id="searchInput" placeholder="Search by name, DOB, phone..." name="q"/>
+				</label>
+				<div class="input-group-btn search_but">
+					<button class="btn btn-disabled btn-block" id="patientSearch" type="button">Search</button>
 				</div>
-   </div>
-   <div class="push"></div>
-   <div class="padd-top50">
-		<span class="searchLetters"><button value="a" onclick="getChar(this);">A</button></span>
-		<span class="searchLetters"><button value="b" onclick="getChar(this);">B</button></span>
-		<span class="searchLetters"><button value="c" onclick="getChar(this);">C</button></span>
-		<span class="searchLetters"><button value="d" onclick="getChar(this);">D</button></span>
-		<span class="searchLetters"><button value="e" onclick="getChar(this);">E</button></span>
-		<span class="searchLetters"><button value="f" onclick="getChar(this);">F</button></span>
-		<span class="searchLetters"><button value="g" onclick="getChar(this);">G</button></span>
-		<span class="searchLetters"><button value="h" onclick="getChar(this);">H</button></span>
-		<span class="searchLetters"><button value="i" onclick="getChar(this);">I</button></span>
-		<span class="searchLetters"><button value="j" onclick="getChar(this);">J</button></span>
-		<span class="searchLetters"><button value="k" onclick="getChar(this);">K</button></span>
-		<span class="searchLetters"><button value="l" onclick="getChar(this);">L</button></span>
-		<span class="searchLetters"><button value="m" onclick="getChar(this);">M</button></span>
-		<span class="searchLetters"><button value="n" onclick="getChar(this);">N</button></span>
-		<span class="searchLetters"><button value="o" onclick="getChar(this);">O</button></span>
-		<span class="searchLetters"><button value="p" onclick="getChar(this);">P</button></span>
-		<span class="searchLetters"><button value="q" onclick="getChar(this);">Q</button></span>
-		<span class="searchLetters"><button value="r" onclick="getChar(this);">R</button></span>
-		<span class="searchLetters"><button value="s" onclick="getChar(this);">S</button></span>
-		<span class="searchLetters"><button value="t" onclick="getChar(this);">T</button></span>
-		<span class="searchLetters"><button value="u" onclick="getChar(this);">U</button></span>
-		<span class="searchLetters"><button value="v" onclick="getChar(this);">V</button></span>
-		<span class="searchLetters"><button value="w" onclick="getChar(this);">W</button></span>
-		<span class="searchLetters"><button value="x" onclick="getChar(this);">X</button></span>
-		<span class="searchLetters"><button value="y" onclick="getChar(this);">Y</button></span>
-		<span class="searchLetters"><button value="z" onclick="getChar(this);">Z</button></span>
-		
-	</div></div>
+			</div>
+			<div class="btn-sorting text-center">
+				<span class="searchLetters"><button value="a" onclick="getChar(this);">A</button></span>
+				<span class="searchLetters"><button value="b" onclick="getChar(this);">B</button></span>
+				<span class="searchLetters"><button value="c" onclick="getChar(this);">C</button></span>
+				<span class="searchLetters"><button value="d" onclick="getChar(this);">D</button></span>
+				<span class="searchLetters"><button value="e" onclick="getChar(this);">E</button></span>
+				<span class="searchLetters"><button value="f" onclick="getChar(this);">F</button></span>
+				<span class="searchLetters"><button value="g" onclick="getChar(this);">G</button></span>
+				<span class="searchLetters"><button value="h" onclick="getChar(this);">H</button></span>
+				<span class="searchLetters"><button value="i" onclick="getChar(this);">I</button></span>
+				<span class="searchLetters"><button value="j" onclick="getChar(this);">J</button></span>
+				<span class="searchLetters"><button value="k" onclick="getChar(this);">K</button></span>
+				<span class="searchLetters"><button value="l" onclick="getChar(this);">L</button></span>
+				<span class="searchLetters"><button value="m" onclick="getChar(this);">M</button></span>
+				<span class="searchLetters"><button value="n" onclick="getChar(this);">N</button></span>
+				<span class="searchLetters"><button value="o" onclick="getChar(this);">O</button></span>
+				<span class="searchLetters"><button value="p" onclick="getChar(this);">P</button></span>
+				<span class="searchLetters"><button value="q" onclick="getChar(this);">Q</button></span>
+				<span class="searchLetters"><button value="r" onclick="getChar(this);">R</button></span>
+				<span class="searchLetters"><button value="s" onclick="getChar(this);">S</button></span>
+				<span class="searchLetters"><button value="t" onclick="getChar(this);">T</button></span>
+				<span class="searchLetters"><button value="u" onclick="getChar(this);">U</button></span>
+				<span class="searchLetters"><button value="v" onclick="getChar(this);">V</button></span>
+				<span class="searchLetters"><button value="w" onclick="getChar(this);">W</button></span>
+				<span class="searchLetters"><button value="x" onclick="getChar(this);">X</button></span>
+				<span class="searchLetters"><button value="y" onclick="getChar(this);">Y</button></span>
+				<span class="searchLetters"><button value="z" onclick="getChar(this);">Z</button></span>
+			</div>
+			
+			<button class="btn btn-secondary btn-block" type="button">Add New Patient</button>
+	</div>
+</div>
 <?php include 'popup/CientSiderror_popup.php';
 ?>
 <!--start footer -->
