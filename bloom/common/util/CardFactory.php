@@ -84,7 +84,7 @@ $userType = $_COOKIE['type'];
 					$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg Admin text-left'>
 					<div class='message_box_bg_blue'>
 					<h2>".$name."</h2>
-					<h4>".$ptcard->{createTimestamp}."</h4>
+					<h4 class='time_date'>".$ptcard->{createTimestamp}."</h4>
 					</div>
 					<div class='message_text_cl'>
 						<h3 id=TITLE_".$ptcard->{dashboardDetailId}.">".$title."</h3>
@@ -117,7 +117,7 @@ $userType = $_COOKIE['type'];
 			<div class='message_box_bg Admin text-left ".$vitalTrends."'>
 					<div class='message_box_bg_blue'>
 					<h2>".$patientName."</h2>
-					<h4>".$ptcard->{createTimestamp}."</h4>
+					<h4 class='time_date'>".$ptcard->{createTimestamp}."</h4>
 					<h3 class='yellow-card-h3'><i>".$viewed."</i></h3>
 					</div>
 					<div class='desc'>".$title."</div>
@@ -311,7 +311,7 @@ $userType = $_COOKIE['type'];
 			$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg Admin text-left ".$vitalTrends."'>
 					<div class='message_box_bg_blue'>
 					<h2 class='".$dbCardType."'>".$patientName."</h2>
-					<h4>".$dueTimeSet."</h4>
+					<h4 class='time_date'>".$vitalTime."</h4>
 					</div>
 					<div class='message_text_cl'>
 						<h2 class=' ".$dbCardType."'>".$reading." <span class='patient-status ".$dbCardType."'>".$vitalName."<span></h2>
@@ -387,7 +387,7 @@ $userType = $_COOKIE['type'];
 			$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg Admin text-left ".$vitalTrends."'>
 					<div class='message_box_bg_blue'>
 					<h2 class='".$dbCardType."'>".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."</h2>
-					<h4>".$ptcard->{createTimestamp}."</h4>
+					<h4 class='time_date'>".$ptcard->{createTimestamp}."</h4>
 					<h3 class=''>".$title."</h3>
 					</div>
 					<h3  class='yellow-card-h3'><i>".$viewed."</i></h3>
@@ -416,7 +416,7 @@ $userType = $_COOKIE['type'];
 		$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg text-left'>
 					<div class='message_box_bg_blue'>
 					<h2 class='".$dbCardType."'>".$name."</h2>
-					<h4>".$ptcard->{createTimestamp}."</h4>
+					<h4 class='time_date'>".$ptcard->{createTimestamp}."</h4>
 					</div>
 					<div class='desc'><p>".$providerName."</p></div>
 					<div class='message_text_cl'>
@@ -488,7 +488,7 @@ $userType = $_COOKIE['type'];
 			$htmlCard = $htmlCard.$reviewDiv."<div class='message_box_bg'>
 					<div class='message_box_bg_blue'>
 					<h2 class='".$dbCardType."'>".$ptcard->{patLastName}." ".$ptcard->{patFirstName}."</h2>
-					<h4>".$ptcard->{createTimestamp}."</h4>
+					<h4 class='time_date'>".$ptcard->{createTimestamp}."</h4>
 					</div>
 					<div class='desc'><p>".$providerName."</p></div>
 					<div class='message_text_cl'>
@@ -677,7 +677,7 @@ $userType = $_COOKIE['type'];
 					<div class='message_box_bg_blue'>
 					<h2 class='".$dbCardType."'>".$name."</h2>
 					<h2 class='".$dbCardType."'>".$patientName."</h2>
-					<h4>".$dueTimeSet."</h4>
+					<h4 class='time_date'>".$vitalTime."</h4>
 					</div>
 					<div class='message_text_cl'>
 						<h2 class=' ".$dbCardType."'>".$reading." <span class='patient-status'>".$vitalName."</span></h2>

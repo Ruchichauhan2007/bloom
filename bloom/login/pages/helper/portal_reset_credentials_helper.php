@@ -28,7 +28,7 @@
 				if($portalRes != "" AND $portalRes->{errorMessage} == "")
 				{
 					
-					$msg="Your request for your username and/ or password has been sent. Please check the email associated with this account for a message with your information. Thank you.";		
+					//$msg="Your request for your username and/ or password has been sent. Please check the email associated with this account for a message with your information. Thank you.";		
 					header("Location:forgot_password_message.php");
 					
 				}	
@@ -91,7 +91,8 @@ if(isset($_POST['submit_recovery']))
 				if($portalRes != "" AND $portalRes->{errorMessage} == "")
 				{
 					
-					$information = "Your request for your username and/ or password has been sent. Please check the email associated with this account for a message with your information. Thank you.";
+					//$information = "Your request for your username and/ or password has been sent. Please check the email associated with this account for a message with your information. Thank you.";
+					header("Location:account_recovery_message.php");
 
 					if($_POST['reset']== VMCPortalConstants::$FORGOT_USERNAME)
 					{

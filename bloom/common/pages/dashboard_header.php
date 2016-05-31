@@ -196,7 +196,7 @@ padding-top: 25px;
 		  <li  onClick="filterMenu(this),openPageWithAjax('../../adherenceReport/pages/adherenceReportList.php','currentPage=1&extractType=WEEKLY','menu-content',event,this)"><a href="#">Provider</a></li>
 				<?php }
 				?>
-				<li  onClick="filterMenu(this)"><a href="#">Support</a></li>
+				<li  onClick="filterMenu(this),openPageWithAjax('../../login/pages/login_support.php','','menu-content',event,this)"><a href="#">Support</a></li>
             <li class=""><a href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/login/pages/logout.php">Log Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->

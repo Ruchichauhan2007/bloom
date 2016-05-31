@@ -158,7 +158,7 @@ padding-top: 25px;
           </ul>
           <ul class="nav navbar-nav navbar-right">
 			<li  onClick="filterMenu(this),openPageWithAjax('../../dashboard/pages/portal_addPatient.php','','menu-content',event,this)"><a href="#">Profile</a></li>
-			<li  onClick="filterMenu(this)"><a href="#">Support</a></li>
+			<li  onClick="filterMenu(this),openPageWithAjax('../../login/pages/login_support.php','','menu-content',event,this)"><a href="#">Support</a></li>
             <li class=""><a href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/login/pages/logout.php">Log Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->

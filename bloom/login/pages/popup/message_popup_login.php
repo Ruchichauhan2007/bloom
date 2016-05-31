@@ -3,6 +3,83 @@
 	if($msg)
 	{
 		$VMCMessage=new  VMCErrorMessage();
+		if($msg=="USER_NAME_TAKEN_PLEASE_CHOOSE_ANOTHER_USER_NAME")
+		{
+			$msg="User name is taken, please choose another user name.";
+		}
+		else if($msg == "COULD_NOT_FIND_USER_IN_KANNACT_WITH_SUPPLIED_INFORMATION")
+		{
+			$msg = "Could not found user in Kannact with supplied information.";
+		}
+		else if($msg=="OLD_PASSWORD_AND_NEW_PASSWORD_ARE_SAME")
+	{
+	$msg="Old password and new password are same.";	
+	}
+	
+	
+	$emailError=explode("(",$msg);
+	$emailError=$emailError[0];
+	if($emailError=="Cannot insert duplicate key row in object 'dbo.CR_Emails' with unique index 'Email Address is already registered.'. The duplicate key value is" or $emailError=="Cannot insert duplicate key row in object 'dbo.CR_Emails' with unique index 'CR_EmailAddress_Emails_UX'. The duplicate key value is " or $emailError== "EMAILADDRESS_ALREADY_REGISTERED")
+	{
+	$msg="Email address is already registered.";
+	}
+	else if($msg=="STRING_LENGTH_EXCEED_SPECIFIED_LENGTH")
+	{
+	$msg="String length exceed specified length.";
+	}
+		$emailError=explode("(",$msg);
+	$emailError=$emailError[0];
+	if($emailError=="Violation of UNIQUE KEY constraint 'uc_PatientDetail'. Cannot insert duplicate key in object 'dbo.EM_PatientRegistration'. The duplicate key value is ") 
+	
+	{
+	$msg="PATIENT_ALREADY_REGISTERED_WITH_SAME_DETAILS";
+	}
+	$emailError=explode("(",$msg);
+	$emailError=$emailError[0];
+	if($emailError=="Violation of UNIQUE KEY constraint 'uc_PatientUsername'. Cannot insert duplicate key in object 'dbo.EM_PatientRegistration'. The duplicate key value is ") 
+	
+	{
+	$msg="User name is taken, please choose another user name.";
+	}
+	$emailError=explode("(",$msg);
+	$emailError=$emailError[0];
+	if($emailError=="Violation of UNIQUE KEY constraint 'uc_PatientEmail'. Cannot insert duplicate key in object 'dbo.EM_PatientRegistration'. The duplicate key value is ") 
+	
+	{
+	$msg="This email is already registered please use other email, if problem continues please contact Kannact support.";
+	}
+	
+	$providerDuplicate=explode("(",$msg);
+	$providerDuplicate=$providerDuplicate[0];
+	if($providerDuplicate == "Cannot insert duplicate key row in object 'dbo.CR_Users' with unique index 'CR_USERS_UserName_Deleted_UX'. The duplicate key value is ")
+	{
+		$msg="DUPLICATE_USER";
+	}
+	$emailError=explode("(",$msg);
+	$emailError=$emailError[0];
+	if($emailError == "Cannot insert duplicate key row in object 'dbo.EM_PatientSupplies' with unique index 'EM_PatientSupplies_SupplyConfigId_UX'. The duplicate key value is ")
+	{
+		$msg = "Device AdapterId already assigned to another patient";
+	}
+	$emailError=explode("(",$msg);
+	$emailError=$emailError[0];
+	if($emailError == "Cannot insert duplicate key row in object 'dbo.EM_PatientDeviceDetail' with unique index 'EM_PatientDeviceDetail_VendorDeviceId_UX'. The duplicate key value is ")
+	{
+		$msg = "Device AdapterId already assigned to another patient";
+	}
+	
+	$emailError=explode("(",$msg);
+	$emailError=$emailError[0];
+	if($emailError == "Cannot insert duplicate key row in object 'dbo.CR_Phones' with unique index 'CR_Phones_PhoneNumber_UX'. The duplicate key value is ")
+	{
+		$msg = "Phone Number already exist";
+	}
+	$emailError=explode("(",$msg);
+	$emailError=$emailError[0];
+	if($emailError == "Cannot insert duplicate key row in object 'dbo.EM_PatientSupplies' with unique index 'EM_PatientSupplies_VendorDeviceId_UX'. The duplicate key value is")
+	{
+		$msg = "Device AdapterId already assigned to another patient.";
+	}
 		
  ?>   
  <script>

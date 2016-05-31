@@ -47,9 +47,9 @@
 						header("Location:".VMCPortalConstants::$HTTP.$_SERVER['HTTP_HOST']."/gladstone/portal/bloom/login/pages/portal_dashboard.php");
 					}
 				}
-				else if ( $loginResp->{success} == VMCPortalConstants::$PHP_EMPTY AND $loginResp->{success} == VMCPortalConstants::$PHP_EMPTY)
+				else if ( $loginResp->{errorMessage} != VMCPortalConstants::$PHP_EMPTY AND $loginResp->{success} == VMCPortalConstants::$PHP_EMPTY)
 				{
-					
+										
 					throw new Exception($loginResp->{errorMessage});
 					//header("Location:new-password.php");
 				}
@@ -58,7 +58,9 @@
 		}
 		 catch(Exception $e)
 	  {
+	  
 		$msg =$e->getMessage();
+		
   	  } 
   }
   ?>

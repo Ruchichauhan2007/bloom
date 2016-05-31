@@ -817,7 +817,8 @@ console.log(availableMenus);
       
       
       $(document).ready(function() {
-      	$("h5.time_date").each(function( index, element) {
+      	$("h4.time_date").each(function( index, element) {
+		
       	var time = moment($(element).html());
       	//time.subtract(time.zone(), 'minutes');
       	var localTime  = moment.utc($(element).text()).toDate();
@@ -998,7 +999,14 @@ console.log(availableMenus);
 					<label class="control-label">Type</label>
                     <select name="all_cards" id="cards" class="form-control select-icon">
 							<option value="All" id="ALL" name="all_cards_option"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_ALLTYPES;?></option>
+                             <?php 
+							if(strtoupper($type) == "PROVIDER")
+							{
+							?>
                             <option  id="all_cards_alert" value="Alert"  selected="selected"  name="all_cards_alert"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_ALERT;?></option>
+                             <?php
+							}
+							?> 
 							<option  id="BIOMETRICS" value="Biometrics"  name="all_cards_biometrics"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_BIOMETRICS;?></option>
 							<option  id="STICKY_NOTE" value="Messages"  name="all_cards_sticky"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_STICKY;?></option>
 							<option  id="all_cards_content" value="Educational"  name="all_cards_content"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_CONTENT;?></option>
@@ -1045,7 +1053,7 @@ console.log(availableMenus);
                      </div>
 						<!-- Filter by Date-->
 						<div class="filter-bydate">
-						<button class="btn-neutral-default" type="submit">Filter by Date</button>
+						<button class="btn-neutral-default " type="submit">Filter</button>
 						</div>
  </form>						
 					</div>

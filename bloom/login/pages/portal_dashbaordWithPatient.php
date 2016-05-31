@@ -3,68 +3,304 @@ include 'controller/portal_dashboard_controller.php';
 include 'popup/timeOut.php';
 ?>
 <style>
-#review_new, 
-#reviewedList,
-#review_new.active, 
-#reviewedList.active {
-    background: transparent none repeat scroll 0 0;
-    border: medium none;
-    font-size: 16px;
-    font-weight: normal;
-    outline: 0 none;
+.sidebar{
+   width: 240px;
+   height: 100%;
+   float: none;
+   display: block;
+   position: fixed !important;
+   overflow: hidden;
+   z-index: 100;
+   }
+   .page-content{
+   display: block;
+   margin-left: 240px;
+   }
+   .trend .VITALS_TREND {
+   text-align: left;
+   }
+   .serchByDate {
+   float: left;
+   width: 100%;
+   }
+   .bttngrp .btn.btn-orange.btn-default {
+   background: #ebaf0d none repeat scroll 0 0;
+   border-bottom: solid 4px #b08641;
+   color: #fff;
+   }
+   .bttngrp .btn.btn-green1.btn-default {
+   background: #57D784 none repeat scroll 0 0;
+   border-bottom: solid 4px #439D66;
+   color: #fff;
+   }
+   /*pagination*/
+   .pagination {
+   text-align: right;
+   margin: 12px 0 20px;
+   }
+   .pagination li {
+   background: none repeat scroll 0 0 #1adb82;
+   border-radius: 5px;
+   display: inline;
+   padding: 6px 10px;
+   box-shadow: 0 4px 0 0 #18ab67;
+   }
+   .pagination a {
+   color: #fff;
+   text-decoration: none;
+   }
+   select.custom-dropdown__select.custom-dropdown__select--white {
+   padding-left: 10px !important;
+   }
+   h3.VITALS_TREND {
+   font-size: 23px !important;
+   color: #000 !important;
+   text-align: center;
+   padding-top: 7px;3e
+   }
+   h2.VITALS_TREND {
+   font-size: 23px !important;
+   color: #000 !important;
+   text-align: center;
+   padding-top: 4px;
+   }
+   #review_new, 
+   #reviewedList,
+   #review_new.active, 
+   #reviewedList.active {
+   border: medium none;
+   box-shadow: none;
+   padding: 6px 15px;
+   color: #7fcebb;
+   background: transparent;
+   text-transform: uppercase;
+   font-weight: 600;
+   outline: 0 none;
+   }
+   #review_new.active, 
+   #reviewedList.active{
+   background: #e6e6e6;
+   color: #666;
+   }
+   .top-search-bar {
+   background: #fff none repeat scroll 0 0;
+   border-bottom: 5px solid #ccc;
+   float: left;
+   width: 100%;
+   max-height: 70px;
+   padding: 9px 0;
+   }
+   select#patients{
+   background: rgba(0, 0, 0, 0) url("../images/dd-icon.png") no-repeat scroll 151px center;
+   border: 0 none;
+   width: 175px;
+   appearance:none;
+   -moz-appearance:none; 
+   -webkit-appearance:none;
+   box-shadow:0 0 0;
+   }
+   #patients option {
+   background: #fff none repeat scroll 0 0;
+   color: #000;
+   }
+   #cleanderDiv .glyphicon-calendar.glyphicon {
+   font-size: 18px;
+   }
+   #cleanderDiv .input-group-addon{
+   padding:0;
+   }
+   .searchByDate #search-form a.activeButton{
+   color:#00affe;
+   }
+   select#cards, #startDate, #endDate{
+   }
+   h1.credentials {
+   float: left;
+   }
+   .second-h1{
+   margin-top:5px;
+   }
+   h3.URGENT {
+   color: #000 !important;
+   }
+   h3.URGENTtitle {
+   color: #000 !important;
+   padding-top: 8px;
+   }
+   h3.S-urgenttitle{
+   padding-top:9px !important;
+   -ms-transform: translate(10px,0px); /* IE 9 */
+   -webkit-transform: translate(10px,0px); /* Safari */
+   transform: translate(10px,0px); /* Standard syntax */
+   }
+   .yellow-card-h3{
+   color:;
+   }
+   .PatCardTime2{
+   position:relative;
+   left:50px;
+   top:-10px;
+   }
+   #menu-content.col-md-12 .dashboardCards .PatCardTime2{
+   position:relative;
+   left:210px;
+   top:-10px;
+   }
+   .second-h2{
+   font-size:;
+   }
+   .card-h5{
+   font-size:;
+   color:;
+   }
+   .right-side-h5{
+   position:relative;
+   right:-19px;
+   top:-10px;
+   }
+   .reviewed-r-img{
+   position:relative;
+   right:-19px;
+   }
+   .sidebar-filter{
+	   width: 300px;
+   }
+   .card{
+	display: block;
+	margin-bottom: 15px;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12),0px 2px 2px 0px rgba(0,0,0,0.24);
 }
-#review_new.active span, 
-#reviewedList.active span{
-	border-bottom:2px solid #41ABFE;
-	color:#41ABFE;
+.card-header{
+	padding: 15px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 0;
 }
-.top-search-bar {
-    background: #fff none repeat scroll 0 0;
-    border-bottom: 5px solid #ccc;
+.sidebar-filter .nav li{
+	height: auto;
+}
+
+.sidebar-filter .card-header .btn-default{
+	background: transparent;
+	color: #666;
+}
+.sidebar-filter .nav-pills>li>a{
+	color: #7acebb;
+	text-transform: uppercase;
+}
+.sidebar-filter .nav-pills>li>a{
+	padding: 8px 20px;
+}
+.sidebar-filter .nav>li>a{
+	padding: 12px 20px;
+	color: rgba(0,0,0,0.54);
+}
+.page-header{
+	padding: 0 20px !important;
+	margin: 0 !important;
+	min-height: 118px;
+	border-bottom: none !important;
+}
+
+.page-header .title{
+	font-size: 26px;
+	float: left;
+	width: 100%;
+	color: #7fcebb;
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+.page-header .sub-title{
+	font-size: 16px;
+	color: #666;
+}
+.padd-top20{
+	padding-top: 20px;
+}
+.padd-top50{
+	padding-top: 50px;
+}
+.card-content{
+	overflow: hidden;
+	padding: 15px;
+}
+.serchByDate{
+	margin-bottom: 20px;
+	padding-top: 0; 
+}
+.serchByDate .date input{
+	padding:0 10px 0 0;
+	border-bottom: 1px solid #e0e0e0;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	box-shadow: none;
+	
+}
+.serchByDate .date .input-group-addon img{
+	width: 24px;
+	cursor: pointer;
+}
+.card-content .nav li.active a{
+	text-decoration: underline;
+}
+.filter-bydate{
+	padding: 0;
+    text-align: right;
     float: left;
     width: 100%;
-	padding: 9px 0;
+    display: block;
+    text-transform: uppercase;
+    margin: 10px 0
 }
-select#patients{
-	background: rgba(0, 0, 0, 0) url("../images/dd-icon.png") no-repeat scroll 151px center;
-    border: 0 none;
-	width: 175px;
-	appearance:none;
-    -moz-appearance:none; 
-    -webkit-appearance:none;
-	box-shadow:0 0 0;
+.filter-bydate a{
+	color: rgba(0,0,0,0.3);
+	font-size: 14px;
+	font-weight: 600;
 }
-#patients option {
-    background: #fff none repeat scroll 0 0;
-    color: #000;
+
+.filter-bydate a:hover{
+	color: rgba(0,0,0,0.54);
 }
-select#cards{
-	background: rgba(0, 0, 0, 0) url("../images/d-icon.png") no-repeat scroll 145px center;
-    border: 0 none;
-    color: #41abfe;
-    font-weight: bold;
-    height: 42px;
-    position: relative;
-    z-index: 9;
-	appearance:none;
-    -moz-appearance:none; 
-    -webkit-appearance:none;
-	box-shadow:0 0 0;
+.custom-tabs li{
+	float: left !important;
 }
-select#cards:focus{
-	box-shadow:0 0 0;
+.custom-tabs li a{
+	padding: 15px 15px !important;
+	color: #b4b4b4 !important;
+	text-transform: uppercase !important;
 }
-#cleanderDiv .glyphicon-calendar.glyphicon {
-    font-size: 18px;
+.custom-tabs li.active{
+	border-bottom: 4px solid #6ac5ad !important;
 }
-#cleanderDiv .input-group-addon{
-    padding:0;
+
+.custom-tabs li.active a{
+	color: #6d6d6d !important;
+	font-weight: 600;
 }
-select#cards, #startDate, #endDate{
-	font-size:16px;
-	font-weight:normal!important;
+.btn-neutral-default{
+	background: transparent !important;
+    border: none;
+    padding: 0;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.38) !important;
+    font-weight: 600;
+    font-size: 14px;
 }
+.btn-neutral-default:focus, .btn-neutral-default:hover{
+	color: #6AC5AD !important;
+}
+.input-icon{
+	position: absolute;
+    right: 15px;
+	cursor: pointer;
+    top: 32px;
+    width: 18px;
+}	
 </style>
+
 <script type="text/javascript">
   $(document).ready(function(){
 	  changeCards('');
@@ -240,9 +476,30 @@ function reviewedDashboardCards(dashboardId, e){
 						</ul>
 					</div>
 					<div class="card-content" id="cardTypeList">
-                    <select name="all_cards" id="cards" class="form-control" style="border: 0 none;color: #41abfe;font-weight: bold; height: 42px;">
+					<!--
+						<ul class="nav nav-list"> 
+						  <li onClick="CardFiter(this)" value="All"><a href="#">Everything</a></li>
+						  <li  onClick="CardFiter(this)"  value="Alert" class="active"><a href="#">Alerts</a></li>
+						  <li onClick="CardFiter(this)"  value="Biometrics"><a href="#">Biometrics</a></li>
+						  <li onClick="CardFiter(this)"  value="Care Communication"><a href="#">Care Communication</a></li>
+						  <li onClick="CardFiter(this)"  value="Educational"><a href="#">Educational</a></li>
+						  <li onClick="CardFiter(this)"  value="Messages" ><a href="#">Messages</a></li>
+						  <li onClick="CardFiter(this)"  value="Patient Care" ><a href="#">Patient Care</a></li>
+						  <li onClick="CardFiter(this)"  value="Surveys" ><a href="#">Surveys</a></li>
+						</ul>
+					-->
+					<div class="form-group">
+					<label class="control-label">Type</label>
+                    <select name="all_cards" id="cards" class="form-control select-icon">
 							<option value="All" id="ALL" name="all_cards_option"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_ALLTYPES;?></option>
+                             <?php 
+							if(strtoupper($_COOKIE['type']) == "PROVIDER")
+							{
+							?>
                             <option  id="all_cards_alert" value="Alert"  selected="selected"  name="all_cards_alert"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_ALERT;?></option>
+                             <?php
+							}
+							?> 
 							<option  id="BIOMETRICS" value="Biometrics"  name="all_cards_biometrics"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_BIOMETRICS;?></option>
 							<option  id="STICKY_NOTE" value="Messages"  name="all_cards_sticky"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_STICKY;?></option>
 							<option  id="all_cards_content" value="Educational"  name="all_cards_content"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_CONTENT;?></option>
@@ -250,7 +507,7 @@ function reviewedDashboardCards(dashboardId, e){
 							
 							<option  id="all_cards_call" value="Surveys"  name="all_cards_call"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_SURVEYS;?></option> 
                             <?php 
-							if(strtoupper($type) == "PROVIDER")
+							if(strtoupper($_COOKIE['type']) == "PROVIDER")
 							{
 							?>
                             <option  id="all_cards_call" value="Care"  name="all_cards_call"><?php echo constantAppResource::$PORTAL_DASHBOARD_TEXT_CARE;?></option>
@@ -259,35 +516,26 @@ function reviewedDashboardCards(dashboardId, e){
 							?> 
 
 						</select>
-
+						</div>
+						
                         <form action="" name="search-form" id="search-form" onSubmit="dateSearch(event);" method="post">
 
 <div class="serchByDate">
                            <div id="cleanderDiv" class="row">
-							<div class="col-md-12">
                               <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class='input-group date' id='datetimepicker1'>
-                                       <input type='text' placeholder="From" class="form-control" id="startDate" name="startDate"/>
-                                       <span class="input-group-addon" style="border-radius:0;background: #fff; border: 0px none; box-shadow: 0px 0px 0px;">
-                                          <!-- <span class="glyphicon glyphicon-calendar"></span>-->
-                                          <img src="/gladstone/portal/bloom/login/images/date-range.svg">
-                                       </span>
-                                    </div>
-                                 </div>
+								<label id='datetimepicker1' class="item-input item-floating-label"> 
+									<span id="startDate" name="startDate" class="input-label">From</span>
+									<input class="form-control" type="text" id="startDate" name="startDate" placeholder="From">
+									<img src="/gladstone/portal/bloom/login/images/date-range.svg" class="input-icon">
+								</label>
                               </div>
                               <div class="col-md-6">
-                                 <div class="form-group">
-                                    <div class='input-group date group float-input' id='datetimepicker2'>
-                                       <input type='text' placeholder="To" class="form-control" id="endDate" name="endDate"/>
-                                       <span class="input-group-addon" style="border-radius:0;background: #fff;border: 0px none; box-shadow: 0px 0px 0px;">
-                                          <!-- <span class="glyphicon glyphicon-calendar"></span>-->
-                                          <img src="/gladstone/portal/bloom/login/images/date-range.svg">
-                                       </span>
-                                    </div>
-                                 </div>
+								<label id='datetimepicker2' class="item-input item-floating-label"> 
+									<span id="startDate" name="endDate" class="input-label">To</span>
+									<input class="form-control" type="text" id="endDate" name="endDate" placeholder="To">
+									<img src="/gladstone/portal/bloom/login/images/date-range.svg" class="input-icon">
+								</label>
                               </div>
-							  </div>
                            </div>
                            <input type="hidden" name="searchCard" />
                            <input type="hidden" name="currentPage"  value="1" />
@@ -298,7 +546,7 @@ function reviewedDashboardCards(dashboardId, e){
                      </div>
 						<!-- Filter by Date-->
 						<div class="filter-bydate">
-						<button class="btn-neutral-default" type="submit">Filter by Date</button>
+						<button class="btn-neutral-default " type="submit">Filter</button>
 						</div>
  </form>						
 					</div>

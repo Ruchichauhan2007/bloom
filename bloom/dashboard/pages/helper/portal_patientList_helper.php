@@ -42,8 +42,17 @@ else
 		$msg = "";
 		//$patientList = $emr->getPatientList(VMCPortalConstants::$API_EMR);
 // 		$patientUtil = new PatientUtil();
+		$checkChar = "";
+		if($_REQUEST["checkChar"])
+		{
+			$checkChar = $_REQUEST["checkChar"];
+		}
+		else
+		{
+			$checkChar = "";
+		}
 		$paramArray = array();
-		$paramArray[0] = "";
+		$paramArray[0] = $checkChar;
 		$patientList = $entityUtil->getObjectFromServer($paramArray, "getPatients", VMCPortalConstants::$API_EMR);
 		$entityDetailInfos= $patientList->{entityDetailInfos};
 		$moveNext = $entityDetailInfos[4]->{nextPage};

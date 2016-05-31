@@ -2,6 +2,13 @@
 include('controller/portal_providerList_controller.php');
 ?>
 <link rel="stylesheet" href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/dashboard/script/css/dashboard.css">
+<script>
+function getChar(ele)
+{
+	var char = $(ele).val();
+	openPageWithAjax('../../provider/pages/portal_providerList.php','filter=true&checkChar='+char,'menu-content',event,this);
+}
+</script>
 <style>
 div.scrollbar1{height:640px}
 .activePage
@@ -32,7 +39,49 @@ font-weight:bold;
     </div>
   </div>
   </div>
-  <div class="clear"></div>
+ 
+  <div class="col-md-4 padd-top50">
+   <div class="sidebar-filter">
+     <div class="input-group serch_patlist" style="float: left;">
+        <input type="hidden" value="<?php echo $selectPatient;?>" id="currentPage" />
+        <input type="hidden" value="<?php echo $page;?>" id="Page" />
+        <input type="text" class="form-control" value="<?php echo $_REQUEST['searchStr']?>" id="searchInput" placeholder="Search" name="q" style="padding:6px 6px; border: inherit;"/>
+        <div class="input-group-btn search_but">
+        <button class="btn btn-neutral-default" id="patientSearch" type="button">Search</button>
+        </div>
+    </div>
+   </div>
+   <div class="push"></div>
+    <div class="padd-top50">
+		<span class="searchLetters"><button value="a" onclick="getChar(this);">A</button></span>
+		<span class="searchLetters"><button value="b" onclick="getChar(this);">B</button></span>
+		<span class="searchLetters"><button value="c" onclick="getChar(this);">C</button></span>
+		<span class="searchLetters"><button value="d" onclick="getChar(this);">D</button></span>
+		<span class="searchLetters"><button value="e" onclick="getChar(this);">E</button></span>
+		<span class="searchLetters"><button value="f" onclick="getChar(this);">F</button></span>
+		<span class="searchLetters"><button value="g" onclick="getChar(this);">G</button></span>
+		<span class="searchLetters"><button value="h" onclick="getChar(this);">H</button></span>
+		<span class="searchLetters"><button value="i" onclick="getChar(this);">I</button></span>
+		<span class="searchLetters"><button value="j" onclick="getChar(this);">J</button></span>
+		<span class="searchLetters"><button value="k" onclick="getChar(this);">K</button></span>
+		<span class="searchLetters"><button value="l" onclick="getChar(this);">L</button></span>
+		<span class="searchLetters"><button value="m" onclick="getChar(this);">M</button></span>
+		<span class="searchLetters"><button value="n" onclick="getChar(this);">N</button></span>
+		<span class="searchLetters"><button value="o" onclick="getChar(this);">O</button></span>
+		<span class="searchLetters"><button value="p" onclick="getChar(this);">P</button></span>
+		<span class="searchLetters"><button value="q" onclick="getChar(this);">Q</button></span>
+		<span class="searchLetters"><button value="r" onclick="getChar(this);">R</button></span>
+		<span class="searchLetters"><button value="s" onclick="getChar(this);">S</button></span>
+		<span class="searchLetters"><button value="t" onclick="getChar(this);">T</button></span>
+		<span class="searchLetters"><button value="u" onclick="getChar(this);">U</button></span>
+		<span class="searchLetters"><button value="v" onclick="getChar(this);">V</button></span>
+		<span class="searchLetters"><button value="w" onclick="getChar(this);">W</button></span>
+		<span class="searchLetters"><button value="x" onclick="getChar(this);">X</button></span>
+		<span class="searchLetters"><button value="y" onclick="getChar(this);">Y</button></span>
+		<span class="searchLetters"><button value="z" onclick="getChar(this);">Z</button></span>
+		</div>
+	</div>
+   <div class="clear"></div>
  <!-- Confirm Delete Provider Modal --->
 <div class="modal" id="providerDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" style="width:458px; margin:15% auto">

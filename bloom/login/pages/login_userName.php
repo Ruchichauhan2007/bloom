@@ -37,6 +37,7 @@ include 'controller/login_userName_controller.php';
 body{
 	background-image:none;
 }
+
 </style>
 
 </head>
@@ -55,7 +56,7 @@ include '../../common/pages/header.php';
 	<div class="widget-body">
 		  <div class="group float-input">
 			<input type="email" name="userName" id="userName" maxlength="50" ng-model="userName" ><span class="highlight"></span><span class="bar"></span>
-			<label><?php echo constantAppResource::$LOGIN_LABEL_EMAILADDRESS;?><span style="color:red;">*</span></label>
+			<label><?php echo constantAppResource::$LOGIN_LABEL_EMAILADDRESS;?></label>
 		  </div>
 		  <div class="group float-input">
 			<input type="password" name="password" id="password"><span class="highlight"></span><span class="bar"></span>
@@ -65,8 +66,8 @@ include '../../common/pages/header.php';
 		  <span id="errorMsg"> </span> <img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" class="pull-right" alt="" />
 		  </div>
 		  <div class="actions">
-			<a href="reset_credential.php?page=forgot_password.php" class="pull-left"><?php echo constantAppResource::$LOGIN_BUTTON_FORGOT_PASSWORD;?></a><br>
-			<a href="reset_credential.php?page=account_recovery.php" class="pull-left"><?php echo constantAppResource::$LOGIN_BOTTON_FORGOT_USER_NAME;?></a>
+          Forgot your <a href="reset_credential.php?page=forgot_password.php" class='font16'>password</a><br> or <a href="reset_credential.php?page=account_recovery.php" class='font16'>account email</a>?
+			
 			<button type="submit" id="Login_submit" name="next" class="button button-login" click="doLogin(login)" ng-disabled="loginForm.$invalid" >LOG IN
 				<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
 			</button>

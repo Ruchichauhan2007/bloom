@@ -96,7 +96,7 @@ class constantAppResource
     public static $PORTAL_DASHBOARD_TEXT_ALL_PATIENTSDASHBOARD_TEXT_SECONDARY_ESCALATION="Secondary Escalation ";
     public static $DASHBOARD_TEXT_TERRITORY_ESCALATION="Tertiary Escalation  ";
 	/******************************************************************************** portal_dashboard.php*******************************************************/
-    public static $PORTAL_DASHBOARD_TEXT_ALLTYPES="All types";
+    public static $PORTAL_DASHBOARD_TEXT_ALLTYPES="Everything";
     public static $PORTAL_DASHBOARD_TEXT_STICKY="Messages";
 	public static $PORTAL_DASHBOARD_TEXT_BIOMETRICS="Biometrics";
     public static $PORTAL_DASHBOARD_TEXT_CONTENT="Educational";

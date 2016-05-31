@@ -47,6 +47,16 @@ h3 { color: #4a89dc; }
 	border: 1px solid #ebebeb;
 	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px;
 }
+.login-widget-support {
+	width: 540px;
+	margin: 4em auto;
+	overflow: hidden;
+	padding: 0;
+	background: #fff;
+	border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+}
+
 
 .widget-header{
 	float: left;
@@ -64,7 +74,7 @@ h3 { color: #4a89dc; }
 }
 
 .widget-header .title{
-	color: rgba(0,0,0,0.50);	
+	color:#612369;	
     font-size: 24px;
 }
 
@@ -226,6 +236,13 @@ label {
 	border-radius: 2px;
 }
 
+ .btn-purple{
+  background: #885A8E !important;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12),
+	0px 2px 2px 0px rgba(0,0,0,0.24);
+	border-radius: 2px;
+}
+
 .button-login:hover { background: rgba(97,35,105,0.70); }
 .button-login:active, .button-login:focus{
 box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12),
@@ -325,3 +342,29 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.12),
 	margin-top: 15px;
 }
 
+.support-widget h1, h5 {
+    margin-left: 15px !important;
+}
+
+.support-widget h5 {
+    margin-top: 8px !important;
+}
+
+.name-group {
+    float: left !important;
+	
+}
+
+.email-group {
+    float: right !important;
+}
+
+.help-group {
+    float: left;
+    width: 100% !important;
+}
+a.font16
+{
+font-size:16px !important;
+
+}

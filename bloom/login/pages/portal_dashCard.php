@@ -3,7 +3,7 @@
 <script>
 $(document).ready(function() {
 //changeCards('');
-	$("h5.time_date").each(function( index, element) {
+	$("h4.time_date").each(function( index, element) {
 	var time = moment($(element).html());
 	//time.subtract(time.zone(), 'minutes');
 	var localTime  = moment.utc($(element).text()).toDate();

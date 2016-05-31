@@ -1,52 +1,7 @@
 <?php
-	include 'controller/login_newPassword_controller.php'; 
+	include 'controller/login_newPassword_controller.php';
+	include '../../common/pages/header.php'; 
 ?>
-<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/query.min_1.7.1.js"></script>
-<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/auth-helper.js"></script>
-<script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/ajax-default.js"></script>
-<?php
-/*foreach ($_COOKIE as $c_id => $c_value)
-{
-	unset($_COOKIE[$c_id]);
-	setcookie($c_id, null, -1, '/');
-}
-*/
-if(!$_COOKIE['status'])
-{
-	setcookie("status","UN",0,'/', '', false, false);
-}
-
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
-<link href="../../common/script/css/common-css.css" rel="stylesheet" type="text/css">
-<link href="../../common/script/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<!-- Set the viewport width to device width for mobile -->
-<title><?php echo constantAppResource::$LOGIN_TITLE_GLADSTONE;?></title>
-<!--Including css files used in all the html pages -->
-<link href="../script/css/login.css" rel="stylesheet" type="text/css">
-<link href="../script/css/login-css.css" rel="stylesheet" type="text/css">
-<link href="/gladstone/portal/bloom/common/script/css/common-css.css" rel="stylesheet" type="text/css">
-<link href="../script/css/Responcive.css" rel="stylesheet" type="text/css">
-<!--***** -->
-<style>
-body{
-	background-image:none;
-}
-</style>
-</head>
-<body>
-		<!--start header -->
-<?php
-include '../../common/pages/header.php';
-?>
-<!--end header -->
 <div class="login-widget">
 	<div class="widget-header">
 	<h1 class="title">Reset Password</h1>
@@ -56,14 +11,14 @@ include '../../common/pages/header.php';
 			<p>Please enter and confirm a new password for  your Kannact account </p> <br>
 		  <div class="group float-input">
 			<input type="password" name="newPassword" id="newPassword"><span class="highlight"></span><span class="bar"></span>
-			<label><?php echo constantAppResource::$LOGIN_LABEL_PASSWORD;?><span style="color:red;">*</span></label>
+			<label><?php echo constantAppResource::$LOGIN_LABEL_PASSWORD;?></label>
 		  </div>
 		  <div class="group float-input">
 			<input type="password" name="confirmPassword" id="confirmPassword"><span class="highlight"></span><span class="bar"></span>
 			<label>Confirm password</label>
 		  </div>
-		  <div class="errorMsgDiv"style="display:none;">
-		  <span id="errorMsg"> </span> <img src="/gladstone/portal/bloom/app/assets/image/error-icon.png" alt="" />
+		   <div class="group float-input" style="display:none;" id="errorMsgDivd">
+		  <span id="errorMsg"> </span> <img  src="/gladstone/portal/bloom/app/assets/image/error-icon.png" alt="" />
 		  </div>
 		  <div class="actions">
 			<button type="submit" id="submit" name="submit" class="button button-login" >SUBMIT
@@ -104,7 +59,7 @@ include '../../common/pages/header.php';
 
 	<!--start footer -->
 <?php
-include 'popup/error_popup_login.php';
+//include 'popup/error_popup_login.php';
 include 'popup/message_popup_login.php';
 ?>
 
@@ -171,9 +126,3 @@ $(window, document, undefined).ready(function() {
 
 });
 </script>
-
-
-
-<!--end footer -->
-</body>
-</html>

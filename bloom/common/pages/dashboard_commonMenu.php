@@ -276,9 +276,9 @@ padding: 0 0 0 4px;
 					<span class="title">Activity</span>
 					<!--<span class="sub-title">Tap cards to mark them as reviewed.</span>-->
 					<ul class="nav custom-tabs Activity">
-						<li onClick="patientCardFiter(this)"><a href="#" value="All Patients"  paginate="true" class="withoutPatient">All</a>
+						<li onClick="patientCardFiter(this)" class="active"><a href="#" value="All Patients"  paginate="true" class="withoutPatient">All</a>
 						</li>
-						<li onClick="patientCardFiter(this)"class="active"><a href="#" value="My Patients" paginate="true" class="withoutPatient">My Patients</a>
+						<li onClick="patientCardFiter(this)"><a href="#" value="My Patients" paginate="true" class="withoutPatient">My Patients</a>
 						</li>
 					</ul>
 				</div>
@@ -306,7 +306,7 @@ padding: 0 0 0 4px;
 					</li>
 					<li><a href="" paginate="true" onClick="openPageWithAjax('../../messages/pages/messages.html','','menu-content',event,this)">Messages</a>
 					</li>
-					<li><a href="#" onClick="openPageWithAjax('../../dashboard/pages/portal_careManagement.php?edit=true&patientId=this.id&type=EDIT','','menu-content',event,this)">Patient Care</a>
+					<li><a href="#" onClick="openPageWithAjax('../../patientcare/pages/patient_care.php','','menu-content',event,this)">Patient Care</a>
 					</li>
 					<li><a href="#" class="patient" onClick="openPageWithAjax('../../dashboard/pages/portal_addPatient.php?edit=true&patientId=this.id&type=EDIT','','menu-content',event,this)">Profile</a>
 					</li>
@@ -349,10 +349,7 @@ padding: 0 0 0 4px;
 					<span class="title">Support</span>
 					<!--<span class="sub-title">Tap cards to mark them as reviewed.</span>-->
 				</div>
-				<ul class="nav Support">
-					<li><a href="#" id="aboutPage">About</a>
-					</li>
-				</ul>
+				
 			</div>
 </div>
 
