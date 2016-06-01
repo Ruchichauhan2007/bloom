@@ -55,9 +55,8 @@ label.col-md-4 {
 }
 .ascalate {
 text-align: right;
-width: 220px;
 float: right;
-margin-right: 13px;
+margin-right: 0;
 }
 
 /*.dashboard_patient_status_img img{
@@ -114,42 +113,151 @@ select:focus
     border-color:#66afe9;
     box-shadow: 0 0 10px #66afe9;
 }
+
 </style>
 <!--start wapper -->
 <!--start dashboard_header -->
 <div class="col-md-8 padd-top20">
-<div class="dashboard_top_nav" style="margin-bottom:25px;">
-  <ul>
-    <li><a href="#" class="active">Provider Detail</a></li>
-  </ul>
+ <div class="card">
+<div class="card-header">
+  <div class="row">
+	<div class="col-md-6 page-title"><a href=""><i class="back-icon"><img src="/gladstone/portal/bloom/common/images/back.svg"></i></a> Provider Detail</div>
+	<div class="col-md-6 text-right secondary-title">Chance Diemer, DDS</div>
+  </div>
 </div>
 <!--end dashboard_header -->
 <div style="clear:both"></div>
+<div class="card-body">
 <div class="row">
-  <form class="form-horizontal" id="addprovideform" method="post" onSubmit="postPatientForm('<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/provider/pages/portal_addProvider.php','addprovideform','menu-content',event)">
+  <form id="addprovideform" method="post" onSubmit="postPatientForm('<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/provider/pages/portal_addProvider.php','addprovideform','menu-content',event)">
 
-<div class="col-lg-12">
+<div class="form-layout">
 <div class="col-lg-6 leftPartForm">
-
-
 <div class="form-group">
-  <label class="col-md-4 control-label" style="padding:0px;" for="textinput">Name<span style="color:red;">*</span></label>  
-  <div class="col-md-3">
-  <?php
-  if($providInfo->{firstName})
-  {
-  ?>
-  <input  name="first_name" id="first_name" placeholder="First" class="form-control input-md captial" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First'"  maxlength="50"  value="<?php echo $providInfo->{firstName} ?>" /> 
-  <?php
-  }
-  else
-  {?>
-  <input  name="first_name" id="first_name" placeholder="First" class="form-control input-md captial" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First'"  maxlength="50"   /> 
-  <?php
-  }
-  ?>
-  </div>
-  <div class="col-md-1" style="padding: 0px;">
+	<!--First Name-->
+	<label class="item-input item-floating-label">
+		<span class="input-label">First Name*</span>
+		<?php
+		  if($providInfo->{firstName})
+		  {
+		  ?>
+		  <input  name="first_name" id="first_name" placeholder="First" class="form-control" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First'"  maxlength="50"  value="<?php echo $providInfo->{firstName} ?>" /> 
+		  <?php
+		  }
+		  else
+		  {?>
+		  <input  name="first_name" id="first_name" placeholder="First" class="form-control" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'First'"  maxlength="50"   /> 
+		  <?php
+		  }
+		 ?>
+	</label>
+	<!--Last Name-->
+	<label class="item-input item-floating-label">
+		<span class="input-label">Last Name*</span>
+		<?php
+		  if($providInfo->{lastName})
+		  {?>
+		  <input  name="last_name" id="last_name" placeholder="Last" class="form-control" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last'"  maxlength="50"/ value="<?php echo $providInfo->{lastName} ?>"  /> 
+		  <?php}
+		  else{?>
+			<input  name="last_name" id="last_name" placeholder="Last" class="form-control" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last'"  maxlength="50"/   /> 
+			<?php
+			}
+		?>
+	</label>
+	<!-- Date of Birth-->
+	<label class="item-input item-floating-label jq-datepicker"> 
+		<span class="input-label">Date Of Birth*</span>
+		 <?php
+		  if($dateOdBirthStr )
+		  {?>
+			<input type="text" class="form-control" name="dob"  id="dob" placeholder="Date Of Birth"   value="<?php echo $dateOdBirthStr ; ?>"  maxlength="10" />
+		<?php
+		}
+		else{?>
+			<input type="text" class="form-control" name="dob"  id="dob" placeholder="Date Of Birth"  maxlength="10" />
+		<?php
+		}
+		?>
+	</label>
+	<!--Email -->
+	<label class="item-input item-floating-label">
+		<span class="input-label">Email*</span>
+		<?php
+			if($emailaddressinfo[0]->{emailAddress})
+			{?>
+			<input  name="email" id="providerEmail" placeholder="User@host.com" class="form-control" type="text" value="<?php echo $emailaddressinfo[0]->{emailAddress} ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'User@host.com'"  maxlength="50" />
+			<?php
+			}
+			else
+			{?>
+			<input  name="email" id="providerEmail" placeholder="User@host.com" class="form-control" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User@host.com'"  maxlength="50" />
+			<?php
+			}
+			?>
+			<?php
+			if($credentialsInfo->{userName})
+			{?>
+			<input  name="username" id="username" placeholder="User Name" class="form-control" type="hidden" readonly="readonly" value="<?php echo $credentialsInfo->{userName} ?>"   />
+			<?php
+			}
+			else
+			{?>
+				<input  name="username" id="username" placeholder="User Name" class="form-control" type="hidden" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User Name'"  maxlength="15"  />
+			<?php
+			}
+			?>
+	</label>
+	<!--Password -->
+	<label class="item-input item-floating-label">
+		<span class="input-label" for="passwordinput">Password*</span>
+		<?php
+			if($credentialsInfo->{password})
+			{
+		  ?>
+			<input  name="password" id="password" placeholder="Password" class="form-control" type="text" value="********"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'"  maxlength="15"  />
+			<?php
+			}
+			else
+			{?>
+			<input  name="password" id="password" placeholder="Password" class="form-control" type="text" value=""  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'"  maxlength="15" />
+			<?php
+			}
+			?>
+	</label>
+	<!--Retype Password -->
+	<label class="item-input item-floating-label">
+		<span class="input-label" for="passwordinput">Re-type password*</span>
+		<?php
+		  if($credentialsInfo->{password})
+		  {?>
+			<input  name="retypepassword" id="retypepassword" placeholder="Retype Password" class="form-control input-md" type="text" value="********"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Retype Password'"  maxlength="15"  />
+			<?php
+			}
+			else
+			{
+			?>
+			<input  name="retypepassword" id="retypepassword" placeholder="Retype Password" class="form-control input-md" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Retype Password'"  maxlength="15" />	
+			<?php
+			}
+			?>
+	</label>
+	<!--Phone-->
+	<label class="item-input item-floating-label">
+		<span class="input-label" for="textinput">Phone*</span>
+		<?php
+	if($providInfo->phoneInfo[0]->{phoneNumber})
+	{
+	?>
+    <input  name="phone" id="providerPhone" placeholder="0123456789" class="form-control input-md" type="text" value="<?php echo $providInfo->phoneInfo[0]->{phoneNumber}; ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = '0123456789'"  maxlength="15"/>
+	<?php}
+	else{?>
+    <input  name="phone" id="providerPhone" placeholder="0123456789" class="form-control input-md" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = '0123456789'"  maxlength="15" />
+	<?php
+	}
+	?>
+	</label>
+  <!--<div class="col-md-1" style="padding: 0px;">
   <?php
   if($providInfo->{middleInitial})
   {?>
@@ -161,125 +269,12 @@ select:focus
   <?php  
   }
   ?>
-  </div>
-  <div class="col-md-3">
-  <?php
-  if($providInfo->{lastName})
-  {?>
-  <input  name="last_name" id="last_name" placeholder="Last" class="form-control input-md captial" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last'"  maxlength="50"/ value="<?php echo $providInfo->{lastName} ?>"  /> 
-  <?php}
-  else{?>
-    <input  name="last_name" id="last_name" placeholder="Last" class="form-control input-md captial" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last'"  maxlength="50"/   /> 
-	<?php
-	}
-	?>
-
-  </div>
-</div>
-<div class="form-group">
-      <label for="dob" class="col-md-4" style="padding:0px;" >Date Of Birth<span style="color:red;">*</span></label>
-      <div class="col-md-8" style="text-align: center;">
-	  <?php
-	  if($dateOdBirthStr )
-	  {?>
-        <input type="text" class="form-control" name="dob"  id="dob" placeholder="Date Of Birth"   value="<?php echo $dateOdBirthStr ; ?>"  style="width: 64%; float: left; margin-right: 6px;"  maxlength="10" />
-	<?php
-	}
-	else{?>
-        <input type="text" class="form-control" name="dob"  id="dob" placeholder="Date Of Birth"    style="width: 64%; float: left; margin-right: 6px;"  maxlength="10" />
-	<?php
-	}
-	?>
-      </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" style="padding:0px;" for="textinput">Email<span style="color:red;">*</span></label>
-  <div class="col-md-8">
-  <?php
-	if($emailaddressinfo[0]->{emailAddress})
-	{?>
-    <input  name="email" id="providerEmail" placeholder="User@host.com" class="form-control input-md" type="text" value="<?php echo $emailaddressinfo[0]->{emailAddress} ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'User@host.com'"  maxlength="50" />
-	<?php
-	}
-	else
-	{?>
-    <input  name="email" id="providerEmail" placeholder="User@host.com" class="form-control input-md" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User@host.com'"  maxlength="50" />
-	<?php
-	}
-	?>
-	<?php
-	if($credentialsInfo->{userName})
-	{?>
-    <input  name="username" id="username" placeholder="User Name" class="form-control input-md" type="hidden" readonly="readonly" value="<?php echo $credentialsInfo->{userName} ?>"   />
-	<?php
-	}
-	else
-	{?>
-	    <input  name="username" id="username" placeholder="User Name" class="form-control input-md" type="hidden" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User Name'"  maxlength="15"  />
-	<?php
-	}
-	?>
-  </div>
+  </div>-->
 </div>
 
 
-<div class="form-group">
-  <label class="col-md-4 control-label" style="padding:0px;" for="passwordinput">Password<span style="color:red;">*</span></label>
-  <div class="col-md-8">
-  <?php
-	if($credentialsInfo->{password})
-	{
-  ?>
-    <input  name="password" id="password" placeholder="Password" class="form-control input-md" type="text" value="********"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'"  maxlength="15"  />
-	<?php
-	}
-	else
-	{?>
-    <input  name="password" id="password" placeholder="Password" class="form-control input-md" type="text" value=""  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'"  maxlength="15" />
-	<?php
-	}
-	?>
-  </div>
-</div>
-
-<div class="form-group"> 
-  <label class="col-md-4 control-label" style="padding:0px;" for="passwordinput">Retype Password<span style="color:red;">*</span></label>
-  <div class="col-md-8">
-  <?php
-  if($credentialsInfo->{password})
-  {?>
-    <input  name="retypepassword" id="retypepassword" placeholder="Retype Password" class="form-control input-md" type="text" value="********"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Retype Password'"  maxlength="15"  />
-	<?php
-	}
-	else
-	{
-	?>
-    <input  name="retypepassword" id="retypepassword" placeholder="Retype Password" class="form-control input-md" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Retype Password'"  maxlength="15" />	
-	<?php
-	}
-	?>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" style="padding:0px;" for="textinput">Phone</label>
-  <div class="col-md-6">
-	<?php
-	if($providInfo->phoneInfo[0]->{phoneNumber})
-	{
-	?>
-    <input  name="phone" id="providerPhone" placeholder="0123456789" class="form-control input-md" type="text" value="<?php echo $providInfo->phoneInfo[0]->{phoneNumber}; ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = '0123456789'"  maxlength="15"/>
-	<?php}
-	else{?>
-    <input  name="phone" id="providerPhone" placeholder="0123456789" class="form-control input-md" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = '0123456789'"  maxlength="15" />
-	<?php
-	}
-	?>
-  </div>
-</div>
-
-<div class="form-group">
+<!--Avatar-->
+<!--<div class="form-group">
   <label class="col-md-4"></label>
 <div class="col-sm-6">
           <div class="dashboard_patient_status_img">
@@ -313,13 +308,15 @@ select:focus
           </div>
 		  </div>
 
+</div>-->
 </div>
-</div>
+
 <div class="col-lg-6 rightPartForm">
 <div class="form-group">
-<label for="status" class="col-md-4" >Gender<span style="color:red;">*</span></label>
-          <span class="custom-dropdown custom-dropdown--white col-md-8" style="padding-right: 0px; width: 55%;">
-            <select name="gender" id="gander" class="custom-dropdown__select custom-dropdown__select--white" style="width:100%;">
+	<!--Gender-->
+	<div class="form-group">
+		<label class="control-label">Gender*</label>
+		<select name="gender" id="gander" class="form-control select-icon">
 				<?php
 				if($providInfo->{genderCode} =="M")
 				{
@@ -353,47 +350,42 @@ select:focus
 				?>
 
             </select>
-          </span>
-</div>
-<div class="form-group">
-  <label class="col-md-4 control-label" style="padding:0px;" for="textinput">Credentials<span style="color:red;">*</span></label>
-  <div class="col-md-7">
-  <?php
-  if($providInfo->{credentials})
-  {?>
-    <input  name="credentials" id="credentials" placeholder="RN" class="form-control input-md" type="text"  value="<?php echo $providInfo->{credentials} ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'RN'"  maxlength="20" />
-	<?php
-	}
-	else
-	{?>
-    <input  name="credentials" id="credentials" placeholder="RN" class="form-control input-md" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'RN'"  maxlength="20"  />
-	<?php
-	}
-	?>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label" style="padding:0px;" for="textinput">Specialty<span style="color:red;">*</span></label>
-  <div class="col-md-7">
-	<?php 
+	</div>
+	<!--Credentials-->
+	<label class="item-input item-floating-label">
+		<span class="input-label" for="textinput">Credentials*</span>
+		<?php
+		  if($providInfo->{credentials})
+		  {?>
+			<input  name="credentials" id="credentials" placeholder="RN" class="form-control" type="text"  value="<?php echo $providInfo->{credentials} ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'RN'"  maxlength="20" />
+			<?php
+			}
+			else
+			{?>
+			<input  name="credentials" id="credentials" placeholder="RN" class="form-control" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'RN'"  maxlength="20"  />
+			<?php
+			}
+			?>
+	</label>
+	<!--Speciality-->
+	<label class="item-input item-floating-label">
+		<span class="input-label" for="textinput">Speciality*</span>
+		<?php 
 	if($providInfo->{specialityCode})
 	{?>
-    <input  name="speciality" id="speciality" placeholder="Hospice" class="form-control input-md" type="text"   value="<?php echo $providInfo->{specialityCode} ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hospice'"  maxlength="20"/>
+    <input  name="speciality" id="speciality" placeholder="Hospice" class="form-control" type="text"   value="<?php echo $providInfo->{specialityCode} ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hospice'"  maxlength="20"/>
 	<?php
 	}
 	else{
 	?>
-	    <input  name="speciality" id="speciality" placeholder="Hospice" class="form-control input-md" type="text"   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hospice'"  maxlength="20" />
+	    <input  name="speciality" id="speciality" placeholder="Hospice" class="form-control" type="text"   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hospice'"  maxlength="20" />
 	<?php
 	}?>
-	  </div>
-</div>
-
-<div class="form-group">
-<label for="status" class="col-md-4" >Provider Type<span style="color:red;">*</span></label>
-          <span class="custom-dropdown custom-dropdown--white col-md-8" style="padding-right: 0px; width: 55%;">
-            <select name="providertype" id="providertype" class="custom-dropdown__select custom-dropdown__select--white" style="width:100%;">
+	</label>
+	<!--Provider Type-->
+	<div class="form-group">
+		<label class="control-label">Provider Type*</label>
+		<select name="providertype" id="providertype" class="form-control select-icon">
 			<?php if($providInfo->{providerType}=="Nurse")
 			{?>
               <option value="Nurse" selected="selected">Nurse </option>
@@ -418,12 +410,11 @@ select:focus
 			 }
 			?>
             </select>
-          </span>
-</div>
-<div class="form-group">
-<label for="status" class="col-md-4" >Assign Role<span style="color:red;">*</span></label>
-          <span class="custom-dropdown custom-dropdown--white col-md-8" style="padding-right: 0px; width: 55%;">
-            <select name="assignrole" id="assignrole" class="custom-dropdown__select custom-dropdown__select--white" style="width:100%;">
+	</div>
+	<!--Assign Role-->
+	<div class="form-group">
+		<label class="control-label">Provider Type*</label>
+		<select name="assignrole" id="assignrole" class="form-control select-icon" style="width:100%;">
 				<?php
 				if($providInfo->{entityType} =="PROVIDER" or $providInfo->{entityType} =="Provider")
 				{
@@ -440,49 +431,23 @@ select:focus
 			 }
 			 ?>
             </select>
-          </span>
-</div>
-<div class="form-group">
-  <label class="col-md-4 control-label" style="padding:0px;" for="textinput">Google Mail</label>
-  <div class="col-md-7">
-	<?php 
+	</div>
+<!--Google Mail-->
+	<label class="item-input item-floating-label">
+		<span class="input-label" for="textinput">Google Mail*</span>
+		<?php 
 	if($providInfo->{googleMail})
 	{?>
-    <input  name="googleMail" id="googleMail" placeholder="Google Mail" class="form-control input-md" type="text"   value="<?php echo $providInfo->{googleMail} ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hospice'"  maxlength="20"/>
+    <input  name="googleMail" id="googleMail" placeholder="Google Mail" class="form-control" type="text"   value="<?php echo $providInfo->{googleMail} ?>"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hospice'"  maxlength="20"/>
 	<?php
 	}
 	else{
 	?>
-	    <input  name="googleMail" id="googleMail" placeholder="Google Mail" class="form-control input-md" type="text"   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hospice'"  maxlength="20" />
+	    <input  name="googleMail" id="googleMail" placeholder="Google Mail" class="form-control" type="text"   onfocus="this.placeholder = ''" onblur="this.placeholder = 'Hospice'"  maxlength="20" />
 	<?php
 	}?>
-	  </div>
+	</label>
 </div>
-
-<div class="form-group" >
-        <div class="ascalate">
-          <div style="padding-left:0px; float: left;">
-            <input type="button" value="<?php echo constantAppResource::$COMMON_BUTTON_CANCEL;?>"  id="pageCancel"  class="but_cancel_bg" style=" margin:0px;" data="openPageWithAjax('<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/provider/pages/portal_providerList.php','currentPage=1','menu-content',event,'this')"  onClick="openPageWithAjax('<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/provider/pages/portal_providerList.php','currentPage=1','menu-content',event,'this')">
-          </div>
-          <div style="padding-left:0px;">
-            <input type="submit" style="margin:0px !important;" value="<?php echo constantAppResource::$COMMON_BUTTON_SAVE;?>" class="submit" name="save" id="submit" />
-			<?php 
-			if(is_null($providInfo))
-			{
-				?>
-				<input type="hidden" name="submit" value="submit" id="page"/>			
-				<input type="hidden" name="providerId" value="" id="providerId" />
-			<?php
-			}
-			else
-			{
-			?>
-				<input type="hidden" name="providerId" value="<?php echo $providInfo->{providerId}?>" id="providerId" />
-				<input type="hidden" name="update" value="update" id="page"/>
-			<?php}?>
-          </div>
-        </div>
-      </div>
 </div>
 </div>
 <!-- Cancel Popup  -->
@@ -508,7 +473,32 @@ select:focus
 </form>
 </div>
 </div>
-
+<div class="card-footer">
+        <div class="ascalate">
+          <div class="pull-left">
+            <input type="button" value="<?php echo constantAppResource::$COMMON_BUTTON_CANCEL;?>"  id="pageCancel"  class="btn-neutral" style=" margin:0px;" data="openPageWithAjax('<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/provider/pages/portal_providerList.php','currentPage=1','menu-content',event,'this')"  onClick="openPageWithAjax('<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/provider/pages/portal_providerList.php','currentPage=1','menu-content',event,'this')">
+          </div>
+          <div class="pull-left">
+            <input type="submit" value="<?php echo constantAppResource::$COMMON_BUTTON_SAVE;?>" class="btn-neutral" name="save" id="submit" />
+			<?php 
+			if(is_null($providInfo))
+			{
+				?>
+				<input type="hidden" name="submit" value="submit" id="page" class="btn-neutral"/>			
+				<input type="hidden" name="providerId" value="" id="providerId" class="btn-neutral"/>
+			<?php
+			}
+			else
+			{
+			?>
+				<input type="hidden" name="providerId" value="<?php echo $providInfo->{providerId}?>" id="providerId" />
+				<input type="hidden" name="update" value="update" id="page"/>
+			<?php}?>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
 
 <!-- Hidden start form  -->
 			      <form  enctype="multipart/form-data" id="hidden-image-form" style="display:none" onSubmit="postMultipartForm('<?php $_SERVER['SERVER_NAME']?>/gladstone/content',this,'',event)">
@@ -568,7 +558,7 @@ select:focus
 $(function(){
 	 $( "#dob" ).datepicker({
 		showOn: "button",
-		buttonImage: "<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/common/images/calender.png",
+		buttonImage: "<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/common/images/date-range.svg",
 		buttonImageOnly: true,
 		buttonText: "Select date",
 		dateFormat: "mm/dd/yy",

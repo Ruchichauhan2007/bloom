@@ -1115,3 +1115,53 @@ width: 60% ;
 }
 
 
+
+.card{
+	display: block;
+	margin-bottom: 15px;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12),0px 2px 2px 0px rgba(0,0,0,0.24);
+}
+.card-header{
+	padding: 20px 15px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 0;
+}
+.card-body, .card-footer{
+	padding: 15px;
+}
+.card-footer{
+	border-top: 1px solid #dcdcdc;
+	overflow: hidden;
+}
+
+i.back-icon img{
+	width: 16px;
+	height: 16px;
+}
+i.back-icon{
+	margin-right: 10px;
+}
+
+.page-title{
+	font-weight: 600;
+	color: rgba(0,0,0,.54);
+}
+
+.secondary-title{
+	color: rgba(0,0,0,.38);
+}
+.form-group label.item-input{
+	display: block;
+}
+.jq-datepicker{
+	position: relative;
+}
+
+.jq-datepicker img.ui-datepicker-trigger{
+	position: absolute;
+    right: 0;
+    bottom: 5px;
+    width: 24px;
+}

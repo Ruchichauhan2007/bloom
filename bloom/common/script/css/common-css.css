@@ -42,13 +42,12 @@ input[type=submit] {
 background-color: transparent;
 color: #7fcebb;
 text-transform: uppercase;
-width:100px;
+width:80px;
 margin-right: 0;
 height:40px;
 }
 input[type="reset"],input[type="submit"],.provider_button > input,#cancel,.auth_but > input,.Login_submit_buttom > input,.login_leftpart_form input {
     font-size: 16px !important;
-    font-weight: 600;
 }
 /*Misc*/
 .floatleft{float:left;}
@@ -92,17 +91,12 @@ float:left;
 margin-left: 10px;
 }
 input[type=button] {
-    background-color: #03aeff;
-    border-bottom: solid 5px #0395d1;
-    border-radius: 7px;
-    color: #fff;
-    font-size: 19px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    cursor: pointer;
-    padding: 5px;
-    margin: 5px;
+    background-color: transparent;
+    color: #7fcebb;
+    text-transform: uppercase;
+    min-width: 80px;
+    margin-right: 0;
+    height: 40px;
 }
 
 input[type=reset] {
