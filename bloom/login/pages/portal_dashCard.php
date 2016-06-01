@@ -15,15 +15,24 @@ $(document).ready(function() {
 var taHTML = $('#menu-content').html();
 var showScroll = $("#getScroll").val();
 var counter = 0;
-$('#menu-content').bind('scroll', function(e)
-{
+//$('#menu-content').bind('scroll', function(e)
+//{
+		var win = $(window);
+	// Each time the user scrolls
+	    win.scroll(function(e) {
 		var action = $("a.nextPage").attr("action");
 		var params = $("a.nextPage").attr("params");
 		var resultingDivId = $("a.nextPage").attr("resultingDivId");
-if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight)
-{
+		
+	
+		// End of the document reached?
+		if ($(document).height() - win.height() == win.scrollTop()) {
+			console.log( win.scrollTop());
+			//$('#loading').show(); 
+		//if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight)
+		//{
 		if(showScroll)
-		 {
+		 { console.log("true");
 		 		if(counter == 0)
 				{	
 				openPagewithScroll(action,params,resultingDivId,e,"a.nextPage");

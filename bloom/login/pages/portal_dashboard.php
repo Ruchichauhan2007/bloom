@@ -345,10 +345,11 @@
       if($_COOKIE['type'] == "Patient" or $_COOKIE['type'] == "PATIENT") $hideFilter = TRUE;
       
       ?>
-	  <link rel='stylesheet prefetch' href='/gladstone/portal/bloom/app/assets/css/ionic.min.css'>
+	  <!--<link rel='stylesheet prefetch' href='/gladstone/portal/bloom/app/assets/css/ionic.min.css'>-->
+      <link rel="stylesheet" type="text/css" media="screen" href="/gladstone/portal/bloom/vitals/scripts/css/bootstrap-datetimepicker.min.css">
 	  <link rel="stylesheet" type="text/css" href="/gladstone/portal/bloom/app/assets/css/intile.css">
 	<link href='../../common/script/css/custom-fonts.css' rel='stylesheet' type='text/css'>
-	<script src='/gladstone/portal/bloom/app/views/scripts/lib/ionic.bundle.js'></script>
+	<!--<script src='/gladstone/portal/bloom/app/views/scripts/lib/ionic.bundle.js'></script>-->
    <script src="../../common/script/js/jquery.cookie.js"> </script>
    <script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/moment.js"></script>
    <script type="text/javascript" src="/gladstone/portal/bloom/common/script/js/post-data.js"></script>
@@ -589,7 +590,7 @@ console.log(availableMenus);
       			{	
 			
       				var resClass = html.split(" ");
-      				//$(this).parents('li').hide();
+      				$(this).parents('li').hide();
       			}
       		});
 			
@@ -600,7 +601,7 @@ console.log(availableMenus);
       			{	
 			
       				var resClass = html.split(" ");
-      			//	$(this).parents('li').hide();
+      			$(this).parents('li').hide();
       				
       			}
       		});

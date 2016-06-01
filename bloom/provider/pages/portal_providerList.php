@@ -15,6 +15,19 @@ div.scrollbar1{height:640px}
 {
 font-weight:bold;
 }
+.ProviderList_part_bg:hover {
+	background-color: #f5f5f5;
+
+}
+
+.edit_sub_button{ 
+display: none;
+}
+.ProviderList_part_bg:hover .edit_sub_button{
+display : block;
+opacity: 1;
+
+}
 </style>
 
 <!--start header -->
@@ -108,7 +121,7 @@ font-weight:bold;
 <!--end footer -->
 <script>
 			window.location.hash = '/provider_list';
-   function deleteProvider(providerId)
+  function deleteProvider(providerId)
   {
 		$("#provider-delete-button").attr('delete-id',providerId);
 		$("#providerDeleteModal").modal();
@@ -121,6 +134,7 @@ function openEditProvider(providerId, e)
 	var purl = '../../provider/pages/portal_addProvider.php';
 	openPageWithAjax(purl,params,'menu-content',e);
 }
+
 
 
 </script>

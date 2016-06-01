@@ -323,7 +323,7 @@ padding: 0 0 0 4px;
 					<!--<span class="sub-title">Tap cards to mark them as reviewed.</span>-->
 				</div>
 				<ul class="nav Provider">
-					<li><a href="#" paginate="true" class="withoutPatient" onClick="openPageWithAjax('../../adherenceReport/pages/adherenceReportList.php','currentPage=1&extractType=WEEKLY','menu-content',event,this)">Adherence Reports</a>
+					<li><a href="#" paginate="true" class="withoutPatient" onClick="openPageWithAjax('../../adherenceReport/pages/adherenceReportList.php','currentPage=1&extractType=WEEKLY','menu-content',event,this)">Adherence Report</a>
 					</li>
 					<li><a href="#" class="withoutPatient" onClick="openPageWithAjax('../../contentlibrary/pages/contentLibrary.php','','menu-content',event,this)">Content Library</a>
 					</li>

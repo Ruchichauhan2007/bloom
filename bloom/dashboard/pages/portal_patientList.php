@@ -117,13 +117,8 @@ $selectPatient = false;
 			}
 
     });*/
-      $('#mCSB_1 div.PatientList_part_bg').hover(function(){
-			$(".editbtn").hide();
-			$(".deletebtn").hide();
-			var id = $(this).attr('id');
-			$("#edit_"+id).show();
-			$("#delete_"+id).show();
-	  });
+
+
       $('#mCSB_1 div.PatientList_part_bg').click(function(event){
 		  if(event.target.nodeName == "A"){
 			  
@@ -211,10 +206,7 @@ function deletePatient(patientId)
 	//$('#patientDeleteModal').modal();
 }
 
-$(document).ready(function() {
-	$(".editbtn").hide();
-	$(".deletebtn").hide();
-});
+
 function getChar(ele)
 {
 	var char = $(ele).val();
@@ -231,6 +223,13 @@ font-weight:bold;
     opacity: 1;
     background-color: #f5f5f5;
 }
+.edit_sub_button{ 
+display: none;
+}
+.PatientList_part_bg:hover .edit_sub_button{
+display : block;
+}
+
 </style>
 <div class="col-md-8 padd-top20">
     <div class="dashboard_patient_rightpart card-container">
