@@ -257,8 +257,7 @@ display : block;
 			<div class="dashboard_box_bg_text" style="font-size:24pt;padding-top:20px;padding-left:20px;"><?php echo constantAppResource::$DASHBOARD_TEXT_PORTAL_SELECT_PATIENT;?></div>
 		<?php }else{?>
 			<div class="dashboard_box_bg_text">
-				<span class="number-of-listing"><?php echo count($entityDetailInfos); ?> Patients</span>
-				<a href="#" onClick="openPageWithAjax('../../dashboard/pages/portal_addPatient.php','','menu-content',event)"><?php echo constantAppResource::$DASHBOARD_TEXT_PORTAL_ADD_PATIENT;?></a>
+				<span class="number-of-listing"><?php echo count($entityDetailInfos); ?> Patients</span>				
 			</div>
 		<?php }?>
 
@@ -334,7 +333,7 @@ display : block;
 				<span class="searchLetters"><button value="z" onclick="getChar(this);">Z</button></span>
 			</div>
 			
-			<button class="btn btn-secondary btn-block" type="button">Add New Patient</button>
+			<button class="btn btn-secondary btn-block" type="button"onClick="openPageWithAjax('../../dashboard/pages/portal_addPatient.php','','menu-content',event)" ><?php echo constantAppResource::$DASHBOARD_TEXT_PORTAL_ADD_PATIENT;?></button>
 	</div>
 </div>
 <?php include 'popup/CientSiderror_popup.php';
