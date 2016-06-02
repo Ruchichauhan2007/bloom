@@ -366,7 +366,7 @@ function filterMenu(currentMenu)
 		
 		$("ul.withoutPatient").show();
 		$("div.Patient").show();
-		$("div.Patient div span").text('Patient');
+		$("div.Patient div span").text('Patients');
 		openPageWithAjax('../../dashboard/pages/portal_patientList.php','','menu-content','',currentMenu);
 	}
 	else{

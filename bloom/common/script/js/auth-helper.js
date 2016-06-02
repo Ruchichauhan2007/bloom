@@ -174,6 +174,7 @@ var token = "";
 		//alert(data.statusText);
 		$("#errorMsg").text("Invalid email address or password.");
 		$(".errorMsgDiv").show();
+		$("#Login_submit").attr("disabled", "disabled");
 		
 		}
 

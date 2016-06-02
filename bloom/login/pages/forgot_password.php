@@ -14,7 +14,7 @@
 	<p>Please enter the email address you used to create your Kannact account </p> <br>
 		  <div class="group float-input">
 			<input type="email" name="email" id="email" maxlength="50"><span class="highlight"></span><span class="bar"></span>
-			<label><?php echo constantAppResource::$LOGIN_LABEL_EMAILADDRESS;?><span style="color:red;">*</span></label>
+			<label><?php echo constantAppResource::$LOGIN_LABEL_EMAILADDRESS;?></label>
 		  </div>
 		  
 		  <div class="group float-input" style="display:none;" id="errorMsgDivd">

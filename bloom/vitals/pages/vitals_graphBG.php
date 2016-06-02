@@ -206,8 +206,8 @@ $("#deviceConfigID").val(deviceConfigId);
 		  {
 		  ?>
 						<div class="padd-15 pre-post-meal ">
-							<button class="btn btn-neutral active"  data="ALL">All</button>
-							<button class="btn btn-default " data="PRE">Pre Meal</button>
+							<button class="btn btn-default active"  data="ALL">All</button>
+							<button class="btn btn-neutral " data="PRE">Pre Meal</button>
 							<button class="btn btn-neutral" data="POST">Post Meal</button>
 						</div> 
 						<input type="hidden" id="meal-type" />

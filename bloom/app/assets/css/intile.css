@@ -175,6 +175,7 @@ font-size: 17px;
 
 .btn {
     font-family: sourcesanspro-semibold;
+	text-transform:uppercase;
 }
 
 button.btn.btn-DarkSky.btn-default {

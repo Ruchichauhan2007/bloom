@@ -15,11 +15,11 @@
 		<p>Please enter the names and date of birth you used to create your Kannact account </p> <br>
 		  <div class="group float-input">
 			<input type="text" name="first_name" id="first_name" maxlength="50"><span class="highlight"></span><span class="bar"></span>
-			<label><?php echo constantAppResource::$LOGIN_LABEL_FIRSTNAME;?><span style="color:red;">*</span></label>
+			<label><?php echo constantAppResource::$LOGIN_LABEL_FIRSTNAME;?></label>
 		  </div>
 		  <div class="group float-input">
 			<input type="text" name="last_name" id="last_name" maxlength="50"><span class="highlight"></span><span class="bar"></span>
-			<label><?php echo constantAppResource::$LOGIN_LABEL_LASTNAME;?><span style="color:red;">*</span></label>
+			<label><?php echo constantAppResource::$LOGIN_LABEL_LASTNAME;?></label>
 		  </div>
                                  <div class="group float-input">
                                     <div class='input-group date' id='datetimepicker1'>
@@ -28,7 +28,7 @@
                                           <!-- <span class="glyphicon glyphicon-calendar"></span>-->
                                           <img class="picDate" src="/gladstone/portal/bloom/login/images/date-range.svg">
                                        </span>
-									   			<label><?php echo constantAppResource::$LOGIN_LABEL_DATE_OF_BIRTH;?><span style="color:red;">*</span></label>
+									   			<label><?php echo constantAppResource::$LOGIN_LABEL_DATE_OF_BIRTH;?></label>
                                     </div>
                                  </div>	
 	 <div class="group float-input" style="display:none;" id="errorMsgDivd">
