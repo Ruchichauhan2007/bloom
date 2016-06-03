@@ -118,7 +118,11 @@ $selectPatient = false;
 
     });*/
 
-
+		$(".editbtn").click(function(){
+		
+		var id= $(this).attr('id').split('_');
+		$('#menu-content-container li').attr('ref', id[1]);
+	});
       $('#mCSB_1 div.PatientList_part_bg').click(function(event){
 		  if(event.target.nodeName == "A"){
 			  

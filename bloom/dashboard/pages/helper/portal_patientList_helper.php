@@ -57,7 +57,9 @@ else
 		$entityDetailInfos= $patientList->{entityDetailInfos};
 		$moveNext = $entityDetailInfos[4]->{nextPage};
 		?><script>
+		$("#getScroll").val('<?php echo $moveNext; ?>');
 		$("#nextButton").val('<?php echo $moveNext; ?>');
+
 		</script>
 		<?php
 	}
