@@ -43,16 +43,61 @@ $selectPatient = false;
 }
 ?>
 <script type="text/javascript">
+var taHTML = $('#PatientList_part_bg_all').html();
+var showScroll = $("#getScroll").val();
+var counter = 0;
+//$('#menu-content').bind('scroll', function(e)
+//{
+	//	var win = $(window);
+	// Each time the user scrolls
+	    // win.scroll(function(e) {
+		// var action = $("a.nextPage").attr("action");
+		// var params = $("a.nextPage").attr("params");
+		// var resultingDivId = "PatientList_part_bg_all";
+
+	
+		// // End of the document reached?
+		// if ($(document).height() - win.height() == win.scrollTop()) {
+			// console.log( win.scrollTop());
+			// //$('#loading').show(); 
+		// //if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight)
+		// //{
+		// if(showScroll)
+		 // { console.log("true"+counter);
+		 		// if(counter == 0)
+				// {	
+			// //	openPagewithScroll(action,params,resultingDivId,e,"a.nextPage");
+				
+				// }
+				// counter++;
+				
+		 // }		
+// }
+// });
+
+
+
+
 	window.location.hash = '/patient_list';
   //$('#patientList').change();
 	$(function() {
 
 		// append navigation
 
+$(document).ready(function()
+{
+
+	$("#patientSearch").attr("disabled", "disabled");
+	
+			 
+});
 	
 
-		$("#searchInput").keyup(function(e){
+		$("#searchInput").on("keyup change blur", function(e){
+			 if( this.value.length > 3 ) 
+			 {
 	        var searchText = $(this).val().toLowerCase();
+			 $("#patientSearch").removeAttr("disabled");
 	        var text = searchText.split(" ");
 			var selectVal = $('#patientList').val();
 			var selection;
@@ -99,9 +144,11 @@ $selectPatient = false;
 		         {
 	            	$('#patientSearch').click();
 		         }
+			
 	        });
+			 }
+			 else{ $("#patientSearch").attr("disabled", "disabled"); }
 		});
-
 		//$('#PatientList_part_bg_all').hide();
 		/*$('#patientList').change(function(){
 			if($('#patientList').val() == 'ALL') {
@@ -118,11 +165,13 @@ $selectPatient = false;
 
     });*/
 
-		$(".editbtn").click(function(){
+
+	$(".editbtn").click(function(){
 		
 		var id= $(this).attr('id').split('_');
 		$('#menu-content-container li').attr('ref', id[1]);
 	});
+	
       $('#mCSB_1 div.PatientList_part_bg').click(function(event){
 		  if(event.target.nodeName == "A"){
 			  

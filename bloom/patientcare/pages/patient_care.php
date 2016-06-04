@@ -77,14 +77,14 @@ float:right;
 <input type="hidden" id="userType" value="<?php echo $_COOKIE['type']; ?>" />
 <div class="row card-container">
   <div class="patientcare_bg">
-    <div class="patientcare_bgt_content" id="patientinfor">
+  <!--  <div class="patientcare_bgt_content" id="patientinfor">
       <div class="learn_patient_content_align">
-        <div id="selectedPatient" class="learn_patient_contentimg"><a href="#"><img src="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/portalLearn/images/learn_patient_img.jpg" alt=""></a> </div>
-        <h3 style="padding-top:10px;">Smith , Joe</h3>
-       
         
+        
+       
       </div>
     </div>
+	-->
     <div class="patientcare_tabs">
       <ul>
         <li><a href="#" id="patient_care_link">Action Plan</a></li>

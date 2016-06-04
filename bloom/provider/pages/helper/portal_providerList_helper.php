@@ -38,9 +38,11 @@ else
 		$fetched = true;
 		$moveNext = $providerList[4]->{nextPage};
 		?><script>
+		$("#getScroll").val('<?php echo $moveNext; ?>');
 		$("#nextButton").val('<?php echo $moveNext; ?>');
 		</script>
 		<?php
+
 	}
 	catch(Exception $e)
 	{

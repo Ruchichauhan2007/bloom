@@ -335,7 +335,7 @@ padding: 0 0 0 4px;
 					</li>
 					<li><a href="#" class="withoutPatient" onClick="openPageWithAjax('../../provider/pages/npi_detail.php','','menu-content',event,this)">NPI Detail</a>
 					</li>
-					<li><a href="#" class="withoutPatient" onClick="openPageWithAjax('../../provider/pages/portal_providerList.php','','menu-content',event,this)" paginate="true">Provider List</a>
+					<li><a href="#" class="withoutPatient" onClick="openPageWithAjax('../../provider/pages/portal_providerList.php','currentPage=1','menu-content',event,this)" paginate="true">Provider List</a>
 					</li>
 					<li><a href="#" class="withoutPatient" onClick="openPageWithAjax('../../provider/pages/supplyOrder.php','','menu-content',event,this)">Supply Orders</a>
 					</li>
@@ -367,7 +367,7 @@ function filterMenu(currentMenu)
 		$("ul.withoutPatient").show();
 		$("div.Patient").show();
 		$("div.Patient div span").text('Patients');
-		openPageWithAjax('../../dashboard/pages/portal_patientList.php','','menu-content','',currentMenu);
+		openPageWithAjax('../../dashboard/pages/portal_patientList.php','currentPage=1','menu-content','',currentMenu);
 	}
 	else{
 			$("."+activeMenu).show();

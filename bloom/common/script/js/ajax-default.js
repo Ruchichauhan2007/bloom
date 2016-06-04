@@ -132,10 +132,10 @@
 	var pageNo="";
 	if(pageNumber == undefined )
 		pageNumber = 1;
-		
+				
+
 	if(moveNext)
 	{
-		
 	nextPage = parseInt(pageNumber)+1;
 	next='<a href="#" class="activePage nextPage" ref="'+nextPage+'" action = "'+action+'"  params = "'+params+'"  resultingDivId = "'+resultingDivId+'" onclick="openPage(&quot;'+action+'&quot;,&quot;'+params+'&quot;,&quot;'+resultingDivId+'&quot;,event,this)">';
 	next += '<img style="height:27px" src="../../common/images/arrow_right.jpg"/></a>';
@@ -152,7 +152,7 @@
 	
 	}
    
-	
+	$(".prevPage,.nextPage").remove();
  	var html = '<div id="pagination" class="pagination"><div class="wrapper1">';
 	html +=prew;
  	// for(i = startPage; i <= page ; i++)
@@ -173,10 +173,10 @@
 	
  	html += '</div></div></div><div class="push">';
 	$('#'+resultingDivId).append(html);
-	if(resultingDivId == "dashCard")
-	{
+	// if(resultingDivId == "dashCard")
+	// {
 		$(".prevPage,.nextPage").hide();
-	}
+	// }
  }
  
  function openPage(action,params,resultingDivId,e,ele)
@@ -227,6 +227,17 @@
 //for dashboard only
 function openPagewithScroll(action,params,resultingDivId,e,ele)
  {
+	 var listType = "";
+	 if("../../dashboard/pages/portal_patientList.php"== action || "/gladstone/portal/bloom/dashboard/pages/portal_patientList.php" == action || "../../dashboard/pages/patList.php" == action)
+	 {
+		 action = "../../dashboard/pages/patList.php";
+		 resultingDivId = "PatientList_part_bg_all";
+		 var listType = "patients";
+	 }
+	 else if("../../provider/pages/portal_providerList.php"== action || "/gladstone/portal/bloom/provider/pages/portal_providerList.php" == action || "../../provider/pages/provList.php" == action){
+		 action = "../../provider/pages/provList.php";
+		 resultingDivId = "PatientList_part_bg"; 
+	 }
 	 if (typeof e !== "undefined" && e !== undefined && e != '') {
          e.preventDefault();
      }
@@ -255,6 +266,7 @@ function openPagewithScroll(action,params,resultingDivId,e,ele)
          success: function(result) {
              $("#" + resultingDivId).append(result);
              var divContent = $("#" + resultingDivId).html();
+			 
 //             console.log('Data : '+divContent);
 //             console.log('Data length : '+$(divContent).find('div.cardPanel').length);
              dataLength = $(divContent).find('.cardPanel').length;
@@ -272,7 +284,13 @@ function openPagewithScroll(action,params,resultingDivId,e,ele)
 			 $(".pagination").remove();
 			 $("#scriptData").remove();
             appendNavigation(action,params,resultingDivId,pageNumber,dataLength);
+			$(".prevPage,.nextPage").hide();
 			
+			 dataLength = $("#"+resultingDivId).find('.cardPanel').length;
+			 if(listType)
+			 {
+				 $(".number-of-listing").text(dataLength+' '+listType);
+			 }
          } 
 	 	});
  }

@@ -3,6 +3,10 @@ include('controller/portal_providerList_controller.php');
 ?>
 <link rel="stylesheet" href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/dashboard/script/css/dashboard.css">
 <script>
+var taHTML = $('#PatientList_part_bg').html();
+var showScroll = $("#getScroll").val();
+var counter = 0;
+
 function getChar(ele)
 {
 	var char = $(ele).val();
@@ -27,6 +31,9 @@ display: none;
 display : block;
 opacity: 1;
 
+}
+#PatientList_part_bg {
+    height: 100%;
 }
 </style>
 

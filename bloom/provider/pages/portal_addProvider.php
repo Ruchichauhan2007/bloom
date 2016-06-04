@@ -121,8 +121,8 @@ select:focus
  <div class="card">
 <div class="card-header">
   <div class="row">
-	<div class="col-md-6 page-title"><a href=""><i class="back-icon"><img src="/gladstone/portal/bloom/common/images/back.svg"></i></a> Provider Detail</div>
-	<div class="col-md-6 text-right secondary-title">Chance Diemer, DDS</div>
+	<div class="col-md-6 page-title"><a href=""onClick="openPageWithAjax('../../provider/pages/portal_providerList.php','currentPage=1','menu-content',event)"><i class="back-icon"><img src="/gladstone/portal/bloom/common/images/back.svg"></i></a> Provider Detail</div>
+	<div class="col-md-6 text-right secondary-title"></div>
   </div>
 </div>
 <!--end dashboard_header -->
