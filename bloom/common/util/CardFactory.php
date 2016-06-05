@@ -1506,7 +1506,7 @@ function   addPatientsCards($patientList, $type, $selectPatient)
 			$htmlAllPatientList = $htmlAllPatientList."<div class='PatientList_part_bg cardPanel ' id=".$patient->{entityId}.">
 				<div class='row patient_address'>
 					<div class='col-md-4 name'>
-						<h2>".$patient->{lastName}." ".$patient->{firstName}."</h2>
+						<h4>".$patient->{lastName}." ".$patient->{firstName}."</h4>
 					</div>
 					<div class='col-md-4 date'>
 						<h3>".$dateUtil->formatDateForDob($patient->{dateOfBirth})."</h3>
