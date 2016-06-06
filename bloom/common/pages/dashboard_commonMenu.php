@@ -129,6 +129,11 @@ padding: 0 0 0 4px;
     margin-top: 30px;
 	float: right;
 }
+ul.leftnav li.active a
+{
+	 font-weight: bold !important;
+    text-decoration: underline !important;
+}
 
 </style>
 <?php
@@ -289,7 +294,7 @@ padding: 0 0 0 4px;
 					<span class="title">Patients</span>
 					<!--<span class="sub-title">Tap cards to mark them as reviewed.</span>-->
 				</div>
-				<ul class="nav Patient withoutPatient">
+				<ul class="nav Patient withoutPatient leftnav">
 					<li><a href="#" onClick="openPageWithAjax('../../dashboard/pages/portal_patientList.php','','menu-content',event,this);" paginate="true" class="withoutPatient">Patient List</a>
 					</li>
 					<li><a href="#" class="withoutPatient" onClick="openExcel('SignUpSheet')">Help Requests</a>
@@ -297,7 +302,7 @@ padding: 0 0 0 4px;
 					<li><a href="#" class="withoutPatient" onClick="openExcel('Patients')">Info Sheet</a>
 					</li>
 				</ul>
-				<ul class="nav Patient withPatient">
+				<ul class="nav Patient withPatient leftnav">
 					<li><a href="#" onClick="openPageWithAjax('../../login/pages/portal_dashbaordWithPatient.php','','menu-content',event,this);">Activity</a>
 					</li>
 					<li><a href="#" onClick="openPageWithAjax('../../vitals/pages/setPath.php','','menu-content',event,this)">Biometrics</a>
@@ -322,7 +327,7 @@ padding: 0 0 0 4px;
 					<span class="title">Provider</span>
 					<!--<span class="sub-title">Tap cards to mark them as reviewed.</span>-->
 				</div>
-				<ul class="nav Provider">
+				<ul class="nav Provider leftnav">
 					<li><a href="#" paginate="true" class="withoutPatient" onClick="openPageWithAjax('../../adherenceReport/pages/adherenceReportList.php','currentPage=1&extractType=WEEKLY','menu-content',event,this)">Adherence Report</a>
 					</li>
 					<li><a href="#" class="withoutPatient" onClick="openPageWithAjax('../../contentlibrary/pages/contentLibrary.php','','menu-content',event,this)">Content Library</a>
@@ -352,7 +357,16 @@ padding: 0 0 0 4px;
 				
 			</div>
 </div>
+<script>
+		$(document).ready(function(){ 
+		$('.leftnav li:first-child').addClass('active');
+		$('.leftnav').on('click', 'li', function() {	
+    $('.leftnav li.active').removeClass('active');
+    $(this).addClass('active');
+});
 
+});
+</script>
 
 <script type="text/javascript">
 function filterMenu(currentMenu)

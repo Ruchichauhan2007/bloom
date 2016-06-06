@@ -2,22 +2,18 @@
 include('controller/portal_patientList_controller.php');
 $deviceConfigId = $_POST["deviceConfigId"];
 $vitalType = $_POST["vitalType"];
-
 ?>
 <link rel="stylesheet" href="<?php $_SERVER['SERVER_NAME']?>/gladstone/portal/bloom/dashboard/script/css/dashboard.css">
 <?php
 	$page = "";
 	$setPatient = $_POST['selectPatient'];
-
 	$selectPatient = FALSE;
 	if(isset($_GET["param"]) OR $setPatient == true)
 	{ 
 		$selectPatient = TRUE;
 		$page = "selectPatient";
-
 		if( $setPatient == true)	$redirectTo  = "/login/pages/portal_dashbaordWithPatient.php";
 	}
-
 	if(isset($_GET["page"]))
 	{
 		$page = $_GET["page"];
@@ -133,7 +129,7 @@ $(document).ready(function()
 
 				if(!hasText)
 					{
-		               $(card).fadeOut(500);
+		               //$(card).fadeOut(500);
 		            }
 	            else
 		            {
@@ -187,13 +183,14 @@ $(document).ready(function()
 		  }
 			// hidden values in header
 			var image = $(this).find('img').attr('src');
-			var name = $(this).find('h2').text();
+			var name = $(this).find('h4').text();
 			var id = $(this).attr('id');
 			$("#edit_"+id).show();
 			$("#delete_"+id).show();
 			$('#contextPatientName').val(name);
 			$("#headerMenu li").attr("ref",id);
 			$("ul.withPatient li ").find('a.patient').attr("id",id);
+			
 
 			
 			
@@ -201,6 +198,7 @@ $(document).ready(function()
       $('#contextPatientId').val(id);
 			$('#contextPatientImage').val(image);
             $('#patientName').html(name);
+			$("patient .page-header .title").text(name);
 			setTimeout(patientName(), 5);
 		$("ul.withoutPatient").hide();
 	 	$("ul.withPatient").show();

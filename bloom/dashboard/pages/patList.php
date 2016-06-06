@@ -73,17 +73,13 @@ var counter = 0;
 		  }
 			// hidden values in header
 			var image = $(this).find('img').attr('src');
-			var name = $(this).find('h2').text();
+			var name = $(this).find('h4').text();
 			var id = $(this).attr('id');
 			$("#edit_"+id).show();
 			$("#delete_"+id).show();
 			$('#contextPatientName').val(name);
 			$("#headerMenu li").attr("ref",id);
-			$("ul.withPatient li ").find('a.patient').attr("id",id);
-
-			
-			
-			
+			$("ul.withPatient li ").find('a.patient').attr("id",id);			
       $('#contextPatientId').val(id);
 			$('#contextPatientImage').val(image);
             $('#patientName').html(name);

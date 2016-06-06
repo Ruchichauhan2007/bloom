@@ -27,6 +27,7 @@ height: 20px;
 <div class="col-md-8 padd-top20">
   <div class="content_sc_x">
     <aside>
+
       <div class="row content_Library_addeddate">
 			<table class="libraryTable">
 				<thead class="content_Library_addeddate_tittle">
@@ -41,6 +42,8 @@ height: 20px;
 					<?php echo addNewContentLibraryCards($contentResp); ?>
 				</tbody>
 			</table>
+
+        
       </div>
     </aside>
   </div>
@@ -112,6 +115,7 @@ height: 20px;
 	   <input type="hidden" name="imageName" value="<?php echo $_COOKIE['imageLoginName'];?>"/>
 	   <input type="hidden" name="contentType" id="addContentLibrary" />
 	  <br clear="all"/>
+
       </div>
       <div class="modal-footer" style="margin-top:0px;">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

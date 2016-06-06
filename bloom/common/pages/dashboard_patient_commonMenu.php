@@ -135,6 +135,11 @@ li .col-md-10 > p {
 {
 width:40px;
 }
+ul.leftnav li.active a
+{
+	 font-weight: bold !important;
+    text-decoration: underline !important;
+}
 </style>
 <div class="login-nav-container">
 <?php /*
@@ -219,8 +224,9 @@ width:40px;
 				<span class="title">Activity</span>
 				<span class="sub-title">Tap cards to mark them as reviewed.</span>
 			</div>
-			<ul class="nav Activity">  
-				 <li><a href="#">Feed</a></li> 
+			
+			<ul class="nav Activity leftnav">  
+				 <li ><a href="#">Feed</a></li> 
 				 <li><a href="#" onClick="openPageWithAjax('../../portalLearn/pages/portal_learn.php','','menu-content',event,this)">Learn</a></li> 
 				 <li><a  href="#" paginate="true" onClick="openPageWithAjax('../../messages/pages/messages.html','','menu-content',event,this)">Messages</a></li> 
 				 <li><a href="#" onClick="openPageWithAjax('../../patientcare/pages/patient_care.php','','menu-content',event,this)">Patient Care</a></li> 
@@ -228,11 +234,12 @@ width:40px;
 				 <li><a href="#" onClick="openPageWithAjax('../../survey/pages/showSurvey.php','','menu-content',event,this)">Survey</a></li> 
 			</ul>
 		</div>
+		
 		<div class="nav Biometrics" style='display:none'>
 			<div class="page-header">
 				<span class="title">Biometrics</span>
 			</div>
-			<ul class="nav Biometrics">
+			<ul class="nav Biometrics leftnav">
 				<?php echo $data;?>
 			</ul>
 		</div>
@@ -258,6 +265,16 @@ $(function() {
     });
 })
 </script>
+<script>
+		$(document).ready(function(){
+		$('.leftnav li:first-child').addClass('active');
+		$('.leftnav').on('click', 'li', function() {
+		$('.leftnav li.active').removeClass('active');
+		$(this).addClass('active');
+});
+
+});
+			</script>
 <script type="text/javascript">
 function filterMenu(currentMenu)
 {
